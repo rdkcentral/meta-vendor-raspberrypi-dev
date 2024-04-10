@@ -16,11 +16,11 @@ BBLAYERS ?= " \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-networking \
         ${MANIFEST_PATH_IMAGE_SUPPORT} \
         "
-#BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_OSS_REFERENCE}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_PRODUCT_LAYER}' if os.path.isfile('${MANIFEST_PATH_PRODUCT_LAYER}/conf/layer.conf') else ''}"
 #BBLAYERS =+ "${@'${MANIFEST_PATH_MW_RELEASE}' if os.path.isfile('${MANIFEST_PATH_MW_RELEASE}/conf/layer.conf') else ''}"
 #BBLAYERS =+ "${@'${MANIFEST_PATH_VTS}' if os.path.isfile('${MANIFEST_PATH_VTS}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_VENDOR_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_VENDOR_OSS_REFERENCE}/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_RELEASE}' if os.path.isfile('${MANIFEST_PATH_OSS_RELEASE}/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@'${MANIFEST_PATH_COMMON_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_COMMON_OSS_REFERENCE}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_BSP}' if os.path.isfile('${MANIFEST_PATH_BSP}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_PLATFORM}' if os.path.isfile('${MANIFEST_PATH_PLATFORM}/conf/layer.conf') else ''}"
 #BBLAYERS =+ "${@'${MANIFEST_PATH_OEM_OVERLAY_SOC}' if os.path.isfile('${MANIFEST_PATH_OEM_OVERLAY_SOC}/conf/layer.conf') else ''}"
