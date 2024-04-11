@@ -10,3 +10,7 @@ PACKAGE_ARCH_pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
 
 #PREFERRED_VERSION_linux-libc-headers = "5.10.%"
 
+PV_pn-cairo = "1.14.6"
+PR_pn-cairo = "r1"
+PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"
+
