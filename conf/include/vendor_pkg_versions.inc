@@ -14,3 +14,11 @@ PV_pn-cairo = "1.14.6"
 PR_pn-cairo = "r1"
 PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"
 
+#gstreamer components
+
+GST_VERSION = "1.18.5"
+GST_REVISION = "r0"
+
+PV_pn-gstreamer1.0 = "${GST_VERSION}"
+PR_pn-gstreamer1.0 = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0 = "${VENDOR_LAYER_EXTENSION}"

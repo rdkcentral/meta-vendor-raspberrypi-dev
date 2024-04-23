@@ -14,5 +14,6 @@ PR = "r0"
 
 RDEPENDS_${PN} = "\
         cairo \
+	gstreamer1.0 \
         "
 
