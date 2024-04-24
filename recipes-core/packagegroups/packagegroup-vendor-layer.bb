@@ -15,6 +15,11 @@ PR = "r0"
 RDEPENDS_${PN} = " \
     cairo \
 	gstreamer1.0 \
-    devicesettings-hal-rpi \
+    "
+
+# Include MACHINE specific HAL packagegroup.
+
+RDEPENDS_${PN}_raspberrypi4 += " \
+    packagegroup-hal-raspberrypi4 \
     "
 

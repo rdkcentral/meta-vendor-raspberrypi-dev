@@ -13,8 +13,10 @@
 SUMMARY = "Devicesettings HAL Implementation for RPI-4"
 SECTION = "console/utils"
 
-LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
+#LICENSE = "Apache-2.0"
+#LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
+
+LICENSE = "CLOSED"
 
 PROVIDES = "virtual/devicesettings-hal"
 RPROVIDES_${PN} = "virtual/devicesettings-hal"
@@ -25,7 +27,8 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRCREV = "${AUTOREV}"
 PV = "${RDK_RELEASE}+git${SRCPV}"
 
-SRC_URI = "${CMF_GIT_ROOT}/rdk/devices/raspberrypi/devicesettings;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_BRANCH}"
+#SRC_URI = "${CMF_GIT_ROOT}/rdk/devices/raspberrypi/devicesettings;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_BRANCH}"
+SRC_URI = "git://github.com/arun-madhavan-013/devicesettings-hal-rpi.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
 
@@ -53,7 +56,7 @@ FILES_${PN} += "/opt/persistent/ds/*"
 FILES_${PN} += "/lib/rdk/*"
 FILES_${PN} += "/lib/systemd/system/*"
 
-#inherit coverity
+#inherit coverity systemd pkgconfig
 inherit systemd
 
 do_compile() {

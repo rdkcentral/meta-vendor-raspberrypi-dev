@@ -1,3 +1,5 @@
+# This layer shall be common for all RPi variants.
+
 #Linux kernel components
 
 PV_pn-linux-libc-headers = "5.10.52"
@@ -23,8 +25,9 @@ PV_pn-gstreamer1.0 = "${GST_VERSION}"
 PR_pn-gstreamer1.0 = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0 = "${VENDOR_LAYER_EXTENSION}"
 
-# HAL Components
+# RDKV HAL component versions
 
-PV_pn-devicesettings-hal-rpi = "1.0.0"
-PR_pn-devicesettings-hal-rpi = "r0"
-PACKAGE_ARCH_pn-devicesettings-hal-rpi = "${VENDOR_LAYER_EXTENSION}"
+# RDKV HAL component versions of raspberrypi4
+PV_pn-devicesettings-hal-raspberrypi4 = "1.0.0"
+PR_pn-devicesettings-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
