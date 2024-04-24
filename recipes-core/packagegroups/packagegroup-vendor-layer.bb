@@ -12,8 +12,9 @@ DEPENDS = " android-raspberrypi make-mod-scripts"
 PV = "1.0.0"
 PR = "r0"
 
-RDEPENDS_${PN} = "\
-        cairo \
+RDEPENDS_${PN} = " \
+    cairo \
 	gstreamer1.0 \
-        "
+    devicesettings-hal-rpi \
+    "
 
