@@ -13,10 +13,8 @@
 SUMMARY = "Devicesettings HAL Implementation for RPI-4"
 SECTION = "console/utils"
 
-#LICENSE = "Apache-2.0"
-#LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
-
-LICENSE = "CLOSED"
+LICENSE = "Apache-2.0"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
 
 PROVIDES = "virtual/devicesettings-hal"
 RPROVIDES_${PN} = "virtual/devicesettings-hal"
@@ -27,8 +25,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRCREV = "${AUTOREV}"
 PV = "${RDK_RELEASE}+git${SRCPV}"
 
-#SRC_URI = "${CMF_GIT_ROOT}/rdk/devices/raspberrypi/devicesettings;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_BRANCH}"
-SRC_URI = "git://github.com/arun-madhavan-013/devicesettings-hal-rpi.git;protocol=https;branch=master"
+SRC_URI = "${CMF_GIT_ROOT}/rdk/devices/raspberrypi/devicesettings;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_BRANCH}"
 
 S = "${WORKDIR}/git"
 
