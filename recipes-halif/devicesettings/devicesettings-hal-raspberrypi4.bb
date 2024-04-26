@@ -38,7 +38,7 @@ DEPENDS = "devicesettings-hal-headers virtual/egl alsa-lib"
 DEPENDS += "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'userland', '', d)}"
 
 INCLUDE_DIRS = " \
-    -I${STAGING_DIR_TARGET}${includedir}/rdk/ds-hal \
+    -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/ds-hal/ \
     "
 
 # note: we really on 'make -e' to control LDFLAGS and CFLAGS from here. This is
