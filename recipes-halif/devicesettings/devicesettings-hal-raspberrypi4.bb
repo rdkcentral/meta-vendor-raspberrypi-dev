@@ -86,3 +86,7 @@ do_install() {
 
 SYSTEMD_SERVICE_${PN} += "rpiDisplay.service"
 
+# Fix the QA warning.
+INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP_${PN}-dev = "ldflags"
+
