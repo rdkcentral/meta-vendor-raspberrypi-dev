@@ -71,14 +71,12 @@ do_install() {
         install -m 0644 $i ${D}${includedir}/rdk/ds-hal/
     done
     install -d ${D}${libdir}
-    install -d ${D}${bindir}
     oe_soinstall ${S}/libds-hal.so.${DSHAL_API_MAJOR_VERSION}.${DSHAL_API_MINOR_VERSION} ${D}${libdir}
+    install -d ${D}${bindir}
     install -m 0644 ${S}/platform.cfg ${D}${bindir}
     install -d ${D}${base_libdir}/rdk
     install -d ${D}${base_libdir}/systemd/system
     install -d ${D}/opt/persistent/ds
-    install -d ${D}${bindir} ${D}/opt/www
-    install -m 0755 ${S}/resolutionsettings.html ${D}/opt/www
     install -m 0755 ${S}/hostData ${D}/opt/persistent/ds/
     install -m 0755 ${S}/scripts/rpiDisplayEnable.sh ${D}/lib/rdk/rpiDisplayEnable.sh
     install -m 0644 ${S}/systemd/rpiDisplay.service ${D}/lib/systemd/system/rpiDisplay.service
