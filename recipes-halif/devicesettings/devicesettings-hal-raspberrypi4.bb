@@ -66,9 +66,9 @@ do_compile() {
 do_install() {
     # Install our HAL .h files required by the 'generic' devicesettings
     cd ${S}
-    install -d ${D}${includedir}/rdk/ds-hal
+    install -d ${D}${includedir}/rdk/halif/ds-hal
     for i in *Settings.h ; do
-        install -m 0644 $i ${D}${includedir}/rdk/ds-hal/
+        install -m 0644 $i ${D}${includedir}/rdk/halif/ds-hal
     done
     install -d ${D}${libdir}
     oe_soinstall ${S}/libds-hal.so.${DSHAL_API_MAJOR_VERSION}.${DSHAL_API_MINOR_VERSION} ${D}${libdir}
