@@ -12,14 +12,18 @@ DEPENDS = " android-raspberrypi make-mod-scripts"
 PV = "1.0.0"
 PR = "r0"
 
-RDEPENDS_${PN} = " \
-    cairo \
-	gstreamer1.0 \
-    "
+RDEPENDS_${PN} = "\
+        cairo \
+        gstreamer1.0 \
+        westeros-simplebuffer \
+        westeros-simpleshell \
+        westeros-soc-drm \
+        westeros \
+        gstreamer1.0-plugins-base \
+        "
 
 # Include MACHINE specific HAL packagegroup.
 
 RDEPENDS_${PN}_raspberrypi4 += " \
     packagegroup-hal-raspberrypi4 \
     "
-

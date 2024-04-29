@@ -10,8 +10,6 @@ PV_pn-android-raspberrypi = "5.10.82"
 PR_pn-android-raspberrypi = "r0"
 PACKAGE_ARCH_pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
 
-#PREFERRED_VERSION_linux-libc-headers = "5.10.%"
-
 PV_pn-cairo = "1.14.6"
 PR_pn-cairo = "r1"
 PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"
@@ -24,6 +22,34 @@ GST_REVISION = "r0"
 PV_pn-gstreamer1.0 = "${GST_VERSION}"
 PR_pn-gstreamer1.0 = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0 = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-gstreamer1.0-plugins-base = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-base = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-base = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-gstreamer1.0-plugins-base-meta = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-base-meta = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-base-meta = "${VENDOR_LAYER_EXTENSION}"
+
+#westeros components
+WESTEROS_VERSION = "1.0.0"
+WESTEROS_REVISION = "r0"
+
+PV_pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
+PR_pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-westeros-simplebuffer = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-westeros-simpleshell = "${WESTEROS_VERSION}"
+PR_pn-westeros-simpleshell = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-westeros-simpleshell = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-westeros-soc-drm = "${WESTEROS_VERSION}"
+PR_pn-westeros-soc-drm = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-westeros-soc-drm = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-westeros = "${WESTEROS_VERSION}"
+PR_pn-westeros = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-westeros = "${VENDOR_LAYER_EXTENSION}"
 
 # RDKV HAL component versions
 
