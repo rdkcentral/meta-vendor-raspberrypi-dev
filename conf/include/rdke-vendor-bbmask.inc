@@ -6,3 +6,12 @@ BBMASK += " meta-rdk-oss-reference/recipes-mac/Apparmor/apparmor_%.bbappend"
 #From meta-openembedded
 BBMASK += " meta-openembedded/meta-multimedia/recipes-multimedia/tinyalsa/tinyalsa.bb"
 BBMASK += " meta-openembedded/meta-oe/recipes-devtools/breakpad/breakpad_svn.bb"
+
+#From meta-rdk-halif-headers
+# FIXME: unmask as integration progresses
+BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/deepsleepmgr/"
+BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/audiocapture/"
+BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/hdmicec"
+BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/pwrmgr"
+BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/tvsettings"
+

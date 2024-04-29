@@ -1,3 +1,5 @@
+# This layer shall be common for all RPi variants.
+
 #Linux kernel components
 
 PV_pn-linux-libc-headers = "5.10.52"
@@ -48,3 +50,11 @@ PACKAGE_ARCH_pn-westeros-soc-drm = "${VENDOR_LAYER_EXTENSION}"
 PV_pn-westeros = "${WESTEROS_VERSION}"
 PR_pn-westeros = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros = "${VENDOR_LAYER_EXTENSION}"
+
+# RDKV HAL component versions
+
+# RDKV HAL component versions of raspberrypi4
+SRCREV_pn-devicesettings-hal-raspberrypi4 = "1.0.0"
+PV_pn-devicesettings-hal-raspberrypi4 = "1.0.0"
+PR_pn-devicesettings-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"

@@ -22,3 +22,8 @@ RDEPENDS_${PN} = "\
         gstreamer1.0-plugins-base \
         "
 
+# Include MACHINE specific HAL packagegroup.
+
+RDEPENDS_${PN}_raspberrypi4 += " \
+    packagegroup-hal-raspberrypi4 \
+    "
