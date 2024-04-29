@@ -14,6 +14,11 @@ PR = "r0"
 
 RDEPENDS_${PN} = "\
         cairo \
-	gstreamer1.0 \
+        gstreamer1.0 \
+        westeros-simplebuffer \
+        westeros-simpleshell \
+        westeros-soc-drm \
+        westeros \
+        gstreamer1.0-plugins-base \
         "
 
