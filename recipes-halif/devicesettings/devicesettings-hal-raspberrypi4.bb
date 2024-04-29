@@ -22,12 +22,10 @@ RPROVIDES_${PN} = "virtual/devicesettings-hal"
 # a HAL is machine specific
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRCREV = "${AUTOREV}"
+SRCREV = "1.0.0"
 PV = "${RDK_RELEASE}+git${SRCPV}"
 
-# Temporary
-SRC_URI = "${CMF_GIT_ROOT}/rdk/devices/raspberrypi/devicesettings;protocol=${CMF_GIT_PROTOCOL};branch=${CMF_GIT_BRANCH}"
-#SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-devicesettings-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
+SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-devicesettings-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
 S = "${WORKDIR}/git"
 
