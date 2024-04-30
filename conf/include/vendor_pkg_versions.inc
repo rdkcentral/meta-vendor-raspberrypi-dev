@@ -39,25 +39,41 @@ PV_pn-gstreamer1.0-plugins-bad = "${GST_VERSION}"
 PR_pn-gstreamer1.0-plugins-bad = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-bad = "${VENDOR_LAYER_EXTENSION}"
 
-#westeros components
+# Westeros components
 WESTEROS_VERSION = "1.0.0"
 WESTEROS_REVISION = "r0"
+# Tip of westeros master as of Mar 7, 2024
+WESTEROS_SRCREV = "04c096cb3df0bc0797f5b6bc568e1d11b62dcb5b"
 
 PV_pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR_pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros-simplebuffer = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-westeros-simplebuffer = "${WESTEROS_SRCREV}"
 
 PV_pn-westeros-simpleshell = "${WESTEROS_VERSION}"
 PR_pn-westeros-simpleshell = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros-simpleshell = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-westeros-simpleshell = "${WESTEROS_SRCREV}"
 
 PV_pn-westeros-soc-drm = "${WESTEROS_VERSION}"
 PR_pn-westeros-soc-drm = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros-soc-drm = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-westeros-soc-drm = "${WESTEROS_SRCREV}"
 
 PV_pn-westeros = "${WESTEROS_VERSION}"
 PR_pn-westeros = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-westeros = "${WESTEROS_SRCREV}"
+
+PV_pn-essos = "${WESTEROS_VERSION}"
+PR_pn-essos = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-essos = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-essos = "${WESTEROS_SRCREV}"
+
+PV_pn-westeros-sink = "${WESTEROS_VERSION}"
+PR_pn-westeros-sink = "${WESTEROS_REVISION}"
+PACKAGE_ARCH_pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-westeros-sink = "${WESTEROS_SRCREV}"
 
 # RDKV HAL component versions
 

@@ -23,6 +23,8 @@ RDEPENDS_${PN} = "\
         westeros-simpleshell \
         westeros-soc-drm \
         westeros \
+        essos \
+        westeros-sink \
         "
 
 # Include MACHINE specific HAL packagegroup.
