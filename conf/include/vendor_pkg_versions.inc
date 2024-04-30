@@ -27,9 +27,17 @@ PV_pn-gstreamer1.0-plugins-base = "${GST_VERSION}"
 PR_pn-gstreamer1.0-plugins-base = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-base = "${VENDOR_LAYER_EXTENSION}"
 
-PV_pn-gstreamer1.0-plugins-base-meta = "${GST_VERSION}"
-PR_pn-gstreamer1.0-plugins-base-meta = "${GST_REVISION}"
-PACKAGE_ARCH_pn-gstreamer1.0-plugins-base-meta = "${VENDOR_LAYER_EXTENSION}"
+PV_pn-gstreamer1.0-libav = "${GST_VERSION}"
+PR_pn-gstreamer1.0-libav = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-libav = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-gstreamer1.0-plugins-good = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-good = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-good = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-gstreamer1.0-plugins-bad = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-bad = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-bad = "${VENDOR_LAYER_EXTENSION}"
 
 #westeros components
 WESTEROS_VERSION = "1.0.0"
