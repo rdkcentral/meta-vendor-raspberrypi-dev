@@ -17,10 +17,9 @@ RDEPENDS_${PN} = "\
         "
 
 # Include MACHINE specific HAL packagegroup.
-
-RDEPENDS_${PN}_raspberrypi4 += " \
-    packagegroup-hal-raspberrypi4 \
-    "
+RDEPENDS_${PN}:append:raspberrypi4 = " \
+        packagegroup-hal-raspberrypi4 \
+        "
 
 # These packages shall be moved to OSS layer in future.
 RDEPENDS_${PN}:append:rdkv-oss = "\
