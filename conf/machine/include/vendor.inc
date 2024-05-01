@@ -20,3 +20,5 @@ LICENSE_FLAGS_WHITELIST += "commercial_gst-fluendo-mpegdemux \
                             commercial_gstreamer1.0-omx \
                             commercial_${MLPREFIX}gstreamer1.0-libav"
 
+# Override introduced to mark components or features to be moved into OSS layer.
+OVERRIDES .= ":rdkv-oss"
