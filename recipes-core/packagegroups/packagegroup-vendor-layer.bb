@@ -13,13 +13,7 @@ PV = "1.0.0"
 PR = "r0"
 
 RDEPENDS_${PN} = "\
-        cairo \
-        gstreamer1.0 \
-        westeros-simplebuffer \
-        westeros-simpleshell \
         westeros-soc-drm \
-        westeros \
-        gstreamer1.0-plugins-base \
         "
 
 # Include MACHINE specific HAL packagegroup.
@@ -27,3 +21,13 @@ RDEPENDS_${PN} = "\
 RDEPENDS_${PN}_raspberrypi4 += " \
     packagegroup-hal-raspberrypi4 \
     "
+
+# These packages shall be moved to OSS layer in future.
+RDEPENDS_${PN}:append:rdkv-oss = "\
+        cairo \
+        gstreamer1.0 \
+        westeros-simplebuffer \
+        westeros-simpleshell \
+        westeros \
+        gstreamer1.0-plugins-base \
+        "
