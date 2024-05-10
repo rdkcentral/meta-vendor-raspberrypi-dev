@@ -94,3 +94,9 @@ SRCREV_pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
 PV_pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
 PR_pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
+PV_pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
+PR_pn-mfrlibs-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+

@@ -13,5 +13,6 @@ PR = "r0"
 RDEPENDS_${PN} = " \
     devicesettings-hal-raspberrypi4 \
     iarmmgrs-hal-raspberrypi4 \
+    mfrlibs-hal-raspberrypi4 \
     "
 
