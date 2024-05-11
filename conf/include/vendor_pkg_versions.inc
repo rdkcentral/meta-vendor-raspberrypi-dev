@@ -12,6 +12,18 @@ PR_pn-android-raspberrypi = "r0"
 PACKAGE_ARCH_pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_android-raspberrypi = "5.10.%"
 
+PV_pn-packagegroup-kernel-modules-raspberrypi4 = "5.10.82"
+PR_pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-packagegroup-kernel-modules-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-linux-firmware-rpidistro = "1.0.0"
+PR_pn-linux-firmware-rpidistro = "r0"
+PACKAGE_ARCH_pn-linux-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-bluez-firmware-rpidistro = "1.0.0"
+PR_pn-bluez-firmware-rpidistro = "r0"
+PACKAGE_ARCH_pn-bluez-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
+
 PV_pn-cairo = "1.14.6"
 PR_pn-cairo = "r1"
 PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"

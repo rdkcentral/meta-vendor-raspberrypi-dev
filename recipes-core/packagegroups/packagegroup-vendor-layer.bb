@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
 inherit packagegroup
 inherit versioned-packagegroup-install-support
 
-DEPENDS = " android-raspberrypi make-mod-scripts"
+DEPENDS = " virtual/kernel make-mod-scripts"
 
 PV = "1.0.0"
 PR = "r0"
@@ -16,8 +16,9 @@ RDEPENDS_${PN} = "\
         westeros-soc-drm \
         "
 
-# Include MACHINE specific HAL packagegroup.
+# Include MACHINE specific packagegroup.
 RDEPENDS_${PN}:append:raspberrypi4 = " \
+        packagegroup-kernel-modules-raspberrypi4 \
         packagegroup-hal-raspberrypi4 \
         "
 
