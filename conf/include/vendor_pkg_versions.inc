@@ -24,11 +24,21 @@ PV_pn-bluez-firmware-rpidistro = "1.0.0"
 PR_pn-bluez-firmware-rpidistro = "r0"
 PACKAGE_ARCH_pn-bluez-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
 
+#OSS Components
+
+PV_pn-libepoxy = "1.5.4"
+PR_pn-libepoxy = "r0"
+PACKAGE_ARCH_pn-libepoxy = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-make-mod-scripts = "1.0"
+PR_pn-make-mod-scripts = "r0"
+PACKAGE_ARCH_pn-make-mod-scripts = "${VENDOR_LAYER_EXTENSION}"
+
 PV_pn-cairo = "1.14.6"
 PR_pn-cairo = "r1"
 PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"
 
-#gstreamer components
+#Gstreamer components
 
 GST_VERSION = "1.18.5"
 GST_REVISION = "r0"
