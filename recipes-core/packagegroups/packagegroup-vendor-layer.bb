@@ -35,4 +35,5 @@ RDEPENDS_${PN}:append:rdkv-oss = "\
         westeros \
         essos \
         westeros-sink \
+        libepoxy \
         "
