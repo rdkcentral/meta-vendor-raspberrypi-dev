@@ -31,3 +31,6 @@ RDKE_GITHUB_BRANCH ?= "develop"
 RDKE_GITHUB_PROTOCOL ?= "ssh"
 RDKE_GITHUB_SRC_URI_SUFFIX = "protocol=${RDKE_GITHUB_PROTOCOL};nobranch=1"
 RDK_GENERIC_ROOT_GIT ?= "git://${RDK_GIT}/rdk/components/generic"
+
+# Fix the build error; related to: https://github.com/rdk-e/meta-image-support/pull/136
+PROJECT_BRANCH ?= "${RDKE_GITHUB_BRANCH}"
