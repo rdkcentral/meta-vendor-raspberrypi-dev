@@ -20,9 +20,23 @@ PV_pn-linux-firmware-rpidistro = "1.0.0"
 PR_pn-linux-firmware-rpidistro = "r0"
 PACKAGE_ARCH_pn-linux-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
 
+#Platform components
+
 PV_pn-bluez-firmware-rpidistro = "1.0.0"
 PR_pn-bluez-firmware-rpidistro = "r0"
 PACKAGE_ARCH_pn-bluez-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-userland = "20200624"
+PR_pn-userland = "r0"
+PACKAGE_ARCH_pn-userland = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-pi-bluetooth = "0.1.12"
+PR_pn-pi-bluetooth = "r0"
+PACKAGE_ARCH_pn-pi-bluetooth = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-udev-rules-rpi = "1.0"
+PR_pn-udev-rules-rpi = "r0"
+PACKAGE_ARCH_pn-udev-rules-rpi = "${VENDOR_LAYER_EXTENSION}"
 
 #OSS Components
 
@@ -37,6 +51,26 @@ PACKAGE_ARCH_pn-make-mod-scripts = "${VENDOR_LAYER_EXTENSION}"
 PV_pn-cairo = "1.14.6"
 PR_pn-cairo = "r1"
 PACKAGE_ARCH_pn-cairo = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-libdrm = "2.4.100"
+PR_pn-libdrm = "r0"
+PACKAGE_ARCH_pn-libdrm = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-mesa = "20.0.2"
+PR_pn-mesa = "r0"
+PACKAGE_ARCH_pn-mesa = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-librsvg = "2.40.21"
+PR_pn-librsvg = "r0"
+PACKAGE_ARCH_pn-librsvg = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-mpg123 = "1.25.13"
+PR_pn-mpg123 = "r0"
+PACKAGE_ARCH_pn-mpg123 = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-pango = "1.44.7"
+PR_pn-pango = "r0"
+PACKAGE_ARCH_pn-pango = "${VENDOR_LAYER_EXTENSION}"
 
 #Gstreamer components
 

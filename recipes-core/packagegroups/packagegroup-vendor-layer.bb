@@ -36,4 +36,8 @@ RDEPENDS_${PN}:append:rdkv-oss = "\
         essos \
         westeros-sink \
         libepoxy \
+        libdrm \
+        librsvg \
+        mpg123 \
+        pango \
         "
