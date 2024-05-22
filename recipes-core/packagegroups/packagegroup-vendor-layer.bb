@@ -28,8 +28,11 @@ RDEPENDS_${PN}:append:rdkv-oss = "\
         gstreamer1.0 \
         gstreamer1.0-libav \
         gstreamer1.0-plugins-base \
+	gstreamer1.0-plugins-base-meta \
         gstreamer1.0-plugins-good \
+	gstreamer1.0-plugins-good-meta \
         gstreamer1.0-plugins-bad \
+	gstreamer1.0-plugins-bad-meta \
 	westeros-simplebuffer \
         westeros-simpleshell \
         westeros \
@@ -40,4 +43,6 @@ RDEPENDS_${PN}:append:rdkv-oss = "\
         librsvg \
         mpg123 \
         pango \
+	pulseaudio \
+	libmms \
         "

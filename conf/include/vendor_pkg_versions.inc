@@ -72,6 +72,18 @@ PV_pn-pango = "1.44.7"
 PR_pn-pango = "r0"
 PACKAGE_ARCH_pn-pango = "${VENDOR_LAYER_EXTENSION}"
 
+PV_pn-pulseaudio = "13.0"
+PR_pn-pulseaudio = "r0"
+PACKAGE_ARCH_pn-pulseaudio = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-libmms = "0.6.4"
+PR_pn-libmms = "r0"
+PACKAGE_ARCH_pn-libmms = "${VENDOR_LAYER_EXTENSION}"
+
+PV_pn-alsa-plugins = "1.2.1"
+PR_pn-alsa-plugins = "r0"
+PACKAGE_ARCH_pn-alsa-plugins = "${VENDOR_LAYER_EXTENSION}"
+
 #Gstreamer components
 
 GST_VERSION = "1.18.5"
@@ -87,6 +99,11 @@ PR_pn-gstreamer1.0-plugins-base = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-base = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-plugins-base ?= "${GST_VERSION}"
 
+PV_pn-gstreamer1.0-plugins-base-meta = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-base-meta = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-base-meta = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_gstreamer1.0-plugins-base-meta ?= "${GST_VERSION}"
+
 PV_pn-gstreamer1.0-libav = "${GST_VERSION}"
 PR_pn-gstreamer1.0-libav = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-libav = "${VENDOR_LAYER_EXTENSION}"
@@ -97,10 +114,20 @@ PR_pn-gstreamer1.0-plugins-good = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-good = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-plugins-good ?= "${GST_VERSION}"
 
+PV_pn-gstreamer1.0-plugins-good-meta = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-good-meta = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-good-meta = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_gstreamer1.0-plugins-good-meta ?= "${GST_VERSION}"
+
 PV_pn-gstreamer1.0-plugins-bad = "${GST_VERSION}"
 PR_pn-gstreamer1.0-plugins-bad = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-bad = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-plugins-bad ?= "${GST_VERSION}"
+
+PV_pn-gstreamer1.0-plugins-bad-meta = "${GST_VERSION}"
+PR_pn-gstreamer1.0-plugins-bad-meta = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-plugins-bad-meta = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad-meta ?= "${GST_VERSION}"
 
 # Westeros components
 WESTEROS_VERSION = "1.0.0"
