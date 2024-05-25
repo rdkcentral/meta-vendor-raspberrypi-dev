@@ -1,4 +1,7 @@
-/*This is a temporary fix for solving the issue of containerization with Access control.
+From bc37f70f1fc989272c3ed35229a71f5805eae198 Fri Jul 21 15:04:18 2023
+From: chennaka_suresh <chennaka_suresh@comcast.com>
+Date: Fri, 21 Jul 2023 15:04:18
+Subject: [PATCH] This is a temporary fix for solving the issue of containerization with Access control.
 
 We have the provision to use an LSM profile in container and it used to work fine till kernel 4.9.
 After 4.9, no-new-privilages (NNP) were introduced in kernel.
@@ -12,7 +15,6 @@ container with its own specific profile configured.
 Inorder to solve this, potential solutions were to inherit current profile or Profile stacking.
 Since they didnt work, we are temporarily commenting the check for NNP here, and will uncomment
 this when we get the proper fix.
-*/
 
 Index: kernel-source/security/apparmor/domain.c
 ===================================================================
