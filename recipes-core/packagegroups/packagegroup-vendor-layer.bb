@@ -12,6 +12,7 @@ PV = "1.0.0"
 PR = "r0"
 
 RDEPENDS_${PN} = " \
+        pi-bluetooth \
         sysint-soc \
         westeros-soc-drm \
         "
