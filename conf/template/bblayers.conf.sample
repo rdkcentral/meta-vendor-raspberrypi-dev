@@ -8,25 +8,59 @@ BBFILES ?= ""
 RDKROOT := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
 include manifest_vars.conf
 
+# Yocto OE layers
 BBLAYERS ?= " \
         ${MANIFEST_PATH_POKY}/meta \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-oe \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-python \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-multimedia \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-networking \
-        ${MANIFEST_PATH_IMAGE_SUPPORT} \
         "
-BBLAYERS =+ "${@'${MANIFEST_PATH_PRODUCT_LAYER}' if os.path.isfile('${MANIFEST_PATH_PRODUCT_LAYER}/conf/layer.conf') else ''}"
-#BBLAYERS =+ "${@'${MANIFEST_PATH_MW_RELEASE}' if os.path.isfile('${MANIFEST_PATH_MW_RELEASE}/conf/layer.conf') else ''}"
-#BBLAYERS =+ "${@'${MANIFEST_PATH_VTS}' if os.path.isfile('${MANIFEST_PATH_VTS}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_RELEASE}' if os.path.isfile('${MANIFEST_PATH_OSS_RELEASE}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_COMMON_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_COMMON_OSS_REFERENCE}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_BSP}' if os.path.isfile('${MANIFEST_PATH_BSP}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_PLATFORM}' if os.path.isfile('${MANIFEST_PATH_PLATFORM}/conf/layer.conf') else ''}"
-#BBLAYERS =+ "${@'${MANIFEST_PATH_OEM_OVERLAY_SOC}' if os.path.isfile('${MANIFEST_PATH_OEM_OVERLAY_SOC}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_VENDOR}' if os.path.isfile('${MANIFEST_PATH_OSS_VENDOR}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_RDK_HALIF_HEADERS}' if os.path.isfile('${MANIFEST_PATH_RDK_HALIF_HEADERS}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_CONFIG_COMMON}' if os.path.isfile('${MANIFEST_PATH_CONFIG_COMMON}/conf/layer.conf') else ''}"
-#BBLAYERS =+ "${@'${MANIFEST_PATH_CONFIGS_REGION}' if os.path.isfile('${MANIFEST_PATH_CONFIGS_REGION}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_CONFIGS_PROFILE}' if os.path.isfile('${MANIFEST_PATH_CONFIGS_PROFILE}/conf/layer.conf') else ''}"
 
+BBLAYERS =+ "${@d.getVar('MANIFEST_META_RUST') if d.getVar('MANIFEST_META_RUST') is not None and os.path.isfile(d.getVar('MANIFEST_META_RUST') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_META_PYTHON2') if d.getVar('MANIFEST_PATH_META_PYTHON2') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_META_PYTHON2') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') if d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') + '/conf/layer.conf') else ''}"
+
+# Common layers
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_SCRIPTS') if d.getVar('MANIFEST_PATH_SCRIPTS') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_SCRIPTS') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_IMAGE_SUPPORT') if d.getVar('MANIFEST_PATH_IMAGE_SUPPORT') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_IMAGE_SUPPORT') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_IPK') if d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_IPK') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_IPK') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS') if d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS') + '/conf/layer.conf') else ''}"
+
+# Product
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_PRODUCT_LAYER') if d.getVar('MANIFEST_PATH_PRODUCT_LAYER') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_PRODUCT_LAYER') + '/conf/layer.conf') else ''}"
+
+# OSS layers
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') if d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_OSS_RELEASE') if d.getVar('MANIFEST_PATH_OSS_RELEASE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_OSS_RELEASE') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_OSS_DEVELOP') if d.getVar('MANIFEST_PATH_OSS_DEVELOP') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_OSS_DEVELOP') + '/conf/layer.conf') else ''}"
+
+# Platform layers
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_BSP') if d.getVar('MANIFEST_PATH_BSP') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_BSP') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_PLATFORM') if d.getVar('MANIFEST_PATH_PLATFORM') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_PLATFORM') + '/conf/layer.conf') else ''}"
+
+# Vendor layers
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_OSS_VENDOR') if d.getVar('MANIFEST_PATH_OSS_VENDOR') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_OSS_VENDOR') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_VENDOR_RELEASE') if d.getVar('MANIFEST_PATH_VENDOR_RELEASE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_VENDOR_RELEASE') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_VENDOR_DEVELOP') if d.getVar('MANIFEST_PATH_VENDOR_DEVELOP') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_VENDOR_DEVELOP') + '/conf/layer.conf') else ''}"
+
+# Configs
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_CONFIG_COMMON') if d.getVar('MANIFEST_PATH_CONFIG_COMMON') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_CONFIG_COMMON') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_CONFIGS_PROFILE') if d.getVar('MANIFEST_PATH_CONFIGS_PROFILE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_CONFIGS_PROFILE') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_CONFIG_PROFILE') if d.getVar('MANIFEST_PATH_CONFIG_PROFILE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_CONFIG_PROFILE') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_CONFIG_REGION') if d.getVar('MANIFEST_PATH_CONFIG_REGION') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_CONFIG_REGION') + '/conf/layer.conf') else ''}"
+
+# Middleware layers
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK_TOOLS') if d.getVar('MANIFEST_PATH_RDK_TOOLS') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK_TOOLS') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_MIDDLEWARE_DEV') if d.getVar('MANIFEST_PATH_MIDDLEWARE_DEV') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_MIDDLEWARE_DEV') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK') if d.getVar('MANIFEST_PATH_RDK') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK_VIDEO') if d.getVar('MANIFEST_PATH_RDK_VIDEO') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK_VIDEO') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK_RESTRICTED') if d.getVar('MANIFEST_PATH_RDK_RESTRICTED') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK_RESTRICTED') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_RDK_VOICE_SDK') if d.getVar('MANIFEST_PATH_RDK_VOICE_SDK') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_RDK_VOICE_SDK') + '/conf/layer.conf') else ''}"
+
+# Masking layers that are not supported in community builds
+BBMASK =+ " ${@'meta-rdk-restricted/recipes-qt/|meta-rdk/recipes-core/packagegroups/packagegroup-rdk-qt5.bb' if (d.getVar('MANIFEST_PATH_META_QT5') is None) else ''}"
+BBMASK =+ " ${@'meta-middleware-development/recipes-sky/' if (d.getVar('MANIFEST_PATH_COMCAST_VIDEO') is None) else ''}"
+BBMASK =+ " ${@'meta-middleware-development/recipes-oem-realtek/' if (d.getVar('MANIFEST_IS_OPEN_SOURCE') is not None) else ''}"
+BBMASK =+ " ${@'meta-middleware-development/recipes-soc-realtek/' if (d.getVar('MANIFEST_IS_OPEN_SOURCE') is not None) else ''}"
+BBMASK =+ " ${@'meta-rdk-restricted/recipes-extended/gst-plugins-playersinkbin/' if (d.getVar('MANIFEST_IS_OPEN_SOURCE') is not None) else ''}"
