@@ -9,7 +9,6 @@ BBMASK += " meta-openembedded/meta-oe/recipes-devtools/breakpad/breakpad_svn.bb"
 
 #From meta-rdk-halif-headers
 # FIXME: unmask as integration progresses
-BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/audiocapture/"
 BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/hdmicec"
 BBMASK += " meta-rdk-halif-headers/recipes-rdk-halif-headers/tvsettings"
 
