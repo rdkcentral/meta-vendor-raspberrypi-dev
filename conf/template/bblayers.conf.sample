@@ -19,6 +19,7 @@ BBLAYERS ?= " \
 
 BBLAYERS =+ "${@d.getVar('MANIFEST_META_RUST') if d.getVar('MANIFEST_META_RUST') is not None and os.path.isfile(d.getVar('MANIFEST_META_RUST') + '/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_META_PYTHON2') if d.getVar('MANIFEST_PATH_META_PYTHON2') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_META_PYTHON2') + '/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_META_GPLV2') if d.getVar('MANIFEST_PATH_META_GPLV2') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_META_GPLV2') + '/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') if d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') is not None and os.path.isfile(d.getVar('MANIFEST_PATH_FOUNDATION_RELEASE') + '/conf/layer.conf') else ''}"
 
 # Common layers
