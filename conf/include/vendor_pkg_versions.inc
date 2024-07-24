@@ -133,6 +133,11 @@ PR_pn-gstreamer1.0-plugins-bad-meta = "${GST_REVISION}"
 PACKAGE_ARCH_pn-gstreamer1.0-plugins-bad-meta = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-plugins-bad-meta ?= "${GST_VERSION}"
 
+PV_pn-gstreamer1.0-rtsp-server = "${GST_VERSION}"
+PR_pn-gstreamer1.0-rtsp-server = "${GST_REVISION}"
+PACKAGE_ARCH_pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
+
 # Westeros components
 WESTEROS_VERSION = "1.0.0"
 WESTEROS_REVISION = "r0"
