@@ -8,8 +8,8 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-hdmicec-raspberrypi4;${CMF_GIT_SRC_URI_SUF
 
 S = "${WORKDIR}/git"
 
-PROVIDES = "virtual/hdmicec-hal"
-RPROVIDES_${PN} = "virtual/hdmicec-hal"
+PROVIDES = "virtual/hdmicec-hal virtual/vendor-hdmicec-hal"
+RPROVIDES_${PN} = "virtual/hdmicec-hal virtual/vendor-hdmicec-hal"
 
 DEPENDS = "hdmicecheader"
 
