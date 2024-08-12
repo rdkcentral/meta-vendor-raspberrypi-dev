@@ -1,5 +1,7 @@
 S = "${WORKDIR}/git"
 
+PROVIDES = "virtual/vendor-westeros-sink"
+
 SINK_SOC_PATH = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'v4l2', 'rpi', d)}"
 
 AUTOTOOLS_SCRIPT_PATH = "${S}/${SINK_SOC_PATH}/westeros-sink"
