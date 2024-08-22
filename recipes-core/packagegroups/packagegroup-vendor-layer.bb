@@ -14,7 +14,8 @@ PR = "r0"
 RDEPENDS_${PN} = " \
         pi-bluetooth \
         sysint-soc \
-        westeros-soc-drm \
+        virtual/vendor-westeros-soc \
+        virtual/vendor-westeros-sink \
         "
 
 # Include MACHINE specific packagegroup.
@@ -47,5 +48,4 @@ RDEPENDS_${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
-        westeros-sink \
         "
