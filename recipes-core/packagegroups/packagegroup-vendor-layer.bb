@@ -48,4 +48,5 @@ RDEPENDS_${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
+        wayland-default-egl \
         "
