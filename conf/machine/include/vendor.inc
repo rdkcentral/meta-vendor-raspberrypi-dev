@@ -10,7 +10,7 @@ DISTRO_FEATURES:append = " enable_esdk"
 VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
 PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
 
-LICENSE_FLAGS_WHITELIST += "commercial_gst-fluendo-mpegdemux \
+LICENSE_FLAGS_ACCEPTED += "commercial_gst-fluendo-mpegdemux \
                             commercial_${MLPREFIX}gst-ffmpeg \
                             ${@bb.utils.contains('DISTRO_FEATURES', 'gstreamer1_18','commercial_${MLPREFIX}ffmpeg','commercial_${MLPREFIX}libav',d)} \
                             commercial_libomxil \
