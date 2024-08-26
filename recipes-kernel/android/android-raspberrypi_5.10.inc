@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-raspberrypi:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-raspberrypi:"
  
 KMETA = "kernel-meta"
  
@@ -9,4 +9,4 @@ SRC_URI = " \
 
 require android-raspberrypi.inc
 
-SRC_URI_remove = "file://rpi-kernel-misc.cfg"
+SRC_URI:remove = "file://rpi-kernel-misc.cfg"

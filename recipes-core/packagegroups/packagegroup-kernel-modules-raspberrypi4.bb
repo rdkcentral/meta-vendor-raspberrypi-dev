@@ -11,7 +11,7 @@ DEPENDS = "virtual/kernel"
 PV = "1.0.0"
 PR = "r0"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
     kernel-modules \
     linux-firmware-rpidistro-bcm43455 \
     bluez-firmware-rpidistro-bcm4345c0-hcd \
