@@ -31,15 +31,15 @@ SERIAL = "${@oe.utils.conditional("ENABLE_UART", "1", "console=serial0,115200", 
 CMDLINE ?= "dwc_otg.lpm_enable=0 ${SERIAL} root=/dev/mmcblk0p2 rootfstype=ext4 rootwait"
 
 # Add the kernel debugger over console kernel command line option if enabled
-CMDLINE_append = ' ${@oe.utils.conditional("ENABLE_KGDB", "1", "kgdboc=serial0,115200", "", d)}'
+CMDLINE:append = ' ${@oe.utils.conditional("ENABLE_KGDB", "1", "kgdboc=serial0,115200", "", d)}'
 
 # Disable rpi logo on boot
-CMDLINE_append += ' ${@oe.utils.conditional("DISABLE_RPI_BOOT_LOGO", "1", "logo.nologo", "", d)}'
+CMDLINE:append += ' ${@oe.utils.conditional("DISABLE_RPI_BOOT_LOGO", "1", "logo.nologo", "", d)}'
 
 # You can define CMDLINE_DEBUG as "debug" in your local.conf or distro.conf
 # to enable kernel debugging.
 CMDLINE_DEBUG ?= ""
-CMDLINE_append = " ${CMDLINE_DEBUG}"
+CMDLINE:append = " ${CMDLINE_DEBUG}"
 
 KERNEL_MODULE_AUTOLOAD += "${@bb.utils.contains("MACHINE_FEATURES", "pitft28r", "stmpe-ts", "", d)}"
 
@@ -78,10 +78,10 @@ config_setup() {
     # populate ${B}.config from either ${S}.config (if it exists) for custom
     # developer changes, or otherwise from ${WORDIR}/defconfig.
     #
-    # - In linux-raspberrypi, we add do_configure_prepend, which tweaks
+    # - In linux-raspberrypi, we add do_configure:prepend, which tweaks
     # ${B}.config. Since this runs *before* the kernel.bbclass do_configure,
     # ${B}.config doesn't yet exist and we hit an error. Thus we need to move
-    # the logic from do_configure up to before our do_configure_prepend. Because
+    # the logic from do_configure up to before our do_configure:prepend. Because
     # we are copying only a portion of do_configure and not the whole thing,
     # there is no clean way to do it using OE functionality, so we just
     # copy-and-paste.
@@ -90,13 +90,13 @@ config_setup() {
     fi
 
     # Copy defconfig to .config if .config does not exist. This allows
-    # recipes to manage the .config themselves in do_configure_prepend().
+    # recipes to manage the .config themselves in do_configure:prepend().
     if [ -f "${WORKDIR}/defconfig" ] && [ ! -f "${B}/.config" ]; then
         cp "${WORKDIR}/defconfig" "${B}/.config"
     fi
 }
 
-do_configure_prepend() {
+do_configure:prepend() {
     config_setup
 
     mv -f ${B}/.config ${B}/.config.patched
@@ -124,14 +124,14 @@ do_configure_prepend() {
 }
 
 
-do_compile_append() {
+do_compile:append() {
     if [ "${SITEINFO_BITS}" = "64" ]; then
         cc_extra=$(get_cc_option)
         oe_runmake dtbs CC="${KERNEL_CC} $cc_extra " LD="${KERNEL_LD}" ${KERNEL_EXTRA_ARGS}
     fi
 }
 
-do_deploy_append() {
+do_deploy:append() {
     # Deploy cmdline.txt only for the main kernel package
     if [ ${KERNEL_PACKAGE_NAME} = "kernel" ]; then
         install -d ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}
