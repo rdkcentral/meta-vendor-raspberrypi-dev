@@ -177,27 +177,27 @@ SRCREV:pn-westeros-sink = "${WESTEROS_SRCREV}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.0.2"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "7419888aaa9a3125980f81a324f6ad4fb83caa7b"
 #PV:pn-devicesettings-hal-raspberrypi4 = "2.0.0"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.0.1"
+SRCREV:pn-hdmicec-hal-raspberrypi4 = "81610f5daf4f2167a30ad9aae8e18c2846e51530"
 #PV:pn-hdmicec-hal-raspberrypi4 = "1.0.0"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.1"
+SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "f174dc2bec24db8d19a2b384c6dccfaaa530c775"
 #PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "1.0.1"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "9522f49f92e7eed8c63c732c2f245012454b0f4b"
 #PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.0.2"
+SRCREV:pn-sysint-soc = "9b9dc358b27f56b1e1a0d993da4ed5159714dd5a"
 #PV:pn-sysint-soc = "1.0.2"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
