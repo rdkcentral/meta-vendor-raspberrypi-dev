@@ -15,14 +15,14 @@ require recipes-kernel/linux/linux-yocto.inc
 SRC_URI += "file://rpi-kernel-misc.cfg"
 
 KCONFIG_MODE = "--alldefconfig"
-KBUILD_DEFCONFIG_raspberrypi0-wifi ?= "bcmrpi_defconfig"
-KBUILD_DEFCONFIG_raspberrypi ?= "bcmrpi_defconfig"
-KBUILD_DEFCONFIG_raspberrypi-cm3 ?= "bcm2709_defconfig"
-KBUILD_DEFCONFIG_raspberrypi2 ?= "bcm2709_defconfig"
-KBUILD_DEFCONFIG_raspberrypi3 ?= "bcm2709_defconfig"
-KBUILD_DEFCONFIG_raspberrypi3-64 ?= "bcmrpi3_defconfig"
-KBUILD_DEFCONFIG_raspberrypi4 ?= "bcm2711_defconfig"
-KBUILD_DEFCONFIG_raspberrypi4-64 ?= "bcm2711_defconfig"
+KBUILD_DEFCONFIG:raspberrypi0-wifi ?= "bcmrpi_defconfig"
+KBUILD_DEFCONFIG:raspberrypi ?= "bcmrpi_defconfig"
+KBUILD_DEFCONFIG:raspberrypi-cm3 ?= "bcm2709_defconfig"
+KBUILD_DEFCONFIG:raspberrypi2 ?= "bcm2709_defconfig"
+KBUILD_DEFCONFIG:raspberrypi3 ?= "bcm2709_defconfig"
+KBUILD_DEFCONFIG:raspberrypi3-64 ?= "bcmrpi3_defconfig"
+KBUILD_DEFCONFIG:raspberrypi4 ?= "bcm2711_defconfig"
+KBUILD_DEFCONFIG:raspberrypi4-64 ?= "bcm2711_defconfig"
 
 LINUX_VERSION_EXTENSION ?= ""
 
