@@ -37,3 +37,6 @@ FILES:${PN}:append = "\
 
 # no EGL runtime providers for vc4graphics
 RPROVIDES:${PN}:remove = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'libegl', '', d)}"
+
+# Fix do_package_qa err
+INSANE_SKIP:${PN}-dev = " staticdev"
