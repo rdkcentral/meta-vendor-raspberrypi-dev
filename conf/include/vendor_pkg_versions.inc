@@ -174,10 +174,10 @@ PR:pn-westeros-sink = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-westeros-sink = "${WESTEROS_SRCREV}"
 
-PV_pn-wayland-default-egl = "1.18.0"
-PR_pn-wayland-default-egl = "r0"
-PACKAGE_ARCH_pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
-SRCREV_pn-wayland-default-egl = "1.18.0"
+PV:pn-wayland-default-egl = "1.18.0"
+PR:pn-wayland-default-egl = "r0"
+PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
+SRCREV:pn-wayland-default-egl = "1.18.0"
 
 # RDKV HAL component versions
 
