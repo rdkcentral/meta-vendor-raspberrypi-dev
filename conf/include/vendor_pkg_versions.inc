@@ -52,10 +52,9 @@ PV:pn-cairo = "1.16.0"
 PR:pn-cairo = "r1"
 PACKAGE_ARCH:pn-cairo = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-libdrm = "2.4.110"
-PR:pn-libdrm = "r0"
+#PV:pn-libdrm = "2.4.110"
+#PR:pn-libdrm = "r0"
 PACKAGE_ARCH:pn-libdrm = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_libdrm = "2.4.110"
 
 PV:pn-mesa = "22.0.3"
 PR:pn-mesa = "r0"
