@@ -2,10 +2,10 @@
 
 #Linux kernel components
 
-PV:pn-linux-libc-headers = "5.16"
+PV:pn-linux-libc-headers = "5.10.52"
 PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_linux-libc-headers = "5.16"
+PREFERRED_VERSION_linux-libc-headers = "5.10.52"
 
 PV:pn-android-raspberrypi = "5.10.82"
 PR:pn-android-raspberrypi = "r0"
@@ -55,6 +55,7 @@ PACKAGE_ARCH:pn-cairo = "${VENDOR_LAYER_EXTENSION}"
 PV:pn-libdrm = "2.4.110"
 PR:pn-libdrm = "r0"
 PACKAGE_ARCH:pn-libdrm = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_libdrm = "2.4.110"
 
 PV:pn-mesa = "22.0.3"
 PR:pn-mesa = "r0"
