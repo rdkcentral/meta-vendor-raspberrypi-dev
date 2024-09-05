@@ -53,7 +53,7 @@ PR:pn-cairo = "r1"
 PACKAGE_ARCH:pn-cairo = "${VENDOR_LAYER_EXTENSION}"
 
 #PV:pn-libdrm = "2.4.110"
-#PR:pn-libdrm = "r0"
+PR:pn-libdrm = "r0"
 PACKAGE_ARCH:pn-libdrm = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-mesa = "22.0.3"
