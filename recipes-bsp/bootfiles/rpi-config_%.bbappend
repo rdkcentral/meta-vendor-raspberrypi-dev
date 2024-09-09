@@ -18,7 +18,7 @@ CORE_FREQ = "500"
 SDRAM_FREQ = "500"
 OVER_VOLTAGE = "6"
 
-do_deploy:append_raspberrypi4() {
+do_deploy:append:raspberrypi4() {
 # Fix to enable both the HDMI ports in case of raspberry pi 4
 # Force both hdmi mode to 720p@60Hz
     sed -i '/#hdmi_group=/ c\[HDMI:0]\
