@@ -8,6 +8,7 @@ SRCREV_machine = "${AUTOREV}"
 
 SRC_URI = " \
             git://github.com/android-rpi/kernel_arpi/;branch=arpi-5.15;name=machine;protocol=https \
+            git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=yocto-5.15;destsuffix=kernel-meta \
             file://powersave.cfg \
             file://android-drivers.cfg \
             file://video-drivers.cfg \
