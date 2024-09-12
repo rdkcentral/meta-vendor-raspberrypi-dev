@@ -2,8 +2,9 @@
 PE = "1"
 PV = "5.15.92"
 
-SRCREV_machine = "${AUTOREV}"
-#SRCREV_meta="567f0adb9d6462279d2e024153d0a8c3a3ff0551"
+#SRCREV_machine = "${AUTOREV}"
+SRCREV_machine = "52cc0a3d8bdee74262c0e326d59bc844d511bfa5"
+SRCREV_meta="567f0adb9d6462279d2e024153d0a8c3a3ff0551"
 #SRCREV_meta="0b65b80aa112614e8ab129f2d832b8cf050e7a4a"
 
 SRC_URI = " \
