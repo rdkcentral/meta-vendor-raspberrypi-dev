@@ -174,6 +174,11 @@ PR_pn-westeros-sink = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
 SRCREV_pn-westeros-sink = "${WESTEROS_SRCREV}"
 
+PV_pn-wayland-default-egl = "1.18.0"
+PR_pn-wayland-default-egl = "r0"
+PACKAGE_ARCH_pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-wayland-default-egl = "1.18.0"
+
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
@@ -192,7 +197,7 @@ PV_pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR_pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV_pn-mfrlibs-hal-raspberrypi4 = "1.0.1"
+SRCREV_pn-mfrlibs-hal-raspberrypi4 = "1.0.2"
 PV_pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
 PR_pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
