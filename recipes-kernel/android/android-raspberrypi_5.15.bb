@@ -11,7 +11,6 @@ SRC_URI = " \
             git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=yocto-5.10;destsuffix=kernel-meta \
             file://powersave.cfg \
             file://android-drivers.cfg \
-            file://video-drivers.cfg \
             file://disable_nnp_lsm_check.patch \
             "
 
