@@ -1,6 +1,6 @@
 DESCRIPTION = "deepsleep HAL Implementation."
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;b1e01b26bacfc2232046c90a330332b3"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
 
 PROVIDES = "virtual/deepsleep-hal virtual/vendor-deepsleep-hal"
 RPROVIDES_${PN} += " virtual/vendor-deepsleepmgr-hal "
