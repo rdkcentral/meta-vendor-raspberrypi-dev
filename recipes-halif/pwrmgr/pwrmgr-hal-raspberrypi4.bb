@@ -1,11 +1,11 @@
 DESCRIPTION = "PWRMGR HAL Implementation."
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=fd707e76aa29b6984fbe80629ec55f78"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
 
 PROVIDES += " virtual/vendor-pwrmgr-hal "
 RPROVIDES_${PN} += " virtual/vendor-pwrmgr-hal"
 
-SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
+SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=develop;protocol=https"
 
 S = "${WORKDIR}/git"
 

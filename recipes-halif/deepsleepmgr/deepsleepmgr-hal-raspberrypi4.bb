@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;b1e01b26bacfc2232046c90a330332b3"
 PROVIDES = "virtual/deepsleep-hal virtual/vendor-deepsleep-hal"
 RPROVIDES_${PN} += " virtual/vendor-deepsleepmgr-hal "
 
-SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-deepsleep-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
+SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-deepsleep-manager-raspberrypi4.git;branch=develop;protocol=https"
 
 S = "${WORKDIR}/git"
 
