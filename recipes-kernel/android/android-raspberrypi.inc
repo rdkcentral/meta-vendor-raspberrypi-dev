@@ -6,13 +6,8 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 COMPATIBLE_MACHINE = "^rpi$"
 
-PE = "1"
-PV = "5.10.82"
-
 inherit kernel siteinfo
 require recipes-kernel/linux/linux-yocto.inc
-
-SRC_URI += "file://rpi-kernel-misc.cfg"
 
 KCONFIG_MODE = "--alldefconfig"
 KBUILD_DEFCONFIG:raspberrypi0-wifi ?= "bcmrpi_defconfig"
