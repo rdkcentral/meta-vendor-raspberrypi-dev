@@ -7,7 +7,7 @@ RPROVIDES_${PN} += " virtual/vendor-pwrmgr-hal"
 
 SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=develop;protocol=https"
 
-SRCREV = "83c49d69e5fb4bc278cd8c8bb9c92f077c287356"
+SRCREV = "d164a5fe0d67f1ce8c8fddaf631e561c1e744466"
 
 S = "${WORKDIR}/git"
 

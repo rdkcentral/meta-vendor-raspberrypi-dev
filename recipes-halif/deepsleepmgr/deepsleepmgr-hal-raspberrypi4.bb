@@ -7,7 +7,7 @@ RPROVIDES_${PN} += " virtual/vendor-deepsleepmgr-hal "
 
 SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-deepsleep-manager-raspberrypi4.git;branch=develop;protocol=https"
 
-SRCREV = "d47a1e3763aee4d97947968ea61d28fe2cf3078a" 
+SRCREV = "f08a3a71e76e2c3f50567095ac470b5bcb18f6ad" 
 
 S = "${WORKDIR}/git"
 
