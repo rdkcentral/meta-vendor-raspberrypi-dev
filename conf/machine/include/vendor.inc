@@ -10,7 +10,7 @@ DISTRO_FEATURES_append = " enable_esdk"
 VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
 PACKAGE_EXTRA_ARCHS_append = " ${VENDOR_LAYER_EXTENSION}"
 
-VENDOR_IPK_SERVER_PATH = "https://partners.artifactory.comcast.com/artifactory/opkg/raspberrypi4-64-rdke/ipks/raspberrypi4-64-rdke-middleware/1.2.5"
+VENDOR_IPK_SERVER_PATH = "https://partners.artifactory.comcast.com/artifactory/opkg/raspberrypi4-64-rdke/ipks/raspberrypi4-64-rdke-vendor/3.0.0"
 
 LICENSE_FLAGS_WHITELIST += "commercial_gst-fluendo-mpegdemux \
                             commercial_${MLPREFIX}gst-ffmpeg \
