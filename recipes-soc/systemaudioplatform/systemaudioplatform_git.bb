@@ -9,20 +9,5 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-systemaudioplatform-raspberrypi4;${CMF_GIT
 S = "${WORKDIR}/git/systemaudioplatform/"
 inherit cmake pkgconfig
 
-
-PROVIDES += "virtual/systemaudioplatform"
-RPROVIDES_${PN} = "virtual/systemaudioplatform"
-
-export LINUX_BUILD="1"
-
-FILES_SOLIBSDEV = ""
-SOLIBS = ".so"
-INSANE_SKIP_${PN} += "dev-so"
-
-# add this insane_skip to suppress the unversioned shared object (so)
-INSANE_SKIP_${PN} += "dev-deps"
-
-ALLOW_EMPTY_${PN} = "1"
-
-FILES_${PN} += "${libdir}/libsystemaudioplatform.so"
-FILES_${PN} += "${libdir}/*.so*"
+FILES_${PN} = "/usr/lib/libsystemaudioplatform.so.*"
+FILES_${PN}-dev = "/usr/lib/libsystemaudioplatform.so /usr/include/systemaudioplatform.h"
