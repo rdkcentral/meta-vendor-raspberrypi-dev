@@ -15,13 +15,3 @@ FILES_${PN}-bcm43430a1-hcd = "\
 FILES_${PN}-bcm4345c0-hcd = "\
     ${sysconfdir}/firmware/brcm/BCM4345C0.hcd \
 "
-
-FILES_${PN}-cypress-license_remove = "\
-    ${nonarch_base_libdir}/firmware/LICENCE.cypress-rpidistro \
-"
-FILES_${PN}-bcm43430a1-hcd_remove = "\
-    ${nonarch_base_libdir}/firmware/brcm/BCM43430A1.hcd \
-"
-FILES_${PN}-bcm4345c0-hcd_remove = "\
-    ${nonarch_base_libdir}/firmware/brcm/BCM4345C0.hcd \
-"
