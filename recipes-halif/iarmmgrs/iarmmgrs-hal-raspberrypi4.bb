@@ -10,7 +10,11 @@ RPROVIDES_${PN} = "virtual/iarmmgrs-hal virtual/vendor-iarmmgrs-hal"
 # IR Manager will get deprecated and replaced by udev or similar.
 # Till then this will provide HAL implementation for all 3; IR, Power & DeepSleep.
 
-SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
+#SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
+
+SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=main;protocol=https"
+
+SRCREV = "b9657d8b94fddfaae656c8112ef392e7d73d06a3"
 
 
 S = "${WORKDIR}/git"
