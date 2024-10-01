@@ -12,10 +12,9 @@ RPROVIDES_${PN} = "virtual/iarmmgrs-hal virtual/vendor-iarmmgrs-hal"
 
 #SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
-SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=main;protocol=https"
+SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=develop;protocol=https"
 
-SRCREV = "b9657d8b94fddfaae656c8112ef392e7d73d06a3"
-
+SRCREV = "7f65da7c23be0eb76ea3fcb63ff09ab2db77089f"
 
 S = "${WORKDIR}/git"
 
