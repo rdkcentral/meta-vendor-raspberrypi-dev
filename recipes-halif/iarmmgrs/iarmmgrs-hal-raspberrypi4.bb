@@ -23,6 +23,7 @@ DEPENDS = "iarmmgrs-hal-headers iarmbus-headers power-manager-headers"
 inherit autotools coverity
 
 CFLAGS += " \
+    -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/power-manager/ \
     -I${STAGING_DIR_TARGET}${includedir}/rdk/iarmmgrs-hal/ \
     "
 
