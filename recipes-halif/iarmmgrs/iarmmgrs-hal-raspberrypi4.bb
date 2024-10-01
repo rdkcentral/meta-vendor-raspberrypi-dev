@@ -18,7 +18,7 @@ SRCREV = "7f65da7c23be0eb76ea3fcb63ff09ab2db77089f"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "iarmmgrs-hal-headers iarmbus-headers"
+DEPENDS = "iarmmgrs-hal-headers iarmbus-headers power-manager-headers"
 
 inherit autotools coverity
 
