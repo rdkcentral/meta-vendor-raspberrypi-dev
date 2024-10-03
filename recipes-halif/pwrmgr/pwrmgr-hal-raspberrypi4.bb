@@ -5,9 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
 PROVIDES += " virtual/vendor-pwrmgr-hal "
 RPROVIDES_${PN} += " virtual/vendor-pwrmgr-hal"
 
-SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=develop;protocol=https"
-
-SRCREV = "7f65da7c23be0eb76ea3fcb63ff09ab2db77089f"
+SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
 S = "${WORKDIR}/git"
 
