@@ -7,7 +7,7 @@ RPROVIDES_${PN} += " virtual/vendor-pwrmgr-hal"
 
 #SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
-SRC_URI = "https://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4;branch=develop;protocol=https"
+SRC_URI = "https://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4;sha256sum=e214e6664a4a19f58b21b6074c0e272f92ba7ef5c05c2930eb161ccc75c14738;ranch=develop;protocol=https"
 
 SRCREV = "5cae2b8ee02235472321272e4e25268e54c65280"
 
