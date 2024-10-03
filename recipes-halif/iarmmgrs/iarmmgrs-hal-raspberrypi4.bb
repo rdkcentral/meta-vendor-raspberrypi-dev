@@ -1,4 +1,4 @@
-DESCRIPTION = "IARMMGRS HAL Implementation - IR, Power & Deepsleep."
+DESCRIPTION = "IARMMGRS HAL Implementation - IR"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
 
@@ -12,18 +12,17 @@ RPROVIDES_${PN} = "virtual/iarmmgrs-hal virtual/vendor-iarmmgrs-hal"
 
 #SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-power-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
-SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-power-manager-raspberrypi4.git;branch=develop;protocol=https"
+SRC_URI = "git://github.com/Mallikarjunm6316/rdkvhal-ir-manager-raspberrypi4.git;branch=develop;protocol=https"
 
-SRCREV = "7f65da7c23be0eb76ea3fcb63ff09ab2db77089f"
+SRCREV = "e8703d9e1313fbb6003acb13354bb568cce3f28d"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "iarmmgrs-hal-headers iarmbus-headers power-manager-headers"
+DEPENDS = "iarmmgrs-hal-headers iarmbus-headers"
 
 inherit autotools coverity
 
 CFLAGS += " \
-    -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/power-manager/ \
     -I${STAGING_DIR_TARGET}${includedir}/rdk/iarmmgrs-hal/ \
     "
 
