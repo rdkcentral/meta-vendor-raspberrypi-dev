@@ -14,5 +14,8 @@ RDEPENDS_${PN} = " \
     hdmicec-hal-raspberrypi4 \
     iarmmgrs-hal-raspberrypi4 \
     mfrlibs-hal-raspberrypi4 \
+    audio-service-rpi \
+    gst-drm-plugins-rpi \
+    secapi2-adapter-rpi  \
     "
 
