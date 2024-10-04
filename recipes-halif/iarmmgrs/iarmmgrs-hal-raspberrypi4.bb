@@ -12,9 +12,9 @@ RPROVIDES_${PN} = "virtual/iarmmgrs-hal virtual/vendor-iarmmgrs-hal"
 
 SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-ir-manager-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
-SRC_URI = "https://github.com/Mallikarjunm6316/rdkvhal-ir-manager-raspberrypi4;sha25sum=543f5cd869d29d5c29782d4829b81943b40a617c683f461fc32531c4c9079a8a;branch=develop;protocol=https"
+#SRC_URI = "https://github.com/Mallikarjunm6316/rdkvhal-ir-manager-raspberrypi4;sha25sum=543f5cd869d29d5c29782d4829b81943b40a617c683f461fc32531c4c9079a8a;branch=develop;protocol=https"
 
-SRCREV = "73afa930eeacc4e327d46e4db33f9b56baacc820"
+#SRCREV = "73afa930eeacc4e327d46e4db33f9b56baacc820"
 
 S = "${WORKDIR}/git"
 
