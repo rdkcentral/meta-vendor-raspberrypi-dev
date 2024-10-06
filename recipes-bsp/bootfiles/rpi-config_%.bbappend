@@ -1,4 +1,4 @@
-SRC_URI_remove = "git://github.com/Evilpaul/RPi-config.git;protocol=git;branch=master"
+SRC_URI:remove = "git://github.com/Evilpaul/RPi-config.git;protocol=git;branch=master"
 SRC_URI += "git://github.com/Evilpaul/RPi-config.git;protocol=https;branch=master"
 
 # RDK specific changes
@@ -18,7 +18,7 @@ CORE_FREQ = "500"
 SDRAM_FREQ = "500"
 OVER_VOLTAGE = "6"
 
-do_deploy_append_raspberrypi4() {
+do_deploy:append:raspberrypi4() {
 # Fix to enable both the HDMI ports in case of raspberry pi 4
 # Force both hdmi mode to 720p@60Hz
     sed -i '/#hdmi_group=/ c\[HDMI:0]\
@@ -31,7 +31,7 @@ do_deploy_append_raspberrypi4() {
  hdmi_mode=4' ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
 }
 
-do_deploy_append() {
+do_deploy:append() {
     echo "dtoverlay=lirc-rpi" >> ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
     # fix to enable audio from 4.4 kernel
     sed -i '/#dtparam=audio=/ c\dtparam=audio=on' ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
@@ -49,15 +49,15 @@ do_deploy_append() {
     sed -i '/#boot_delay=/ c\boot_delay=0' ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
 }
 
-do_deploy_append_hybrid() {
+do_deploy:append_hybrid() {
     do_deploy_rdk_config
 }
 
-do_deploy_append_client() {
+do_deploy:append:client() {
     do_deploy_rdk_config
 }
 
-do_deploy_append_ipclient() {
+do_deploy:append_ipclient() {
     do_deploy_rdk_config
 }
 
@@ -69,7 +69,7 @@ do_deploy_rdk_config() {
    fi
 }
 
-do_deploy_append_camera() {
+do_deploy:append_camera() {
     echo "# for sound over HDMI" >> ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
     echo "hdmi_drive=2" >> ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
 }
