@@ -194,8 +194,8 @@ PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "9522f49f92e7eed8c63c732c2f245012454b0f4b"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "43b84464afdede3cb2c0a108ec6ad14107cc8c5b"
+PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.2"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
