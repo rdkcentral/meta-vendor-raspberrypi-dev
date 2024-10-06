@@ -190,7 +190,7 @@ PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "f174dc2bec24db8d19a2b384c6dccfaaa530c775"
-PV:pniarmmgrs-hal-raspberrypi4 = "2.0.1"
+PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
