@@ -14,6 +14,7 @@ PR = "r0"
 RDEPENDS:${PN} = " \
         pi-bluetooth \
         sysint-soc \
+        systemaudioplatform \
         virtual/vendor-westeros-soc \
         virtual/vendor-westeros-sink \
         "

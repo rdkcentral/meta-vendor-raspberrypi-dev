@@ -185,7 +185,7 @@ PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-hdmicec-hal-raspberrypi4 = "81610f5daf4f2167a30ad9aae8e18c2846e51530"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.0.0"
+PV:pn-hdmicec-hal-raspberrypi4 = "1.0.1"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -194,8 +194,8 @@ PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "9522f49f92e7eed8c63c732c2f245012454b0f4b"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "43b84464afdede3cb2c0a108ec6ad14107cc8c5b"
+PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.2"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -203,3 +203,8 @@ SRCREV:pn-sysint-soc = "9b9dc358b27f56b1e1a0d993da4ed5159714dd5a"
 PV:pn-sysint-soc = "1.0.2"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-systemaudioplatform = "59662783df1c0c7d04016c6f90da27516c070109"
+PV:pn-systemaudioplatform = "1.0.0"
+PR:pn-systemaudioplatform = "r0"
+PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
