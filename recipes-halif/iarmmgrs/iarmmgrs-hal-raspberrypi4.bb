@@ -7,7 +7,7 @@ RPROVIDES:${PN} = "virtual/iarmmgrs-hal virtual/vendor-iarmmgrs-hal"
 
 # TODO: Move to respective recipe when available
 PROVIDES += " virtual/vendor-pwrmgr-hal virtual/vendor-deepsleepmgr-hal "
-RPROVIDES_${PN} += " virtual/vendor-pwrmgr-hal virtual/vendor-deepsleepmgr-hal "
+RPROVIDES:${PN} += " virtual/vendor-pwrmgr-hal virtual/vendor-deepsleepmgr-hal "
 
 # Future: RDK-48312 says IARMMGRS HAL will be split into Power & DeepSleep.
 # Rename this recipe as Power Manager HAL when this happens and introduce another for DeepSleep.

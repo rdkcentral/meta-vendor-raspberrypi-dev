@@ -9,5 +9,5 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-systemaudioplatform-raspberrypi4;${CMF_GIT
 S = "${WORKDIR}/git/systemaudioplatform/"
 inherit cmake pkgconfig
 
-FILES_${PN} = "/usr/lib/libsystemaudioplatform.so.*"
-FILES_${PN}-dev = "/usr/lib/libsystemaudioplatform.so /usr/include/systemaudioplatform.h"
+FILES:${PN} = "/usr/lib/libsystemaudioplatform.so.*"
+FILES:${PN}-dev = "/usr/lib/libsystemaudioplatform.so /usr/include/systemaudioplatform.h"
