@@ -3,7 +3,7 @@ do_install:append() {
     install -d ${D}${sysconfdir}/firmware/brcm
 
     cp LICENCE.cypress-rpidistro ${D}${sysconfdir}/firmware
-    install -m 0644 broadcom/BCM43430A1.hcdhcd ${D}${sysconfdir}/firmware/brcm/
+    install -m 0644 broadcom/BCM43430A1.hcd ${D}${sysconfdir}/firmware/brcm/
     install -m 0644 broadcom/BCM4345C0.hcd ${D}${sysconfdir}/firmware/brcm/
 }
 
