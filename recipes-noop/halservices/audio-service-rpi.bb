@@ -7,8 +7,6 @@ RPROVIDES:${PN} = "virtual/audio-service virtual/vendor-audio-service"
 
 ALLOW_EMPTY:${PN} = "1"
 
-PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
-
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"
 do_install[noexec] = "1"

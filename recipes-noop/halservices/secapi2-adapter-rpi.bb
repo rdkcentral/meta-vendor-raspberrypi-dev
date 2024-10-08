@@ -7,8 +7,6 @@ RPROVIDES:${PN} = "virtual/secapi2-adapter virtual/vendor-secapi2-adapter"
 
 ALLOW_EMPTY:${PN} = "1"
 
-PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
-
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"
 do_install[noexec] = "1"
