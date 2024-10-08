@@ -189,10 +189,20 @@ PV:pn-hdmicec-hal-raspberrypi4 = "1.0.1"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "f174dc2bec24db8d19a2b384c6dccfaaa530c775"
+SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "f7c7d360fd856e06b65097333e77a0c1c5d313ea"
 PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-pwrmgr-hal-raspberrypi4 = "4781328b379ce4d88084ec75ca714733212fad40"
+PV:pn-pwrmgr-hal-raspberrypi4 = "1.0.0"
+PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "5299b42a8bf4c462303e77caf2d0441057929e62"
+PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
+PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-mfrlibs-hal-raspberrypi4 = "43b84464afdede3cb2c0a108ec6ad14107cc8c5b"
 PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.2"
