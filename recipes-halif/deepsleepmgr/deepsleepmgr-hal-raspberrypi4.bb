@@ -13,8 +13,6 @@ DEPENDS = "iarmbus-headers deepsleep-manager-headers"
 
 inherit autotools coverity
 
-IMAGE_INSTALL += "lib32-deepsleepmgr-hal-raspberrypi4"
-
 CFLAGS += " \
     -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/deepsleep-manager/ \
     "
