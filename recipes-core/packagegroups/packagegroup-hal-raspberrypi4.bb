@@ -13,6 +13,8 @@ RDEPENDS:${PN} = " \
     devicesettings-hal-raspberrypi4 \
     hdmicec-hal-raspberrypi4 \
     iarmmgrs-hal-raspberrypi4 \
+    pwrmgr-hal-raspberrypi4 \
+    deepsleepmgr-hal-raspberrypi4 \
     mfrlibs-hal-raspberrypi4 \
     "
 
