@@ -216,3 +216,8 @@ SRCREV_pn-sysint-soc = "1.0.2"
 PV_pn-sysint-soc = "1.0.2"
 PR_pn-sysint-soc = "r0"
 PACKAGE_ARCH_pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-systemaudioplatform = "1.0.0"
+PV_pn-systemaudioplatform = "1.0.0"
+PR_pn-systemaudioplatform = "r0"
+PACKAGE_ARCH_pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
