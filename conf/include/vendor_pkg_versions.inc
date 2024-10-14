@@ -218,3 +218,18 @@ SRCREV:pn-systemaudioplatform = "59662783df1c0c7d04016c6f90da27516c070109"
 PV:pn-systemaudioplatform = "1.0.0"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-audio-service-rpi = "1.0"
+PV:pn-audio-service-rpi = "1.0"
+PR:pn-audio-service-rpi = "r0"
+PACKAGE_ARCH:pn-audio-service-rpi = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-gst-drm-plugins-rpi = "1.0"
+PV:pn-gst-drm-plugins-rpi = "1.0"
+PR:pn-gst-drm-plugins-rpi = "r0"
+PACKAGE_ARCH:pn-gst-drm-plugins-rpi = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-secapi2-adapter-rpi  = "1.0"
+PV:pn-secapi2-adapter-rpi  = "1.0"
+PR:pn-secapi2-adapter-rpi  = "r0"
+PACKAGE_ARCH:pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"
