@@ -109,3 +109,8 @@ do_compile:append() {
     fi
 }
 
+# RDKVREFPLT-3709: do_image_wic error - In kirkstone, kernel_do_install task in kernel.bbclass doesnt 
+# create symlink for KERNEL_IMAGETYPE which is required by do_image_wic to create wic image.
+do_install:append() {
+        ln -sf ${imageType}-${KERNEL_VERSION} ${D}/${KERNEL_IMAGEDEST}/${imageType}
+}
