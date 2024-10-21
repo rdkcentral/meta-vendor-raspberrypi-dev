@@ -174,20 +174,40 @@ PR_pn-westeros-sink = "${WESTEROS_REVISION}"
 PACKAGE_ARCH_pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
 SRCREV_pn-westeros-sink = "${WESTEROS_SRCREV}"
 
+PV_pn-wayland-default-egl = "1.18.0"
+PR_pn-wayland-default-egl = "r0"
+PACKAGE_ARCH_pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
+SRCREV_pn-wayland-default-egl = "1.18.0"
+
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV_pn-devicesettings-hal-raspberrypi4 = "1.0.2"
+SRCREV_pn-devicesettings-hal-raspberrypi4 = "1.0.4"
 PV_pn-devicesettings-hal-raspberrypi4 = "2.0.0"
 PR_pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV_pn-iarmmgrs-hal-raspberrypi4 = "1.0.1"
+SRCREV_pn-hdmicec-hal-raspberrypi4 = "1.0.1"
+PV_pn-hdmicec-hal-raspberrypi4 = "1.0.0"
+PR_pn-hdmicec-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
 PV_pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR_pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV_pn-mfrlibs-hal-raspberrypi4 = "1.0.1"
+SRCREV_pn-pwrmgr-hal-raspberrypi4 = "1.1.0"
+PV_pn-pwrmgr-hal-raspberrypi4 = "1.0.0"
+PR_pn-pwrmgr-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-deepsleepmgr-hal-raspberrypi4 = "1.1.0"
+PV_pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
+PR_pn-deepsleepmgr-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH_pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-mfrlibs-hal-raspberrypi4 = "1.0.2"
 PV_pn-mfrlibs-hal-raspberrypi4 = "1.0.0"
 PR_pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH_pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
@@ -196,3 +216,23 @@ SRCREV_pn-sysint-soc = "1.0.2"
 PV_pn-sysint-soc = "1.0.2"
 PR_pn-sysint-soc = "r0"
 PACKAGE_ARCH_pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-systemaudioplatform = "1.0.0"
+PV_pn-systemaudioplatform = "1.0.0"
+PR_pn-systemaudioplatform = "r0"
+PACKAGE_ARCH_pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-audio-service-rpi = "1.0"
+PV_pn-audio-service-rpi = "1.0"
+PR_pn-audio-service-rpi = "r0"
+PACKAGE_ARCH_pn-audio-service-rpi = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-gst-drm-plugins-rpi = "1.0"
+PV_pn-gst-drm-plugins-rpi = "1.0"
+PR_pn-gst-drm-plugins-rpi = "r0"
+PACKAGE_ARCH_pn-gst-drm-plugins-rpi = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV_pn-secapi2-adapter-rpi  = "1.0"
+PV_pn-secapi2-adapter-rpi  = "1.0"
+PR_pn-secapi2-adapter-rpi  = "r0"
+PACKAGE_ARCH_pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"

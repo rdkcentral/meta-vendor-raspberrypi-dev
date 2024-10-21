@@ -8,13 +8,15 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "1.0.0"
+PV = "1.2.6"
 PR = "r0"
 
 RDEPENDS_${PN} = " \
         pi-bluetooth \
         sysint-soc \
-        westeros-soc-drm \
+        systemaudioplatform \
+        virtual/vendor-westeros-soc \
+        virtual/vendor-westeros-sink \
         "
 
 # Include MACHINE specific packagegroup.
@@ -47,5 +49,5 @@ RDEPENDS_${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
-        westeros-sink \
+        wayland-default-egl \
         "

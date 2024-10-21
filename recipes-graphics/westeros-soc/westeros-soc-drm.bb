@@ -9,8 +9,16 @@ COMPATIBLE_MACHINE = "(hikey-32|dragonboard-410c-32|dragonboard-820c-32|poplar|i
 
 DEPENDS = "wayland virtual/egl glib-2.0 libdrm"
 
-PROVIDES = "virtual/westeros-soc westeros-soc"
-RPROVIDES_${PN} = "virtual/westeros-soc westeros-soc"
+PROVIDES = " \
+    virtual/westeros-soc \
+    virtual/vendor-westeros-soc \
+    westeros-soc \
+    "
+RPROVIDES_${PN} = " \
+    virtual/westeros-soc \
+    virtual/vendor-westeros-soc \
+    westeros-soc \
+    "
 
 CFLAGS_append = " -I${STAGING_INCDIR}/libdrm"
 
