@@ -23,7 +23,13 @@ do_install() {
 
         # Provide the OEM/SoC device.properties
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
+
+        # Provide FlashApp support
+        install -d ${D}${bindir}
+        install -m 0755 ${S}/FlashApp.sh ${D}${bindir}/FlashApp.sh
+        ln -sf ${D}${bindir}/FlashApp.sh ${D}${bindir}/FlashApp
 }
 
 FILES_${PN} += "${systemd_unitdir}/system/*"
 FILES_${PN} += "${sysconfdir}/*"
+FILES_${PN} += "${bindir}/*"
