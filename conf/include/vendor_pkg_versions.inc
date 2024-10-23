@@ -1,4 +1,4 @@
- layer shall be common for all RPi variants.
+# This layer shall be common for all RPi variants.
 
 #Linux kernel components
 
