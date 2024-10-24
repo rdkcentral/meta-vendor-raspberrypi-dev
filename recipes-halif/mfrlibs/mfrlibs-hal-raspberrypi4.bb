@@ -15,3 +15,11 @@ EXTRA_OECONF += "--enable-thermalprotection"
 
 inherit autotools coverity
 
+do_install_append() {
+    # Provide FlashApp support
+    install -d ${D}${bindir}
+    install -m 0755 ${S}/FlashApp.sh ${D}${bindir}/FlashApp.sh
+    ln -sf ${D}${bindir}/FlashApp.sh ${D}${bindir}/FlashApp
+}
+
+FILES_${PN} += "${bindir}/*"
