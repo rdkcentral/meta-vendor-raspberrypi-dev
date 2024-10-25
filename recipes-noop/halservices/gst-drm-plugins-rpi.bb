@@ -11,4 +11,4 @@ do_configure[noexec] = "1"
 do_compile[noexec] = "1"
 do_install[noexec] = "1"
 
-FILES_${PN} = ""
+FILES:${PN} = ""

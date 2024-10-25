@@ -11,7 +11,7 @@ DEPENDS = " virtual/kernel make-mod-scripts"
 PV = "1.2.6"
 PR = "r0"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
         pi-bluetooth \
         sysint-soc \
         systemaudioplatform \
@@ -20,13 +20,13 @@ RDEPENDS_${PN} = " \
         "
 
 # Include MACHINE specific packagegroup.
-RDEPENDS_${PN}:append:raspberrypi4 = " \
+RDEPENDS:${PN}:append:raspberrypi4 = " \
         packagegroup-kernel-modules-raspberrypi4 \
         packagegroup-hal-raspberrypi4 \
         "
 
 # These packages shall be moved to OSS layer in future.
-RDEPENDS_${PN}:append:rdkv-oss = " \
+RDEPENDS:${PN}:append:rdkv-oss = " \
         cairo \
         essos \
         gstreamer1.0 \

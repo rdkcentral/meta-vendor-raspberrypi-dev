@@ -9,7 +9,7 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-mfrlibs-raspberrypi4;${CMF_GIT_SRC_URI_SUF
 S = "${WORKDIR}/git"
 
 PROVIDES = "virtual/mfrlib"
-RPROVIDES_${PN} = "virtual/mfrlib"
+RPROVIDES:${PN} = "virtual/mfrlib"
 
 EXTRA_OECONF += "--enable-thermalprotection"
 

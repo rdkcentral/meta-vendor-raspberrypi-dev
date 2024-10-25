@@ -7,7 +7,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
 
 PROVIDES = "virtual/devicesettings-hal virtual/vendor-devicesettings-hal"
-RPROVIDES_${PN} = "virtual/devicesettings-hal virtual/vendor-devicesettings-hal"
+RPROVIDES:${PN} = "virtual/devicesettings-hal virtual/vendor-devicesettings-hal"
 
 # a HAL is machine specific
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -33,12 +33,12 @@ CFLAGS += "-fPIC -D_REENTRANT -Wall ${INCLUDE_DIRS}"
 export DSHAL_API_MAJOR_VERSION = '0'
 export DSHAL_API_MINOR_VERSION = '0'
 
-FILES_${PN} += "${libdir}/*.so*"
-FILES_${PN} += "/opt/www/*.html"
-FILES_${PN} += "/opt/persistent/ds/"
-FILES_${PN} += "/opt/persistent/ds/*"
-FILES_${PN} += "/lib/rdk/*"
-FILES_${PN} += "/lib/systemd/system/*"
+FILES:${PN} += "${libdir}/*.so*"
+FILES:${PN} += "/opt/www/*.html"
+FILES:${PN} += "/opt/persistent/ds/"
+FILES:${PN} += "/opt/persistent/ds/*"
+FILES:${PN} += "/lib/rdk/*"
+FILES:${PN} += "/lib/systemd/system/*"
 
 #inherit coverity systemd pkgconfig
 inherit systemd
@@ -67,9 +67,9 @@ do_install() {
     install -m 0644 ${S}/systemd/rpiDisplay.service ${D}/lib/systemd/system/rpiDisplay.service
 }
 
-SYSTEMD_SERVICE_${PN} += "rpiDisplay.service"
+SYSTEMD_SERVICE:${PN} += "rpiDisplay.service"
 
 # Fix the QA warning.
-INSANE_SKIP_${PN} = "ldflags"
-INSANE_SKIP_${PN}-dev = "ldflags"
+INSANE_SKIP:${PN} = "ldflags"
+INSANE_SKIP:${PN}-dev = "ldflags"
 
