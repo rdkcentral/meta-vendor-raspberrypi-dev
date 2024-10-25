@@ -4,6 +4,8 @@ IMAGE_INSTALL = " \
                  packagegroup-core-boot \
                  ${CORE_IMAGE_EXTRA_INSTALL} \
                  packagegroup-vendor-layer \
+                 ca-certificates-default-certs \
+                 dropbear \
                 "
 
 IMAGE_LINGUAS = " "
