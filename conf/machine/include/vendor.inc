@@ -4,13 +4,13 @@ include conf/include/rdke-vendor-bbmask.inc
 include conf/include/vendor_pkg_versions.inc
 
 #Enable esdk
-DISTRO_FEATURES_append = " VENDOR"
-DISTRO_FEATURES_append = " enable_esdk"
+DISTRO_FEATURES:append = " VENDOR"
+DISTRO_FEATURES:append = " enable_esdk"
 
 VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
-PACKAGE_EXTRA_ARCHS_append = " ${VENDOR_LAYER_EXTENSION}"
+PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
 
-LICENSE_FLAGS_WHITELIST += "commercial_gst-fluendo-mpegdemux \
+LICENSE_FLAGS_ACCEPTED += "commercial_gst-fluendo-mpegdemux \
                             commercial_${MLPREFIX}gst-ffmpeg \
                             ${@bb.utils.contains('DISTRO_FEATURES', 'gstreamer1_18','commercial_${MLPREFIX}ffmpeg','commercial_${MLPREFIX}libav',d)} \
                             commercial_libomxil \

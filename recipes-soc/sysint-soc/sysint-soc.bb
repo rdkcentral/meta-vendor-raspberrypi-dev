@@ -25,5 +25,5 @@ do_install() {
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
 }
 
-FILES_${PN} += "${systemd_unitdir}/system/*"
-FILES_${PN} += "${sysconfdir}/*"
+FILES:${PN} += "${systemd_unitdir}/system/*"
+FILES:${PN} += "${sysconfdir}/*"
