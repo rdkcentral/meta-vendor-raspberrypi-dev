@@ -9,9 +9,17 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-mfrlibs-raspberrypi4;${CMF_GIT_SRC_URI_SUF
 S = "${WORKDIR}/git"
 
 PROVIDES = "virtual/mfrlib"
-RPROVIDES_${PN} = "virtual/mfrlib"
+RPROVIDES:${PN} = "virtual/mfrlib"
 
 EXTRA_OECONF += "--enable-thermalprotection"
 
 inherit autotools coverity
 
+do_install:append() {
+    # Provide FlashApp support
+    install -d ${D}${bindir}
+    install -m 0755 ${S}/FlashApp.sh ${D}${bindir}/FlashApp.sh
+    ln -sf ${D}${bindir}/FlashApp.sh ${D}${bindir}/FlashApp
+}
+
+FILES:${PN} += "${bindir}/*"

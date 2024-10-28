@@ -9,7 +9,7 @@ inherit packagegroup
 PV = "1.0.0"
 PR = "r0"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
     devicesettings-hal-raspberrypi4 \
     hdmicec-hal-raspberrypi4 \
     iarmmgrs-hal-raspberrypi4 \

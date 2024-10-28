@@ -13,7 +13,7 @@ PROVIDES = " \
     virtual/vendor-hdmicec-hal \
     "
 
-RPROVIDES_${PN} = " \
+RPROVIDES:${PN} = " \
     virtual/hdmicec-hal \
     virtual/vendor-hdmicec-hal \
     "
