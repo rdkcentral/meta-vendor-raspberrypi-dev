@@ -204,8 +204,8 @@ PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
 PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "b2fcf0c031dc1ccc8c2d2b70fda55e1e9dfb84f6"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.3"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "d3fc718427467c51a4fc0287698fd2c352668ff3"
+PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.4"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
