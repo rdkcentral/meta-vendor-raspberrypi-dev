@@ -36,6 +36,10 @@ PV:pn-udev-rules-rpi = "1.0"
 PR:pn-udev-rules-rpi = "r0"
 PACKAGE_ARCH:pn-udev-rules-rpi = "${VENDOR_LAYER_EXTENSION}"
 
+PV:pn-rdk-gstreamer-utils-platform = "${PV:pn-rdk-gstreamer-utils-headers}"
+PR:pn-rdk-gstreamer-utils-platform = "r0"
+PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
+
 #OSS Components
 
 PV:pn-libepoxy = "1.5.9"
