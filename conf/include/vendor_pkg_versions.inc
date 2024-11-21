@@ -209,8 +209,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.4"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "b3354c3413585412f8182503a42c6fdd05ae7611"
-PV:pn-sysint-soc = "1.0.3"
+SRCREV:pn-sysint-soc = "6bfd58ede41fc0a8f62e201f8a386e7f41a51553"
+PV:pn-sysint-soc = "1.0.4"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
