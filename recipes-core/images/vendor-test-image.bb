@@ -7,7 +7,7 @@ IMAGE_INSTALL = " \
                  packagegroup-core-boot \
                  ${CORE_IMAGE_EXTRA_INSTALL} \
                  packagegroup-vendor-layer \
-                 ca-certificates-default-certs \
+                 virtual/ca-certificates-trust-store \
                  dropbear \
                 "
 
