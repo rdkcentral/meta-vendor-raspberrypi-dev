@@ -36,10 +36,6 @@ PV:pn-udev-rules-rpi = "1.0"
 PR:pn-udev-rules-rpi = "r0"
 PACKAGE_ARCH:pn-udev-rules-rpi = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-rdk-gstreamer-utils-platform = "${PV:pn-rdk-gstreamer-utils-headers}"
-PR:pn-rdk-gstreamer-utils-platform = "r0"
-PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
-
 #OSS Components
 
 PV:pn-libepoxy = "1.5.9"
@@ -222,6 +218,11 @@ SRCREV:pn-systemaudioplatform = "59662783df1c0c7d04016c6f90da27516c070109"
 PV:pn-systemaudioplatform = "1.0.0"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-rdk-gstreamer-utils-platform = "22372e73f4450e290df41d6cf4c61af264c44f76"
+PV:pn-rdk-gstreamer-utils-platform = "1.0.0"
+PR:pn-rdk-gstreamer-utils-platform = "r0"
+PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-audio-service-rpi = "1.0"
 PV:pn-audio-service-rpi = "1.0"
