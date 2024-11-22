@@ -16,6 +16,8 @@ do_install() {
 
         # RDKE-115: Dropbear drop-in conf for RPi
         install -D -m 0644 ${S}/systemd_units/00-dropbear-vendor.conf ${D}${systemd_unitdir}/system/dropbear.service.d/00-dropbear.conf
+        # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469. 
+        install -D -m 0644 ${S}/systemd_units/00-remove-static-ssh-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
 
         # Dropbear SSH banner
         install -d ${D}${sysconfdir}
