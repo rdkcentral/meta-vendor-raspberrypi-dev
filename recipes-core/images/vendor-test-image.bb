@@ -7,7 +7,8 @@ IMAGE_INSTALL = " \
                 "
 
 # Additional packages added as part of test framework requirement.
-# 'virtual/ca-certificates-trust-store' is provided from OSS pkggrp by https://github.com/rdk-e/meta-rdk-oss-reference/pull/335.
+# 'virtual/ca-certificates-trust-store' is provided from OSS pkggrp.
+# Ref: https://github.com/rdk-e/meta-rdk-oss-reference/commit/f0e7e8081cdb96735c8216282273d928f6501fd6.
 IMAGE_INSTALL += " \
                  virtual/ca-certificates-trust-store \
                  dropbear \
