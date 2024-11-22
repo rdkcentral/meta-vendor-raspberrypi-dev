@@ -1,9 +1,13 @@
-SUMMARY = "A small image just capable of allowing a device to boot."
+SUMMARY = "Vendor bootable image which can be flashed on boot media for vendor layer testing and validation."
 
 IMAGE_INSTALL = " \
                  packagegroup-core-boot \
                  ${CORE_IMAGE_EXTRA_INSTALL} \
                  packagegroup-vendor-layer \
+                "
+
+# Additional packages added as part of test framework requirement.
+IMAGE_INSTALL += " \
                  virtual/ca-certificates-trust-store \
                  dropbear \
                 "
