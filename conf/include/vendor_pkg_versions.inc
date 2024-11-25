@@ -209,8 +209,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.4"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "b3354c3413585412f8182503a42c6fdd05ae7611"
-PV:pn-sysint-soc = "1.0.3"
+SRCREV:pn-sysint-soc = "6bfd58ede41fc0a8f62e201f8a386e7f41a51553"
+PV:pn-sysint-soc = "1.0.4"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
@@ -218,6 +218,11 @@ SRCREV:pn-systemaudioplatform = "59662783df1c0c7d04016c6f90da27516c070109"
 PV:pn-systemaudioplatform = "1.0.0"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-rdk-gstreamer-utils-platform = "22372e73f4450e290df41d6cf4c61af264c44f76"
+PV:pn-rdk-gstreamer-utils-platform = "1.0.0"
+PR:pn-rdk-gstreamer-utils-platform = "r0"
+PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-audio-service-rpi = "1.0"
 PV:pn-audio-service-rpi = "1.0"

@@ -1,13 +1,16 @@
-SUMMARY = "A small image just capable of allowing a device to boot."
-
-# https://github.com/rdk-e/meta-rdk-oss-reference/pull/335
-# Change 'ca-certificates-default-certs' to 'virtual/ca-certificates-trust-store' when OSS release provides it.
+SUMMARY = "Vendor bootable image which can be flashed on boot media for vendor layer testing and validation."
 
 IMAGE_INSTALL = " \
                  packagegroup-core-boot \
                  ${CORE_IMAGE_EXTRA_INSTALL} \
                  packagegroup-vendor-layer \
-                 ca-certificates-default-certs \
+                "
+
+# Additional packages added as part of test framework requirement.
+# 'virtual/ca-certificates-trust-store' is provided from OSS pkggrp.
+# Ref: https://github.com/rdk-e/meta-rdk-oss-reference/commit/f0e7e8081cdb96735c8216282273d928f6501fd6.
+IMAGE_INSTALL += " \
+                 virtual/ca-certificates-trust-store \
                  dropbear \
                 "
 

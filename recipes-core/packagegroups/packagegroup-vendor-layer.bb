@@ -17,6 +17,7 @@ RDEPENDS:${PN} = " \
         systemaudioplatform \
         virtual/vendor-westeros-soc \
         virtual/vendor-westeros-sink \
+        rdk-gstreamer-utils-platform \
         "
 
 # Include MACHINE specific packagegroup.
