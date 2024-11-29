@@ -6,8 +6,8 @@ DEPENDS += "rdk-gstreamer-utils-headers"
 SRC_URI = "${CMF_GITHUB_ROOT}/rdk-gstreamer-utils-raspberrypi;${CMF_GITHUB_SRC_URI_SUFFIX}"
 S = "${WORKDIR}/git/"
 
-PROVIDES = "virtual/lib32-vendor-rdk-gstreamer-utils-platform"
-RPROVIDES:${PN} = "virtual/lib32-vendor-rdk-gstreamer-utils-platform"
+PROVIDES = "virtual/vendor-rdk-gstreamer-utils-platform"
+RPROVIDES:${PN} = "virtual/vendor-rdk-gstreamer-utils-platform"
 
 CXXFLAGS += "-I${STAGING_INCDIR}/glib-2.0 -I${STAGING_INCDIR}/gstreamer-1.0 -I${STAGING_DIR_TARGET}/${libdir}/glib-2.0/include/ "
 
