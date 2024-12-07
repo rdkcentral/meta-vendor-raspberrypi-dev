@@ -11,7 +11,7 @@ S = "${WORKDIR}/git"
 PROVIDES = "virtual/mfrlib"
 RPROVIDES:${PN} = "virtual/mfrlib"
 
-EXTRA_OECONF += "--enable-thermalprotection"
+EXTRA_OECONF += "--enable-thermalprotection --enable-single-instance-lock"
 
 inherit autotools coverity
 
