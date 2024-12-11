@@ -12,6 +12,8 @@ PROVIDES = "virtual/mfrlib"
 RPROVIDES:${PN} = "virtual/mfrlib"
 
 EXTRA_OECONF += "--enable-thermalprotection"
+## Enable to limit mfrhal library runtime to single instance if required
+#EXTRA_OECONF += "--enable-single-instance-lock"
 
 inherit autotools coverity
 
