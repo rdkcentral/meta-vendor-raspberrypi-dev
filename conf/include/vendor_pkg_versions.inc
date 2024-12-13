@@ -179,8 +179,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "93a357b669de537a02b9bce7f32020b42e10a2b8"
-PV:pn-devicesettings-hal-raspberrypi4 = "2.0.1"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "e13a3bee00866b9f6df9a866a4f2f6504233a3f4"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.0.7"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -194,8 +194,8 @@ PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-pwrmgr-hal-raspberrypi4 = "4781328b379ce4d88084ec75ca714733212fad40"
-PV:pn-pwrmgr-hal-raspberrypi4 = "1.0.0"
+SRCREV:pn-pwrmgr-hal-raspberrypi4 = "f559dd23838db9cc20cfba5513a1afa9db4525c2"
+PV:pn-pwrmgr-hal-raspberrypi4 = "1.1.1"
 PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -204,8 +204,8 @@ PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
 PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "d3fc718427467c51a4fc0287698fd2c352668ff3"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.0.4"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "0c8b6a05a73aace7bd4c83780abbcff67661c3f2"
+PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
