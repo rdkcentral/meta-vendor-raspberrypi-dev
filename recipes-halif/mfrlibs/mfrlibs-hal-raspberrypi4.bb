@@ -24,4 +24,6 @@ do_install:append() {
     ln -sr ${D}${bindir}/FlashApp.sh ${D}${bindir}/FlashApp
 }
 
-FILES:${PN} += "${bindir}/*"
+FILES_SOLIBSDEV = ""
+FILES:${PN} += "${libdir}/*.so ${bindir}/*"
+INSANE_SKIP:${PN} += "dev-so"
