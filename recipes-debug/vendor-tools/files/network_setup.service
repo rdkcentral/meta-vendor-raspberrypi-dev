@@ -3,9 +3,9 @@ Description=Network Setup Service
 After=network.target
 
 [Service]
+Type=oneshot
 ExecStart=/usr/bin/network_setup.sh
-Restart=on-failure
-RestartSec=10
+RemainAfterExit=true
 
 [Install]
 WantedBy=multi-user.target
