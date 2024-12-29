@@ -13,7 +13,7 @@ inherit systemd
 RDEPENDS:${PN} = " bash "
 
 SYSTEMD_AUTO_ENABLE = "enable"
-SYSTEMD_SERVICE_${PN} = "network_setup.service"
+SYSTEMD_SERVICE:${PN} = "network_setup.service"
 
 do_compile[noexec] = "1"
 
