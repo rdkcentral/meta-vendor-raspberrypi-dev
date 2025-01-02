@@ -27,24 +27,28 @@ wait_for_carrier() {
 }
 
 run_udhcpc_and_verify() {
-    udhcpc -i "$INTERFACE"
-    if [ $? -ne 0 ]; then
-        echo "Failed to acquire IP address using udhcpc on $INTERFACE."
-        exit 1
+    udhcpc -i "$INTERFACE" -t 10 -T 3 -A 3 -n -p /tmp/udhcpc."$INTERFACE".pid
+    if [ $? -eq 0 ]; then
+        IP_ADDRESS_V4=$(ip -4 addr show "$INTERFACE" | awk '/inet / {print $2}' | cut -d/ -f1)
+        IP_ADDRESS_V6=$(ip -6 addr show "$INTERFACE" | awk '/inet6 / {print $2}' | cut -d/ -f1)
+
+        if [ -n "$IP_ADDRESS_V4" ] || [ -n "$IP_ADDRESS_V6" ]; then
+            echo "Successfully acquired IP addresses on $INTERFACE:"
+            [ -n "$IP_ADDRESS_V4" ] && echo "IPv4: $IP_ADDRESS_V4"
+            [ -n "$IP_ADDRESS_V6" ] && echo "IPv6: $IP_ADDRESS_V6"
+            return 0
+        fi
     fi
 
-    IP_ADDRESS_V4=$(ip -4 addr show "$INTERFACE" | awk '/inet / {print $2}' | cut -d/ -f1)
-    IP_ADDRESS_V6=$(ip -6 addr show "$INTERFACE" | awk '/inet6 / {print $2}' | cut -d/ -f1)
-
-    if [ -z "$IP_ADDRESS_V4" ] && [ -z "$IP_ADDRESS_V6" ]; then
-        echo "Failed to acquire IP address on $INTERFACE."
-        exit 1
-    fi
-
-    echo "Successfully acquired IP addresses on $INTERFACE:"
-    [ -n "$IP_ADDRESS_V4" ] && echo "IPv4: $IP_ADDRESS_V4"
-    [ -n "$IP_ADDRESS_V6" ] && echo "IPv6: $IP_ADDRESS_V6"
+    echo "Failed to acquire IP address on $INTERFACE after $timeout seconds."
+    return 1
 }
+
+# Ensure the script is run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root"
+    exit 1
+fi
 
 # Main script execution
 if ! interface_exists; then
@@ -59,3 +63,12 @@ fi
 
 wait_for_carrier
 run_udhcpc_and_verify
+# monitor the carrier and exit if its lost cleaning up the udhcpc process as well as the interface IP
+while is_carrier_detected; do
+    sleep 2
+done
+ip addr flush dev "$INTERFACE"
+if [ -f /tmp/udhcpc."$INTERFACE".pid ]; then
+    kill -9 $(cat /tmp/udhcpc."$INTERFACE".pid)
+fi
+exit 0
