@@ -11,8 +11,13 @@ do_compile[noexec] = "1"
 
 do_install() {
         install -d ${D}${systemd_unitdir}/system
+
         # RDKE-122: WPEFramework drop-in
         install -D -m 0644 ${S}/systemd_units/00-wpeframework-vendor.conf ${D}${systemd_unitdir}/system/wpeframework.service.d/00-wpeframework-vendor.conf
+        # RDKVREFPLT-4428: temporary fix
+        install -d ${D}${bindir}
+        install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
+        install -D -m 0755 ${S}/scripts/oem-first-boot.sh ${D}${bindir}/oem-first-boot.sh
 
         # RDKE-115: Dropbear drop-in conf for RPi
         install -D -m 0644 ${S}/systemd_units/00-dropbear-vendor.conf ${D}${systemd_unitdir}/system/dropbear.service.d/00-dropbear.conf

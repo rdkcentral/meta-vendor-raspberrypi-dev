@@ -12,6 +12,7 @@ IMAGE_INSTALL = " \
 IMAGE_INSTALL += " \
                  virtual/ca-certificates-trust-store \
                  dropbear \
+                 network-setup \
                 "
 
 IMAGE_LINGUAS = " "
