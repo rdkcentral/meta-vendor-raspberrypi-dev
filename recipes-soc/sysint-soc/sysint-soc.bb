@@ -7,6 +7,8 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-sysint-raspberrypi4;${CMF_GIT_SRC_URI_SUFF
 
 S = "${WORKDIR}/git"
 
+inherit systemd
+
 do_compile[noexec] = "1"
 
 do_install() {
@@ -34,3 +36,6 @@ do_install() {
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
 FILES:${PN} += "${sysconfdir}/*"
+
+# RDKVREFPLT-4428: temporary fix
+SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
