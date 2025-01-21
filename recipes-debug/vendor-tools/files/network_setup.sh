@@ -17,7 +17,7 @@
 ## limitations under the License.
 ###
 
-#!/bin/bash
+#!/bin/sh
 
 INTERFACE="eth0"
 
@@ -63,8 +63,16 @@ run_udhcpc_and_verify() {
     return 1
 }
 
+# External dependencies which are requied for this script to execute properly.
+commandsRequired="echo id exit sleep ip kill udhcpc cat"
+for cmd in $commandsRequired; do
+    if ! command -v $cmd > /dev/null; then
+        echo "This script may not work properly because required '$cmd' is not found."
+    fi
+done
+
 # Ensure the script is run as root
-if [ "$EUID" -ne 0 ]; then
+if [ "$(id -u)" -ne 0 ]; then
     echo "Please run as root"
     exit 1
 fi
