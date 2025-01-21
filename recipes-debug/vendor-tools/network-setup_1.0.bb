@@ -10,8 +10,6 @@ S = "${WORKDIR}"
 
 inherit systemd
 
-RDEPENDS:${PN} = " bash "
-
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE:${PN} = "network-setup.service"
 
