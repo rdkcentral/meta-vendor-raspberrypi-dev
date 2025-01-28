@@ -238,3 +238,7 @@ SRCREV:pn-secapi2-adapter-rpi  = "1.0"
 PV:pn-secapi2-adapter-rpi  = "1.0"
 PR:pn-secapi2-adapter-rpi  = "r0"
 PACKAGE_ARCH:pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"
+
+PREFERRED_VERSION_ffmpeg = "4.2.2"
+PR:pn-ffmpeg = "r1"
+PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
