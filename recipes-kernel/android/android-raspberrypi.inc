@@ -9,6 +9,9 @@ COMPATIBLE_MACHINE = "^rpi$"
 inherit kernel siteinfo
 require recipes-kernel/linux/linux-yocto.inc
 
+PROVIDES += "virtual/kernel"
+RPROVIDES:${PN} = "virtual/kernel"
+
 KCONFIG_MODE = "--alldefconfig"
 KBUILD_DEFCONFIG:raspberrypi0-wifi ?= "bcmrpi_defconfig"
 KBUILD_DEFCONFIG:raspberrypi ?= "bcmrpi_defconfig"
