@@ -30,6 +30,9 @@ INCLUDE_DIRS = " \
 CFLAGS += " ${INCLUDE_DIRS}"
 EXTRA_OECMAKE += "-DDRI_CARD=/dev/dri/card1"
 
+# TODO: remove when MW alignes
+EXTRA_OECMAKE += "-DLIBNAME=ds-hal"
+
 FILES:${PN} += "/opt/www/*.html"
 FILES:${PN} += "/opt/persistent/ds/"
 FILES:${PN} += "/opt/persistent/ds/*"
