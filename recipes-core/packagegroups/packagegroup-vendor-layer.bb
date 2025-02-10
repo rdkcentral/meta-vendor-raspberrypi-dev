@@ -12,6 +12,7 @@ PV = "4.0.5"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
+        ffmpeg \
         pi-bluetooth \
         sysint-soc \
         systemaudioplatform \

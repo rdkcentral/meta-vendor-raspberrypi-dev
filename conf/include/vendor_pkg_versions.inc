@@ -209,8 +209,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "ebf97324a74f0e2f689d804103d6986074cbb332"
-PV:pn-sysint-soc = "1.1.2"
+SRCREV:pn-sysint-soc = "689e7b54ccf0e76d273da1565a5c87e972814b7d"
+PV:pn-sysint-soc = "1.1.3"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
@@ -238,3 +238,7 @@ SRCREV:pn-secapi2-adapter-rpi  = "1.0"
 PV:pn-secapi2-adapter-rpi  = "1.0"
 PR:pn-secapi2-adapter-rpi  = "r0"
 PACKAGE_ARCH:pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"
+
+PREFERRED_VERSION_ffmpeg = "4.2.2"
+PR:pn-ffmpeg = "r1"
+PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
