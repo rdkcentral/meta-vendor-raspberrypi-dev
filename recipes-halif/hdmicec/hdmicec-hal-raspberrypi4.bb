@@ -21,3 +21,7 @@ RPROVIDES:${PN} = " \
 DEPENDS = "hdmicecheader"
 
 inherit cmake
+
+FILES:${PN} += "${libdir}/*.so"
+FILES_SOLIBSDEV = ""
+INSANE_SKIP:${PN} += "dev-so"
