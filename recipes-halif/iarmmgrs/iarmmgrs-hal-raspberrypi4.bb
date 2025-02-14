@@ -16,3 +16,7 @@ inherit autotools coverity
 CFLAGS += " \
     -I${STAGING_DIR_TARGET}${includedir}/rdk/iarmmgrs-hal/ \
     "
+
+FILES:${PN} += "${libdir}/*.so"
+FILES_SOLIBSDEV = ""
+INSANE_SKIP:${PN} += "dev-so"

@@ -38,6 +38,9 @@ FILES:${PN} += "/opt/persistent/ds/"
 FILES:${PN} += "/opt/persistent/ds/*"
 FILES:${PN} += "/lib/rdk/*"
 FILES:${PN} += "/lib/systemd/system/*"
+FILES:${PN} += "${libdir}/*.so"
+FILES_SOLIBSDEV = ""
+INSANE_SKIP:${PN} += "dev-so"
 
 #inherit coverity systemd pkgconfig
 inherit systemd cmake pkgconfig
@@ -51,6 +54,7 @@ do_install:append() {
     install -m 0755 ${S}/hostData ${D}/opt/persistent/ds/
     install -m 0755 ${S}/scripts/rpiDisplayEnable.sh ${D}/lib/rdk/rpiDisplayEnable.sh
     install -m 0644 ${S}/systemd/rpiDisplay.service ${D}/lib/systemd/system/rpiDisplay.service
+    ln -sr ${D}${libdir}/libds-hal.so.0.0.0 ${D}${libdir}/libdshal.so
 }
 
 SYSTEMD_SERVICE:${PN} += "rpiDisplay.service"
