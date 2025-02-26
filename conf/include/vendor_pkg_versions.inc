@@ -179,8 +179,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "6ce0f0c573700115e5bdd02212b4af55fb33bd41"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.1.0"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "ff90c889922c2cac6b8971cccb10101cb9499c5e"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.1.1"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -209,8 +209,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "689e7b54ccf0e76d273da1565a5c87e972814b7d"
-PV:pn-sysint-soc = "1.1.3"
+SRCREV:pn-sysint-soc = "0c9bfecbca9830b94ae83ae608458b7e26a630a1"
+PV:pn-sysint-soc = "1.1.4"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
@@ -244,7 +244,7 @@ PR:pn-ffmpeg = "r1"
 PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-apparmor-vendor = "1.0.0"
-PR:pn-apparmor-vendor = "ro"
+PR:pn-apparmor-vendor = "r0"
 PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-apparmor-vendor = "292e6e2def2612f698e18da6143aa1e6ecf5e95a"
 SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "193dc103e95283d27f4e359e7463b183d6ee61e4"
