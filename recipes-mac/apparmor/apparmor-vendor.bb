@@ -27,7 +27,9 @@ do_install(){
     install -d ${D}${sysconfdir}/apparmor/caps/
     install -d ${D}${sysconfdir}/apparmor.d
     install -d ${D}${sysconfdir}/apparmor.d/vendor/
+    install -d ${D}${systemd_unitdir}/system
 
+    install -D -m 0644 ${S}/apparmor-vendor.conf ${D}${systemd_unitdir}/system/apparmor.service.d/apparmor-vendor.conf
     install -m -0644 ${S}/platform_profiles/* ${D}${sysconfdir}/apparmor.d/vendor/
     
     if [ -f "${S}/apparmor_platform_defaults" ]; then
@@ -41,3 +43,4 @@ do_install(){
 }
 
 FILES:${PN} = "${sysconfdir}/apparmor/* ${sysconfdir}/apparmor.d/* "
+FILES:${PN} += " ${systemd_unitdir}/system/*"
