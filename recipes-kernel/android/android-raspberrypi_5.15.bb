@@ -1,6 +1,6 @@
 
 PE = "1"
-PV = "5.15.92"
+PV = "6.1"
 
 SRCREV_machine = "c3a4809076cc88dce4113d0cae0dc6d319d54593"
 SRCREV_meta="0b65b80aa112614e8ab129f2d832b8cf050e7a4a"
