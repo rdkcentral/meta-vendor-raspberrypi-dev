@@ -5,10 +5,10 @@
 PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-android-raspberrypi = "5.15.92"
+PV:pn-android-raspberrypi = "6.1"
 PR:pn-android-raspberrypi = "r0"
 PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_android-raspberrypi = "5.15.%"
+PREFERRED_VERSION_android-raspberrypi = "6.1.%"
 
 PV:pn-packagegroup-kernel-modules-raspberrypi4 = "5.15.92"
 PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
