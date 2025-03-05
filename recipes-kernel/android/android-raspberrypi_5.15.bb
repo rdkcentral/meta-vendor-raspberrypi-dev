@@ -3,7 +3,7 @@ PE = "1"
 PV = "6.1"
 
 SRCREV_machine = "c3a4809076cc88dce4113d0cae0dc6d319d54593"
-SRCREV_meta="0b65b80aa112614e8ab129f2d832b8cf050e7a4a"
+SRCREV_meta="b292fbe55b1863cdb444fca24634f89b016215ed"
 
 SRC_URI = " \
             git://github.com/android-rpi/kernel_arpi/;branch=arpi14-6.1;name=machine;protocol=https \
