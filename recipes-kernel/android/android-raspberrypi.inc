@@ -9,7 +9,7 @@ COMPATIBLE_MACHINE = "^rpi$"
 inherit kernel siteinfo
 require recipes-kernel/linux/linux-yocto.inc
 
-KCONFIG_MODE = "--alldefconfig"
+#KCONFIG_MODE = "--alldefconfig"
 KBUILD_DEFCONFIG:raspberrypi0-wifi ?= "bcmrpi_defconfig"
 KBUILD_DEFCONFIG:raspberrypi ?= "bcmrpi_defconfig"
 KBUILD_DEFCONFIG:raspberrypi-cm3 ?= "bcm2709_defconfig"
