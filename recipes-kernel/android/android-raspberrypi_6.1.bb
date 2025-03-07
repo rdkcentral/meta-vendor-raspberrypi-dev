@@ -1,16 +1,13 @@
+PV = "6.1.62"
 
-PE = "1"
-PV = "5.15.92"
-
-SRCREV_machine = "52cc0a3d8bdee74262c0e326d59bc844d511bfa5"
-SRCREV_meta="0b65b80aa112614e8ab129f2d832b8cf050e7a4a"
+SRCREV_machine = "fcfb330216491074648ed71ab0a85e417475cfa5"
+SRCREV_meta="b292fbe55b1863cdb444fca24634f89b016215ed"
 
 SRC_URI = " \
-            git://github.com/android-rpi/kernel_arpi/;branch=arpi-5.15;name=machine;protocol=https \
-            git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=yocto-5.10;destsuffix=kernel-meta \
+            git://github.com/android-rpi/kernel_arpi/;branch=arpi14-6.1.62;name=machine;protocol=https \
+            git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=yocto-6.1;destsuffix=kernel-meta \
             file://powersave.cfg \
             file://android-drivers.cfg \
-            file://disable_nnp_lsm_check.patch \
             file://video-drivers.cfg \
             "
 

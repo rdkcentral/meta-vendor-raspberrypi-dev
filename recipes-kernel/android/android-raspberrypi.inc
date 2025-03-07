@@ -9,7 +9,13 @@ COMPATIBLE_MACHINE = "^rpi$"
 inherit kernel siteinfo
 require recipes-kernel/linux/linux-yocto.inc
 
+SRC_URI:append = " \
+                    ${@bb.utils.contains("MACHINE_FEATURES", "vc4graphics", "file://vc4graphics.cfg", "", d)} \
+                    file://default-cpu-governor.cfg \
+                 "
+
 KCONFIG_MODE = "--alldefconfig"
+
 KBUILD_DEFCONFIG:raspberrypi0-wifi ?= "bcmrpi_defconfig"
 KBUILD_DEFCONFIG:raspberrypi ?= "bcmrpi_defconfig"
 KBUILD_DEFCONFIG:raspberrypi-cm3 ?= "bcm2709_defconfig"
@@ -86,15 +92,6 @@ do_configure:prepend() {
         kernel_configure_variable OVERLAY_FS y
         kernel_configure_variable SQUASHFS y
         kernel_configure_variable UBIFS_FS y
-    fi
-
-    # Activate the configuration options for VC4
-    VC4GRAPHICS="${@bb.utils.contains("MACHINE_FEATURES", "vc4graphics", "1", "0", d)}"
-    if [ "${VC4GRAPHICS}" = "1" ]; then
-        kernel_configure_variable I2C_BCM2835 y
-        kernel_configure_variable DRM y
-        kernel_configure_variable DRM_FBDEV_EMULATION y
-        kernel_configure_variable DRM_VC4 y
     fi
 
     # Keep this the last line

@@ -5,10 +5,10 @@
 PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-android-raspberrypi = "5.15.92"
+PV:pn-android-raspberrypi = "6.1"
 PR:pn-android-raspberrypi = "r0"
 PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_android-raspberrypi = "5.15.%"
+PREFERRED_VERSION_android-raspberrypi = "6.1.62"
 
 PV:pn-packagegroup-kernel-modules-raspberrypi4 = "5.15.92"
 PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
@@ -140,7 +140,7 @@ PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 WESTEROS_VERSION = "1.0.0"
 WESTEROS_REVISION = "r0"
 # Tip of westeros master as of Mar 7, 2024
-WESTEROS_SRCREV = "04c096cb3df0bc0797f5b6bc568e1d11b62dcb5b"
+WESTEROS_SRCREV = "547f03bf45c32c026e0931b9882323fc4e559618"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
