@@ -249,7 +249,7 @@ PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-apparmor-vendor = "707f854ceea15919a2495db32c6ca5ef75e8b43b"
 SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "6b493ce3338e64e8a66224942d6af84b440d52c9"
 
-SRCREV:pn-displayinfo-soc = "dafaaea8aabd18d8f1cd9845761cbea55c05f0e9"
+SRCREV:pn-displayinfo-soc = "35bce8d56d84b5ee1a5908dcae0542f8c96e838d"
 PV:pn-displayinfo-soc = "1.0.0"
 PR:pn-displayinfo-soc = "r0"
 PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
