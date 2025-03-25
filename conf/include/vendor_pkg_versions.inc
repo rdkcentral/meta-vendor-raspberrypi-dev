@@ -137,10 +137,10 @@ PACKAGE_ARCH:pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
-WESTEROS_VERSION = "1.0.0"
+WESTEROS_VERSION = "1.1.58"
 WESTEROS_REVISION = "r0"
-# Tip of westeros master as of Mar 7, 2024
-WESTEROS_SRCREV = "04c096cb3df0bc0797f5b6bc568e1d11b62dcb5b"
+# Tip of westeros master as of Feb 28, 2025
+WESTEROS_SRCREV = "547f03bf45c32c026e0931b9882323fc4e559618"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
