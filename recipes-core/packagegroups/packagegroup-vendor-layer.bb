@@ -20,6 +20,7 @@ RDEPENDS:${PN} = " \
         virtual/vendor-westeros-sink \
         rdk-gstreamer-utils-platform \
         ${@bb.utils.contains('DISTRO_FEATURES', 'apparmor', 'apparmor-vendor', '', d)} \
+        displayinfo-soc \
         "
 
 # Include MACHINE specific packagegroup.
