@@ -137,10 +137,10 @@ PACKAGE_ARCH:pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
-WESTEROS_VERSION = "1.0.0"
+WESTEROS_VERSION = "1.1.58"
 WESTEROS_REVISION = "r0"
-# Tip of westeros master as of Mar 7, 2024
-WESTEROS_SRCREV = "04c096cb3df0bc0797f5b6bc568e1d11b62dcb5b"
+# Tip of westeros master as of Feb 28, 2025
+WESTEROS_SRCREV = "547f03bf45c32c026e0931b9882323fc4e559618"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -248,3 +248,8 @@ PR:pn-apparmor-vendor = "r0"
 PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-apparmor-vendor = "707f854ceea15919a2495db32c6ca5ef75e8b43b"
 SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "6b493ce3338e64e8a66224942d6af84b440d52c9"
+
+SRCREV:pn-displayinfo-soc = "d093b726b7078ba5495c4c4dc524295ff0da94ea"
+PV:pn-displayinfo-soc = "1.0.0"
+PR:pn-displayinfo-soc = "r0"
+PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
