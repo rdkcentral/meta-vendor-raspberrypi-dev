@@ -24,5 +24,5 @@ inherit core-image
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
 
-# Remove symlinks for /etc/resolv.conf in Vendor, udhcpc populates the value in Vendor
+# RDKEMW-2939: Remove symlinks for /etc/resolv.conf in Vendor, udhcpc populates the value in Vendor
 ROOTFS_POSTPROCESS_COMMAND:remove += " create_NM_link; "
