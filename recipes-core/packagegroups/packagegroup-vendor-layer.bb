@@ -47,6 +47,7 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         libmms \
         librsvg \
         mpg123 \
+        networkmanager \
         pango \
         pulseaudio \
         wayland-default-egl \
