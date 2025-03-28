@@ -39,4 +39,4 @@ FILES:${PN}:append = "\
 RPROVIDES:${PN}:remove = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'libegl', '', d)}"
 
 # Fix do_package_qa err
-INSANE_SKIP:${PN}-dev = " staticdev"
+INSANE_SKIP:${PN}-dev = " staticdev file-rdeps "
