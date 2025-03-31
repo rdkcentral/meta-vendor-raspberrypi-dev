@@ -199,8 +199,8 @@ PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
 PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
-PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.0.0"
+SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.0"
+PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.0"
 PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
