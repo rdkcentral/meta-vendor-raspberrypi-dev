@@ -13,6 +13,8 @@ PR = "r0"
 
 RDEPENDS:${PN} = " \
         ffmpeg \
+        x264 \
+        fdk-aac \
         pi-bluetooth \
         sysint-soc \
         systemaudioplatform \
