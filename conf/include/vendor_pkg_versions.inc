@@ -243,6 +243,12 @@ PREFERRED_VERSION_ffmpeg = "4.2.2"
 PR:pn-ffmpeg = "r1"
 PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
 
+PR:pn-x264 = "r0"
+PACKAGE_ARCH:pn-x264 = "${VENDOR_LAYER_EXTENSION}"
+
+PR:pn-fdk-aac = "r0"
+PACKAGE_ARCH:pn-fdk-aac = "${VENDOR_LAYER_EXTENSION}"
+
 PV:pn-apparmor-vendor = "1.0.1"
 PR:pn-apparmor-vendor = "r0"
 PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
