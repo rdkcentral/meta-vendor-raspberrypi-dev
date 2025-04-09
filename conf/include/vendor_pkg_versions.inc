@@ -240,7 +240,7 @@ PR:pn-secapi2-adapter-rpi  = "r0"
 PACKAGE_ARCH:pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"
 
 PREFERRED_VERSION_ffmpeg = "4.2.2"
-PR:pn-ffmpeg = "r1"
+PR:pn-ffmpeg = "r2"
 PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-apparmor-vendor = "1.0.1"
