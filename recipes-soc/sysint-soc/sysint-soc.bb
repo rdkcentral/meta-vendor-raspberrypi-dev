@@ -2,7 +2,7 @@ SUMMARY = "Sysint application - Vendor"
 SECTION = "console/utils"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
- 
+
 SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-sysint-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
 S = "${WORKDIR}/git"
@@ -16,6 +16,8 @@ do_install() {
 
         # RDKE-122: WPEFramework drop-in
         install -D -m 0644 ${S}/systemd_units/00-wpeframework-vendor.conf ${D}${systemd_unitdir}/system/wpeframework.service.d/00-wpeframework-vendor.conf
+        # RDKVREFPLT-5430: DSMgr drop-in to make XDG_RUNTIME_DIR matching with WPEFramework service
+        install -D -m 0644 ${S}/systemd_units/00-dsmgr-vendor.conf ${D}${systemd_unitdir}/system/dsmgr.service.d/00-dsmgr-vendor.conf
         # RDKVREFPLT-4428: temporary fix
         install -d ${D}${bindir}
         install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
@@ -23,7 +25,7 @@ do_install() {
 
         # RDKE-115: Dropbear drop-in conf for RPi
         install -D -m 0644 ${S}/systemd_units/00-dropbear-vendor.conf ${D}${systemd_unitdir}/system/dropbear.service.d/00-dropbear.conf
-        # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469. 
+        # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469.
         install -D -m 0644 ${S}/systemd_units/00-remove-static-ssh-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
 
         # Dropbear SSH banner
