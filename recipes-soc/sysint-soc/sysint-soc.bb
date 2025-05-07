@@ -2,7 +2,7 @@ SUMMARY = "Sysint application - Vendor"
 SECTION = "console/utils"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b1e01b26bacfc2232046c90a330332b3"
- 
+
 SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-sysint-raspberrypi4;${CMF_GIT_SRC_URI_SUFFIX}"
 
 S = "${WORKDIR}/git"
@@ -23,8 +23,12 @@ do_install() {
 
         # RDKE-115: Dropbear drop-in conf for RPi
         install -D -m 0644 ${S}/systemd_units/00-dropbear-vendor.conf ${D}${systemd_unitdir}/system/dropbear.service.d/00-dropbear.conf
-        # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469. 
+        # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469.
         install -D -m 0644 ${S}/systemd_units/00-remove-static-ssh-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
+
+        # RDKVREFPLT-5430: dsmgr hal uses westeros-gl-console which requires westeros instance active to work.
+        install -D -m 0644 ${S}/systemd_units/00-dsmgr-vendor.conf ${D}${systemd_unitdir}/system/dsmgr.service.d/00-dsmgr-vendor.conf
+        install -D -m 0644 ${S}/systemd_units/00-wpeframework-rdkshell-vendor.conf ${D}${systemd_unitdir}/system/wpeframework-rdkshell.service.d/00-wpeframework-rdkshell-vendor.conf
 
         # Dropbear SSH banner
         install -d ${D}${sysconfdir}
