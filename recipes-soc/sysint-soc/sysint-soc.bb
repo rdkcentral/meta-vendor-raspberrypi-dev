@@ -26,10 +26,6 @@ do_install() {
         # TODO: remove when middleware iptables_init script gets refactored. See RDKE-469.
         install -D -m 0644 ${S}/systemd_units/00-remove-static-ssh-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
 
-        # RDKVREFPLT-5430: dsmgr hal uses westeros-gl-console which requires westeros instance active to work.
-        install -D -m 0644 ${S}/systemd_units/00-dsmgr-vendor.conf ${D}${systemd_unitdir}/system/dsmgr.service.d/00-dsmgr-vendor.conf
-        install -D -m 0644 ${S}/systemd_units/00-wpeframework-rdkshell-vendor.conf ${D}${systemd_unitdir}/system/wpeframework-rdkshell.service.d/00-wpeframework-rdkshell-vendor.conf
-
         # Dropbear SSH banner
         install -d ${D}${sysconfdir}
         install -m 0644 ${S}/dropbear/sshbanner.txt ${D}${sysconfdir}
