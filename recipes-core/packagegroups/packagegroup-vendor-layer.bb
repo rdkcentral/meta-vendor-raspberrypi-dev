@@ -8,7 +8,7 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "4.4.3"
+PV = "4.4.4"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
