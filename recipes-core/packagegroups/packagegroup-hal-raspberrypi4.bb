@@ -6,8 +6,8 @@ PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
 
 inherit packagegroup
 
-PV ?= "1.0.0"
-PR ?= "r0"
+PV = "1.0.0"
+PR = "r0"
 
 RDEPENDS:${PN} = " \
     devicesettings-hal-raspberrypi4 \

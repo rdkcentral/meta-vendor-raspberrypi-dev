@@ -8,8 +8,8 @@ inherit packagegroup
 
 DEPENDS = "virtual/kernel"
 
-PV ?= "1.0.0"
-PR ?= "r0"
+PV = "1.0.0"
+PR = "r0"
 
 RDEPENDS:${PN} = " \
     kernel-modules \
