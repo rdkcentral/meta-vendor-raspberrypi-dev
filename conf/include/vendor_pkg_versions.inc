@@ -2,6 +2,10 @@
 
 #Linux kernel components
 
+SRCREV:pn-packagegroup-kernel-modules-raspberrypi4 = "1.0.0"
+PV:pn-packagegroup-kernel-modules-raspberrypi4 = "1.0.0"
+PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
+
 PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
 
@@ -177,6 +181,9 @@ PR:pn-wayland-default-egl = "r0"
 PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 
 # RDKV HAL component versions
+SRCREV:pn-packagegroup-hal-raspberrypi4 = "1.0.0"
+PV:pn-packagegroup-hal-raspberrypi4 = "1.0.0"
+PR:pn-packagegroup-hal-raspberrypi4 = "r0"
 
 # RDKV HAL component versions of raspberrypi4
 SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.1.2"
