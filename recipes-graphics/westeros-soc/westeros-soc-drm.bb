@@ -32,12 +32,8 @@ DEBIAN_NOAUTONAME:${PN}-staticdev = "1"
 
 inherit autotools pkgconfig
 
-#Commented below line to get "westeros-gl-console" binary into final image.
-#FILES:${PN} = "${libdir}/*"
-
 COMPATIBLE_MACHINE = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '(.*)', 'null', d)}"
 
 # incase if enabled in bb file, it should be removed for Rpi
 CFLAGS:remove = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '-DWESTEROS_GL_NO_PLANES', '', d)}"
 CFLAGS:append = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', ' -DDRM_NO_NATIVE_FENCE', '', d)}"
-
