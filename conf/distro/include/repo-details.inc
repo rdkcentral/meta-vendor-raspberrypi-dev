@@ -18,5 +18,4 @@ CMF_GITHUB_STABLE2_BRANCH ?= "topic/rdke_mvp"
 RDKE_GITHUB_BRANCH ?= "develop"
 RDK_GENERIC_ROOT_GIT ?= "git://${RDK_GIT}/rdk/components/generic"
 
-# Fix the build error; related to: meta-image-support/pull/136
 PROJECT_BRANCH ?= "${RDKE_GITHUB_BRANCH}"
