@@ -20,4 +20,3 @@ RDEPENDS:${PN} = " \
     gst-drm-plugins-rpi \
     secapi2-adapter-rpi  \
     "
-
