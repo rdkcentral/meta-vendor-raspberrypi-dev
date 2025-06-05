@@ -184,8 +184,8 @@ PV:pn-devicesettings-hal-raspberrypi4 = "1.1.2"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.0.2"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.0.2"
+SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
+PV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -209,8 +209,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.5"
-PV:pn-sysint-soc = "1.1.5"
+SRCREV:pn-sysint-soc = "1.1.6"
+PV:pn-sysint-soc = "1.1.6"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
@@ -219,8 +219,8 @@ PV:pn-systemaudioplatform = "1.0.0"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-rdk-gstreamer-utils-platform = "1.0.1"
-PV:pn-rdk-gstreamer-utils-platform = "1.0.1"
+SRCREV:pn-rdk-gstreamer-utils-platform = "1.0.0"
+PV:pn-rdk-gstreamer-utils-platform = "1.0.0"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
