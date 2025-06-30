@@ -219,8 +219,8 @@ PV:pn-systemaudioplatform = "1.0.0"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-rdk-gstreamer-utils-platform = "1.0.0"
-PV:pn-rdk-gstreamer-utils-platform = "1.0.0"
+SRCREV:pn-rdk-gstreamer-utils-platform = "1.0.1"
+PV:pn-rdk-gstreamer-utils-platform = "1.0.1"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
