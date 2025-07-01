@@ -189,11 +189,6 @@ PV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
-PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
-PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
 SRCREV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
 PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
 PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
