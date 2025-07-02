@@ -9,6 +9,8 @@ S = "${WORKDIR}/git"
 
 inherit systemd
 
+RDEPENDS:${PN} += "util-linux-uuidgen"
+
 do_compile[noexec] = "1"
 
 do_install() {
