@@ -9,7 +9,7 @@ S = "${WORKDIR}/git"
 
 inherit systemd
 
-DEPENDS:append = "util-linux-native"
+RDEPENDS:${PN} += "util-linux-uuidgen"
 
 do_compile[noexec] = "1"
 
