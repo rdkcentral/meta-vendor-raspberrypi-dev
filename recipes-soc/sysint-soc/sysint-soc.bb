@@ -9,6 +9,8 @@ S = "${WORKDIR}/git"
 
 inherit systemd
 
+DEPENDS:append = "util-linux-native"
+
 do_compile[noexec] = "1"
 
 do_install() {
