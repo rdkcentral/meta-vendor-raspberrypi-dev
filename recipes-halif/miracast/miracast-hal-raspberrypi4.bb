@@ -11,6 +11,9 @@ RPROVIDES:${PN} = "virtual/vendor-miracast-soc"
 
 inherit pkgconfig cmake
 
+DEPENDS = "${@bb.utils.contains('DISTRO_FEATURES', 'gstreamer1', 'gstreamer1.0  gstreamer1.0-plugins-base', 'gstreamer gst-plugins-base', d)}"
+RDEPENDS:${PN} = "${@bb.utils.contains('DISTRO_FEATURES', 'gstreamer1', 'gstreamer1.0  gstreamer1.0-plugins-base', 'gstreamer gst-plugins-base', d)}"
+
 FILES:${PN} += "${libdir}/*.so"
 #FILES_SOLIBSDEV = ""
 #INSANE_SKIP:${PN} += "dev-so"
