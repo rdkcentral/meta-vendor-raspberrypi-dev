@@ -248,3 +248,9 @@ SRCREV:pn-displayinfo-soc = "1.0.0"
 PV:pn-displayinfo-soc = "1.0.0"
 PR:pn-displayinfo-soc = "r0"
 PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-miracast-hal-raspberrypi4 = "1.0.0"
+PV:pn-miracast-hal-raspberrypi4 = "1.0.0"
+PR:pn-miracast-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH:pn-miracast-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
