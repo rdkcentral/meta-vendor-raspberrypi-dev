@@ -9,7 +9,7 @@ S = "${WORKDIR}/git"
 PROVIDES = "virtual/vendor-miracast-soc"
 RPROVIDES:${PN} = "virtual/vendor-miracast-soc"
 
-inherit cmake
+inherit pkgconfig cmake
 
 FILES:${PN} += "${libdir}/*.so"
 #FILES_SOLIBSDEV = ""
