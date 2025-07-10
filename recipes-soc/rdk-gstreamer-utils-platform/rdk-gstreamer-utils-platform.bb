@@ -4,7 +4,7 @@ DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'gstreamer1', 'gstreamer1.0 
 DEPENDS += "rdk-gstreamer-utils-headers"
 
 SRC_URI = "${CMF_GITHUB_ROOT}/rdk-gstreamer-utils-raspberrypi;${CMF_GITHUB_SRC_URI_SUFFIX}"
-S = "${WORKDIR}/git/"
+S = "${WORKDIR}/git"
 
 PROVIDES = "virtual/vendor-rdk-gstreamer-utils-platform"
 RPROVIDES:${PN} = "virtual/vendor-rdk-gstreamer-utils-platform"

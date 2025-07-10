@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
 
 inherit packagegroup
 
-PV = "1.0.0"
+PV = "1.0.1"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
@@ -18,4 +18,5 @@ RDEPENDS:${PN} = " \
     audio-service-rpi \
     gst-drm-plugins-rpi \
     secapi2-adapter-rpi  \
+    miracast-hal-raspberrypi4 \
     "
