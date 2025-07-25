@@ -11,7 +11,13 @@ RPROVIDES:${PN} = "virtual/vendor-rdk-gstreamer-utils-platform"
 
 CXXFLAGS += "-I${STAGING_INCDIR}/glib-2.0 -I${STAGING_INCDIR}/gstreamer-1.0 -I${STAGING_DIR_TARGET}/${libdir}/glib-2.0/include/ "
 
-inherit autotools pkgconfig
+inherit autotools pkgconfig hal-version
+
+CXXFLAGS += " \
+  -DRDK_HALIF_RDK_GSTREAMER_VERSION_MAJOR=${RDK_GSTREAMER_VER_MAJOR} \
+  -DRDK_HALIF_RDK_GSTREAMER_VERSION_MINOR=${RDK_GSTREAMER_VER_MINOR} \
+  -DRDK_HALIF_RDK_GSTREAMER_VERSION_BUILD=${RDK_GSTREAMER_VER_BUILD} \
+  -DRDK_HALIF_RDK_GSTREAMER_VERSION_ENGINEERING=${RDK_GSTREAMER_VER_ENG}"
 
 do_compile () {
     oe_runmake -C ${S} -f Makefile
