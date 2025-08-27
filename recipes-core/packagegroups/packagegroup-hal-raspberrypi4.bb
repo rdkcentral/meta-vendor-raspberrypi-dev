@@ -4,12 +4,13 @@ LICENSE = "MIT"
 
 PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
 
-inherit packagegroup
+inherit packagegroup hal-version
 
 PV = "1.0.1"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'rdk-iarmmgrs-hal-unified-v1.0.1', 'iarmmgrs-hal-raspberrypi4', '', d)} \
     devicesettings-hal-raspberrypi4 \
     hdmicec-hal-raspberrypi4 \
     pwrmgr-hal-raspberrypi4 \
