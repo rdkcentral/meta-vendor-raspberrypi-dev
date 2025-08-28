@@ -12,7 +12,7 @@ IMAGE_INSTALL += " \
                  virtual/ca-certificates-trust-store \
                  dropbear \
                  network-setup \
-		 ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan-devtools', " vkmark ", "", d)} \
+		         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan-devtools', " vkmark ", "", d)} \
                 "
 
 IMAGE_LINGUAS = " "
