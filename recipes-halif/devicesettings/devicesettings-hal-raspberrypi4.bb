@@ -43,7 +43,15 @@ FILES_SOLIBSDEV = ""
 INSANE_SKIP:${PN} += "dev-so"
 
 #inherit coverity systemd pkgconfig
-inherit systemd cmake pkgconfig
+inherit systemd cmake pkgconfig hal-version
+
+CFLAGS += " -Wno-unused-parameter"
+
+CFLAGS += " \
+  -DRDK_HALIF_DEVICE_SETTINGS_VERSION_MAJOR=${DEVICE_SETTINGS_VER_MAJOR} \
+  -DRDK_HALIF_DEVICE_SETTINGS_VERSION_MINOR=${DEVICE_SETTINGS_VER_MINOR} \
+  -DRDK_HALIF_DEVICE_SETTINGS_VERSION_BUILD=${DEVICE_SETTINGS_VER_BUILD} \
+  -DRDK_HALIF_DEVICE_SETTINGS_VERSION_ENGINEERING=${DEVICE_SETTINGS_VER_ENG}"
 
 do_install:append() {
     install -d ${D}${bindir}

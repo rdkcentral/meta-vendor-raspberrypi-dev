@@ -86,6 +86,11 @@ PV:pn-alsa-plugins = "1.2.6"
 PR:pn-alsa-plugins = "r0"
 PACKAGE_ARCH:pn-alsa-plugins = "${VENDOR_LAYER_EXTENSION}"
 
+PV:pn-vulkan-tools = "1.3.204"
+PR:pn-vulkan-tools = "r0"
+PACKAGE_ARCH:pn-vulkan-tools = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vulkan-loader = "${VENDOR_LAYER_EXTENSION}"
+
 #Gstreamer components
 
 GST_VERSION = "1.18.5"
@@ -137,10 +142,10 @@ PACKAGE_ARCH:pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
-WESTEROS_VERSION = "1.1.58"
+WESTEROS_VERSION = "1.1.59"
 WESTEROS_REVISION = "r0"
-# Tip of westeros master as of Feb 28, 2025
-WESTEROS_SRCREV = "Westeros-1.01.58"
+# Tip of westeros master as of Jun 24, 2025
+WESTEROS_SRCREV = "Westeros-1.01.59"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -179,8 +184,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.1.2"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.1.2"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.2.0"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.2.0"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -188,6 +193,11 @@ SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
 PV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+
+SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
+PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
+PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
+PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 SRCREV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
 PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
@@ -209,13 +219,13 @@ PV:pn-sysint-soc = "1.1.7"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-systemaudioplatform = "1.0.0"
-PV:pn-systemaudioplatform = "1.0.0"
+SRCREV:pn-systemaudioplatform = "1.0.1"
+PV:pn-systemaudioplatform = "1.0.1"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-rdk-gstreamer-utils-platform = "1.0.1"
-PV:pn-rdk-gstreamer-utils-platform = "1.0.1"
+SRCREV:pn-rdk-gstreamer-utils-platform = "1.1.0"
+PV:pn-rdk-gstreamer-utils-platform = "1.1.0"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 

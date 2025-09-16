@@ -8,7 +8,7 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "4.5.1"
+PV = "4.6.0"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
@@ -49,9 +49,11 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         mpg123 \
         pango \
         pulseaudio \
+        wpa-supplicant \
         wayland-default-egl \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
         wayland-default-egl \
+	    ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
         "
