@@ -8,7 +8,7 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "4.6.0"
+PV = "4.7.0"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
@@ -49,6 +49,7 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         mpg123 \
         pango \
         pulseaudio \
+        wpa-supplicant \
         wayland-default-egl \
         westeros \
         westeros-simplebuffer \

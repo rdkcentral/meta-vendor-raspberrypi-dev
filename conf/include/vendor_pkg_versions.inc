@@ -142,10 +142,10 @@ PACKAGE_ARCH:pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
-WESTEROS_VERSION = "1.1.58"
+WESTEROS_VERSION = "1.1.59"
 WESTEROS_REVISION = "r0"
-# Tip of westeros master as of Feb 28, 2025
-WESTEROS_SRCREV = "Westeros-1.01.58"
+# Tip of westeros master as of Jun 24, 2025
+WESTEROS_SRCREV = "Westeros-1.01.59"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -224,8 +224,8 @@ PV:pn-systemaudioplatform = "1.0.1"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-rdk-gstreamer-utils-platform = "1.1.0"
-PV:pn-rdk-gstreamer-utils-platform = "1.1.0"
+SRCREV:pn-rdk-gstreamer-utils-platform = "1.2.0"
+PV:pn-rdk-gstreamer-utils-platform = "1.2.0"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
