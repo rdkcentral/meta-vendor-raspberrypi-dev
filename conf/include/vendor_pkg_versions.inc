@@ -182,7 +182,7 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.2.0"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "8e82fabfe005cc45b7204271b2ad6db181deef01"
 PV:pn-devicesettings-hal-raspberrypi4 = "1.2.0"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
