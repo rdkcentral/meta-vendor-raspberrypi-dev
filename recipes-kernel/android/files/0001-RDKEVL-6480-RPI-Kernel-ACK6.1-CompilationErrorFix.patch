@@ -1,0 +1,50 @@
+From 0429ae2a0017df6557e4df8db06e243c5a5080bc Mon Sep 17 00:00:00 2001
+From: smuthu065_comcast <SundaraMuneeswaran_Muthuraj@comcast.com>
+Date: Thu, 11 Sep 2025 13:35:09 +0000
+Subject: [PATCH] RDKEVL-6480-[RPI][Kernel 6.12] Build Vendor test image with
+ kernel 6.1. Patch added for fix the compilation error of kernel Modules.
+
+---
+ include/drm/drm_bridge.h | 8 ++++++++
+ include/drm/drm_panel.h  | 6 ++++++
+ 2 files changed, 14 insertions(+)
+
+diff --git a/include/drm/drm_bridge.h b/include/drm/drm_bridge.h
+index 96682fc46dfd..13ca634ebf97 100644
+--- a/include/drm/drm_bridge.h
++++ b/include/drm/drm_bridge.h
+@@ -787,6 +787,14 @@ struct drm_bridge {
+ 	 * @hpd_cb.
+ 	 */
+ 	void *hpd_data;
++	/**
++	 * @pre_enable_prev_first: The bridge requires that the prev
++	 * bridge @pre_enable function is called before its @pre_enable,
++	 * and conversely for post_disable. This is most frequently a
++	 * requirement for DSI devices which need the host to be initialised
++	 * before the peripheral.
++	 */
++	bool pre_enable_prev_first;
+ };
+ 
+ static inline struct drm_bridge *
+diff --git a/include/drm/drm_panel.h b/include/drm/drm_panel.h
+index a10dbf0d4429..94cdf5bed245 100644
+--- a/include/drm/drm_panel.h
++++ b/include/drm/drm_panel.h
+@@ -195,6 +195,12 @@ struct drm_panel {
+ 	 * Panel entry in registry.
+ 	 */
+ 	struct list_head list;
++
++	/**
++	 * @prepare_upstream_first:
++	 *
++	 */
++	bool prepare_upstream_first;
+ };
+ 
+ void drm_panel_init(struct drm_panel *panel, struct device *dev,
+-- 
+2.25.1
+
