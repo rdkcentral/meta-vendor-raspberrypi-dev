@@ -16,7 +16,6 @@ BBLAYERS ?= " \
         ${MANIFEST_PATH_OPENEMBEDDED}/meta-networking \
         ${MANIFEST_PATH_STACK_LAYERING_SUPPORT} \
         ${MANIFEST_PATH_RDK_AUXILIARY} \
-        ${MANIFEST_PATH_IMAGE_SUPPORT_RDKE} \
         "
 
 # Common layers
