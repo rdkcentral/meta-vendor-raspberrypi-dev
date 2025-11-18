@@ -1,0 +1,22 @@
+Index: drm/westeros-gl/westeros-gl.c
+===================================================================
+--- drm.orig/westeros-gl/westeros-gl.c
++++ drm/westeros-gl/westeros-gl.c
+@@ -2897,7 +2897,7 @@ static void wstDisplayServerProcessMessa
+                      if ( gCtx && gCtx->modeInfo )
+                      {
+                         pthread_mutex_lock( &gCtx->mutex );
+-                        sprintf( conn->response, "%d: mode %dx%d%sx%d", 0,
++                        sprintf( conn->response, "%d: mode %dx%d%s%d", 0,
+                                   gCtx->modeInfo->hdisplay, gCtx->modeInfo->vdisplay,
+                                   ((gCtx->modeInfo->flags & DRM_MODE_FLAG_INTERLACE) ? "i" : "p"),
+                                   gCtx->modeInfo->vrefresh  );
+@@ -7904,7 +7904,7 @@ bool WstGLSetDisplayMode( WstGLCtx *ctx,
+                      if ( (conn->modes[i].hdisplay == width) &&
+                           (conn->modes[i].vdisplay == height) )
+                      {
+-                        bool modeIsInterlaced= (conn->modes[i].flags & DRM_MODE_FLAG_INTERLACE);
++                        bool modeIsInterlaced= ( (conn->modes[i].flags & DRM_MODE_FLAG_INTERLACE) != 0 );
+                         if ( modeIsInterlaced != interlaced )
+                         {
+                            continue;
