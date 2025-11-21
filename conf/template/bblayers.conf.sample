@@ -29,6 +29,7 @@ BBLAYERS =+ "${@'${MANIFEST_PATH_COMMON_OSS_REFERENCE}' if os.path.isfile('${MAN
 BBLAYERS =+ "${@'${MANIFEST_PATH_BSP}' if os.path.isfile('${MANIFEST_PATH_BSP}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_PLATFORM}' if os.path.isfile('${MANIFEST_PATH_PLATFORM}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_EXT}' if os.path.isfile('${MANIFEST_PATH_OSS_EXT}/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@'${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}' if os.path.isfile('${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}/conf/layer.conf') else ''}"
 
 # Future reserved
 #BBLAYERS =+ "${@'${MANIFEST_PATH_OEM_OVERLAY_SOC}' if os.path.isfile('${MANIFEST_PATH_OEM_OVERLAY_SOC}/conf/layer.conf') else ''}"
