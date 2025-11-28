@@ -6,7 +6,6 @@ PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
 
 PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_android-raspberrypi = "6.1.%"
 
 PV:pn-packagegroup-kernel-modules-raspberrypi4 = "6.1.77"
 PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
@@ -140,10 +139,13 @@ PACKAGE_ARCH:pn-gstreamer1.0-rtsp-server = "${VENDOR_LAYER_EXTENSION}"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
-WESTEROS_VERSION = "1.1.59"
+
+WESTEROS_VERSION = "1.1.61"
 WESTEROS_REVISION = "r0"
-# Tip of westeros master as of Jun 24, 2025
-WESTEROS_SRCREV = "Westeros-1.01.59"
+
+# Tip of westeros master as of Oct 01, 2025
+# Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
+WESTEROS_SRCREV = "Westeros-1.01.61"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -182,8 +184,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.1"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.3.1"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.2"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.3.2"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -202,8 +204,8 @@ PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
 PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.0"
-PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.0"
+SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.1"
+PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.1"
 PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
