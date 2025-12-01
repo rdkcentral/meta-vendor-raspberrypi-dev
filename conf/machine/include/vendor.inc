@@ -7,6 +7,7 @@ include conf/include/vendor_pkg_versions.inc
 DISTRO_FEATURES:append = " VENDOR"
 DISTRO_FEATURES:append = " enable_esdk"
 
+LAYER_EXTENSION = "-vendor"
 VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
 PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
 
