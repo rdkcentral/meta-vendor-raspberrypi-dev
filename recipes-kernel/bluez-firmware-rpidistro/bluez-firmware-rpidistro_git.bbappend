@@ -1,5 +1,4 @@
 do_install:append() {
-    rm -rf ${D}${nonarch_base_libdir}
     install -d ${D}${sysconfdir}/firmware/brcm
 
     cp LICENCE.cypress-rpidistro ${D}${sysconfdir}/firmware
