@@ -9,6 +9,7 @@ PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-packagegroup-kernel-modules-raspberrypi4 = "6.1.77"
 PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
+PREFERRED_VERSION_android-raspberrypi = "6.1.%"
 PACKAGE_ARCH:pn-packagegroup-kernel-modules-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-linux-firmware-rpidistro = "1.0.0"
