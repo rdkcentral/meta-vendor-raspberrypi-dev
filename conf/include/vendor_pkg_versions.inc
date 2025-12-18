@@ -9,6 +9,7 @@ PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-packagegroup-kernel-modules-raspberrypi4 = "6.1.77"
 PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
+PREFERRED_VERSION_android-raspberrypi = "6.1.%"
 PACKAGE_ARCH:pn-packagegroup-kernel-modules-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-linux-firmware-rpidistro = "1.0.0"
@@ -214,8 +215,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.7"
-PV:pn-sysint-soc = "1.1.7"
+SRCREV:pn-sysint-soc = "1.1.8"
+PV:pn-sysint-soc = "1.1.8"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 

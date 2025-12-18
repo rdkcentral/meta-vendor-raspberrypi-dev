@@ -14,15 +14,11 @@ SRC_URI = " \
     file://disable-framebuffer-console.cfg \
     file://0001-RDKEVL-6480-RPI-Kernel-ACK6.1-CompilationErrorFix.patch \
     file://apparmor.cfg \
+    file://rdkv.cfg \
     "
 
 # Keep file search path like your earlier bbappend did
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
-
-# If you use machine flavor appends (same as original)
-SRC_URI:append:hybrid = " file://rdkv.cfg"
-SRC_URI:append:client = " file://rdkv.cfg"
-SRC_URI:append:ipclient = " file://rdkv.cfg"
 
 require android-raspberrypi.inc
 
