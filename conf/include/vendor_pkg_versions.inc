@@ -190,8 +190,8 @@ PV:pn-devicesettings-hal-raspberrypi4 = "1.3.2"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.0.3"
+SRCREV:pn-hdmicec-hal-raspberrypi4 = "2609e7d36e2e17ef829825eed9b7dec79e3f78d9"
+PV:pn-hdmicec-hal-raspberrypi4 = "1.1.0"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
