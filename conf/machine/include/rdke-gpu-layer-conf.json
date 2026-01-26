@@ -1,0 +1,33 @@
+{
+	"mount-config-file": "/usr/share/gpu-layer/config.json",
+	"mount-config": {
+		"vendorGpuSupport": {
+			"dev-nodes": [
+				"/dev/ashmem",
+				"/dev/dma_heap/system",
+				"/dev/dma_heap/system-uncached",
+				"/dev/dri/card0",
+				"/dev/dri/card1"
+			],
+			"group-ids": [
+				"video"
+			]
+		}
+	},
+	"mount-rootfs-path": "/usr/share/gpu-layer/rootfs",
+	"mount-rootfs-links": {
+		"mesa": [
+			"/usr/lib/libEGL.so",
+			"/usr/lib/libGLESv2.so"
+		],
+		"vulkan-tools": [
+			"/usr/lib/libvulkan.so"
+		],
+		"libdrm": [
+			"/usr/lib/libdrm.so"
+		],
+		"wayland-default-egl": [
+			"/usr/lib/libwayland-egl.so"
+		]
+	}
+}
