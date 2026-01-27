@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${VENDOR_LAYER_EXTENSION}"
 
 inherit packagegroup hal-version
 
-PV = "1.0.1"
+PV = "1.0.2"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
