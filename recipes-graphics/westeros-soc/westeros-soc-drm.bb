@@ -39,3 +39,28 @@ SRC_URI += "file://set_and_get_resolution.patch"
 # incase if enabled in bb file, it should be removed for Rpi
 CFLAGS:remove = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '-DWESTEROS_GL_NO_PLANES', '', d)}"
 CFLAGS:append = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', ' -DDRM_NO_NATIVE_FENCE', '', d)}"
+
+PACKAGES += "${PN}-gpulayer"
+RDEPENDS:${PN} += "${PN}-gpulayer"
+
+do_install:append() {
+
+    GPU_LAYER_LIBDIR="${D}/usr/share/gpu-layer/rootfs/usr/lib"
+
+    # Ensure destination directory exists
+    install -d ${GPU_LAYER_LIBDIR}
+
+    # Create hardlinks for all shared libraries
+    for so in ${D}${libdir}/libwesteros_gl.so.*; do
+        if [ -f "$so" ]; then
+            ln -f "$so" "${GPU_LAYER_LIBDIR}/$(basename $so)"
+        fi
+    done
+}
+
+FILES:${PN}-gpulayer += "/usr/share/gpu-layer/rootfs/usr/lib/*"
+
+PRIVATE_LIBS:${PN}-gpulayer = "\
+    libwesteros_gl.so.0 \
+    libwesteros_gl.so.0.0.0 \
+    "

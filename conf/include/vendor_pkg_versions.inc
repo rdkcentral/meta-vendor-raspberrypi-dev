@@ -35,6 +35,14 @@ PR:pn-udev-rules-rpi = "r0"
 PACKAGE_ARCH:pn-udev-rules-rpi = "${VENDOR_LAYER_EXTENSION}"
 
 #OSS Components
+PR:pn-wayland = "r0"
+PACKAGE_ARCH:pn-wayland = "${VENDOR_LAYER_EXTENSION}"
+
+PR:pn-libffi = "r0"
+PACKAGE_ARCH:pn-libffi = "${VENDOR_LAYER_EXTENSION}"
+
+PR:pn-expat = "r0"
+PACKAGE_ARCH:pn-expat = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-libepoxy = "1.5.9"
 PR:pn-libepoxy = "r0"
@@ -215,7 +223,7 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.8"
+SRCREV:pn-sysint-soc = "3279e7da6c019d699879662c32f118653acce476"
 PV:pn-sysint-soc = "1.1.8"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
