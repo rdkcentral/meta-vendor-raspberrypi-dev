@@ -2,32 +2,35 @@
 	"mount-config-file": "/usr/share/gpu-layer/config.json",
 	"mount-config": {
 		"vendorGpuSupport": {
-			"dev-nodes": [
+			"devNodes": [
 				"/dev/ashmem",
 				"/dev/dma_heap/system",
 				"/dev/dma_heap/system-uncached",
 				"/dev/dri/card0",
 				"/dev/dri/card1"
 			],
-			"group-ids": [
+			"groupIds": [
 				"video"
 			]
 		}
 	},
 	"mount-rootfs-path": "/usr/share/gpu-layer/rootfs",
 	"mount-rootfs-links": {
-		"mesa": [
-			"/usr/lib/libEGL.so",
-			"/usr/lib/libGLESv2.so"
-		],
-		"vulkan-tools": [
-			"/usr/lib/libvulkan.so"
-		],
-		"libdrm": [
-			"/usr/lib/libdrm.so"
-		],
-		"wayland-default-egl": [
-			"/usr/lib/libwayland-egl.so"
+		"madatory": {
+			"libEGL.so": "/usr/lib/libEGL.so",
+			"libEGL.so.1": "/usr/lib/libEGL.so.1.0.0",
+			"libGLESv1_CM.so": "",
+			"libGLESv1_CM.so.1": "",
+			"libGLESv2.so": "/usr/lib/libGLESv2.so.2.0.0",
+			"libGLESv2.so.2": "/usr/lib/libGLESv2.so.2.0.0",
+			"libwayland-egl.so.1": "/usr/lib/libwayland-egl.so.1.0.0"
+		},
+		"optional": [
+			"/usr/lib/libglapi.so.0.0.0",
+			"/usr/lib/libffi.so.8.1.2",
+			"/usr/lib/libgbm.so.1.0.0",
+			"/usr/lib/libdrm.so.2.4.0",
+			"/usr/lib/libvulkan.so.1.3.204"
 		]
 	}
 }
