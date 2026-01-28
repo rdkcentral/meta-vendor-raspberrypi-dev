@@ -16,7 +16,7 @@
 	},
 	"mount-rootfs-path": "/usr/share/gpu-layer/rootfs",
 	"mount-rootfs-links": {
-		"madatory": {
+		"mandatory": {
 			"libEGL.so": "/usr/lib/libEGL.so",
 			"libEGL.so.1": "/usr/lib/libEGL.so.1.0.0",
 			"libGLESv1_CM.so": "",
