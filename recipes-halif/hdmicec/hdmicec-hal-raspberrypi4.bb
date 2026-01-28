@@ -8,13 +8,6 @@ SRC_URI = "${CMF_GITHUB_ROOT}/rdkvhal-hdmicec-raspberrypi4;${CMF_GIT_SRC_URI_SUF
 
 S = "${WORKDIR}/git"
 
-DEPENDS += "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'userland', '', d)}"
-
-INCLUDE_DIRS = " \
-    -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/ds-hal/ \
-    -I${STAGING_DIR_TARGET}${includedir}/interface/vmcs_host/ \
-    "
-
 PROVIDES = " \
     virtual/hdmicec-hal \
     virtual/vendor-hdmicec-hal \
@@ -25,7 +18,7 @@ RPROVIDES:${PN} = " \
     virtual/vendor-hdmicec-hal \
     "
 
-DEPENDS = "hdmicecheader"
+DEPENDS = "hdmicecheader userland"
 
 inherit cmake
 
