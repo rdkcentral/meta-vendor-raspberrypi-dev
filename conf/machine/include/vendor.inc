@@ -7,16 +7,10 @@ include conf/include/vendor_pkg_versions.inc
 DISTRO_FEATURES:append = " VENDOR"
 DISTRO_FEATURES:append = " enable_esdk"
 
-VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
-PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
-
 LAYER_EXTENSION = "-vendor"
-VENDOR_OSS_REL_VER = "4.10.0"
-VENDOR_OSS = "${@get_oss_arch(d)}${LAYER_EXTENSION}"
-PACKAGE_EXTRA_ARCHS:append = "${@ '' if '${VENDOR_OSS}' == '${OSS_LAYER_ARCH}' else ' ${VENDOR_OSS}'}"
-OPKG_ARCH_PRIORITY:${VENDOR_OSS} = "310"
-STACK_LAYER_EXTENSION ?= "${VENDOR_OSS} ${VENDOR_LAYER_EXTENSION}"
-EXCLUDE_IPK_FEEDS ?= "${VENDOR_OSS} ${VENDOR_LAYER_EXTENSION}"
+
+VENDOR_LAYER_EXTENSION = "${MACHINE}${LAYER_EXTENSION}"
+PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
 
 LICENSE_FLAGS_ACCEPTED += "commercial_gst-fluendo-mpegdemux \
                             commercial_${MLPREFIX}gst-ffmpeg \
