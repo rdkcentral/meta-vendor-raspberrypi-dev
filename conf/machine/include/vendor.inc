@@ -25,3 +25,6 @@ OVERRIDES .= ":rdkv-oss"
 
 #Android raspberrypi Kernel version
 KERNEL_ARPI_MAJOR_VERSION = "6"
+
+#GPU Layer Library path
+GPU_LAYER_LIBDIR="/usr/share/gpu-layer/rootfs/usr/lib"

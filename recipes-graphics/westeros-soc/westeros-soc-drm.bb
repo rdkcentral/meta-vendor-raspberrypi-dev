@@ -44,23 +44,17 @@ PACKAGES += "${PN}-gpulayer"
 RDEPENDS:${PN} += "${PN}-gpulayer"
 
 do_install:append() {
-
-    GPU_LAYER_LIBDIR="${D}/usr/share/gpu-layer/rootfs/usr/lib"
-
     # Ensure destination directory exists
-    install -d ${GPU_LAYER_LIBDIR}
+    install -d ${D}${GPU_LAYER_LIBDIR}
 
     # Create hardlinks for all shared libraries
     for so in ${D}${libdir}/libwesteros_gl.so.*; do
         if [ -f "$so" ]; then
-            ln -f "$so" "${GPU_LAYER_LIBDIR}/$(basename $so)"
+            ln -f "$so" "${D}${GPU_LAYER_LIBDIR}/$(basename $so)"
         fi
     done
 }
 
-FILES:${PN}-gpulayer += "/usr/share/gpu-layer/rootfs/usr/lib/*"
+FILES:${PN}-gpulayer += "${GPU_LAYER_LIBDIR}/*"
 
-PRIVATE_LIBS:${PN}-gpulayer = "\
-    libwesteros_gl.so.0 \
-    libwesteros_gl.so.0.0.0 \
-    "
+PRIVATE_LIBS:${PN}-gpulayer = "libwesteros_gl.so.0"
