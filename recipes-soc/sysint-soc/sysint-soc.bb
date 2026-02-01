@@ -37,13 +37,13 @@ do_install() {
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
 
         # Provide the gpu-layer config.json file
-        install -d ${D}/usr/share/gpu-layer
-        install -D -m 0644 ${S}/gpu-layer/config.json ${D}/usr/share/gpu-layer/config.json
+        install -d ${D}${datadir}/gpu-layer
+        install -D -m 0644 ${S}/gpu-layer/config.json ${D}${datadir}/gpu-layer/config.json
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
 FILES:${PN} += "${sysconfdir}/*"
-FILES:${PN} += "/usr/share/gpu-layer/config.json"
+FILES:${PN} += "${datadir}/gpu-layer/config.json"
 
 # RDKVREFPLT-4428: temporary fix
 SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
