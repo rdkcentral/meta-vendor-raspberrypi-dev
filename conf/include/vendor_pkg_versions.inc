@@ -267,4 +267,4 @@ PACKAGE_ARCH:pn-miracast-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-gpu-layer = "1.0.0"
 PR:pn-gpu-layer = "r0"
-PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-gpu-layer = "${VENDOR_LAYER_EXTENSION}"

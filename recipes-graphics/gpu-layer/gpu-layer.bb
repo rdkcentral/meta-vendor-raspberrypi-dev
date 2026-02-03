@@ -25,6 +25,7 @@ do_install() {
 
     # Create directories
     install -d ${GPU_LAYER_LIBDIR}
+    install -d ${JSON_DIR}
 
     # ---- Hard link Graphics libraries ----
     for lib in \
@@ -52,7 +53,7 @@ do_install() {
 # Package contents
 FILES:${PN} += "\
     /usr/share/gpu-layer/rootfs/usr/lib/* \
-    /usr/share/gpu-layer/gpu-config.json \
+    /usr/share/gpu-layer/config.json \
     "
 PRIVATE_LIBS:${PN} = "\
     libwesteros_gl.so.0 \
