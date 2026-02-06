@@ -12,12 +12,9 @@ inherit pkgconfig
 DEPENDS += "\
     mesa \
     libdrm \
-    wayland \
     wayland-default-egl \
     westeros-soc-drm \
-    westeros-simpleshell \
     expat \
-    libffi \
     "
 
 # gpu-layer layout inside target rootfs
@@ -30,15 +27,12 @@ GPU_LAYER_LIBS = "\
     libdrm.so.2 \
     libEGL.so.1 \
     libGLESv2.so.2 \
+    libGLESv1_CM.so.1 \
     libgbm.so.1 \
     libglapi.so.0 \
     libexpat.so.1 \
-    libffi.so.8 \
-    libwayland-client.so.0 \
-    libwayland-server.so.0 \
     libwayland-egl.so.1 \
     libwesteros_gl.so.0 \
-    libwesteros_simpleshell_client.so.0 \
     "
 
 # DRI drivers required by Mesa (software + VC4)
