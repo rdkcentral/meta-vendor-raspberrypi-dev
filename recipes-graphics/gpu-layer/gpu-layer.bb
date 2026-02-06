@@ -95,5 +95,5 @@ FILES:${PN} += "/usr/share/gpu-layer"
 # (avoid shlibs auto-dependency generation)
 PRIVATE_LIBS:${PN} = "${GPU_LAYER_LIBS}"
 
-# Libraries are already stripped by their providers
+# Skip dev-so QA check because we deliberately install unversioned .so symlinks
 INSANE_SKIP:${PN} += "dev-so"
