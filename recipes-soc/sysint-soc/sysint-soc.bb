@@ -23,6 +23,8 @@ do_install() {
         install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
         install -D -m 0755 ${S}/scripts/oem-first-boot.sh ${D}${bindir}/oem-first-boot.sh
         install -D -m 0644 ${S}/systemd_units/nvram.service ${D}${systemd_unitdir}/system/nvram.service
+        install -D -m 0755 ${S}/scripts/bt-reset.sh ${D}${bindir}/bt-reset.sh
+        install -D -m 0644 ${S}/systemd_units/bt-reset.service ${D}${systemd_unitdir}/system/bt-reset.service
 
         # RDKE-115: Dropbear drop-in conf for RPi
         install -D -m 0644 ${S}/systemd_units/00-dropbear-vendor.conf ${D}${systemd_unitdir}/system/dropbear.service.d/00-dropbear.conf
@@ -43,3 +45,4 @@ FILES:${PN} += "${sysconfdir}/*"
 # RDKVREFPLT-4428: temporary fix
 SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
 SYSTEMD_SERVICE:${PN} += "nvram.service"
+SYSTEMD_SERVICE:${PN} += "bt-reset.service"
