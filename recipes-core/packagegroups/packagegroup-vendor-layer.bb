@@ -54,6 +54,6 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
-        wayland-default-egl \
-	    ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
+        gpu-layer \
+        ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
         "
