@@ -146,7 +146,7 @@ WESTEROS_REVISION = "r0"
 
 # Tip of westeros master as of Oct 01, 2025
 # Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.61"
+WESTEROS_SRCREV = "Westeros-1.01.63"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
