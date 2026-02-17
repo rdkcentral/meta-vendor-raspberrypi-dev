@@ -56,4 +56,5 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros-simpleshell \
         gpu-layer \
         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
+        ${@multilib_pkg_extend(d, 'packagegroup-core-standalone-sdk-target')} \
         "
