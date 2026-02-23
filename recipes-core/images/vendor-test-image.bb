@@ -13,6 +13,7 @@ IMAGE_INSTALL += " \
                  dropbear \
                  network-setup \
 		         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan-devtools', " vkmark ", "", d)} \
+                 bluez5 \
                 "
 
 IMAGE_LINGUAS = " "
