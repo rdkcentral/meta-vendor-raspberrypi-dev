@@ -8,7 +8,7 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "4.9.1"
+PV = "4.10.0"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
@@ -54,6 +54,6 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
-        wayland-default-egl \
-	    ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
+        gpu-layer \
+        ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
         "

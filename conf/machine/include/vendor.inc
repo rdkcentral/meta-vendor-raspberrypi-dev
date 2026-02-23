@@ -7,7 +7,9 @@ include conf/include/vendor_pkg_versions.inc
 DISTRO_FEATURES:append = " VENDOR"
 DISTRO_FEATURES:append = " enable_esdk"
 
-VENDOR_LAYER_EXTENSION = "${MACHINE}-vendor"
+LAYER_EXTENSION = "-vendor"
+
+VENDOR_LAYER_EXTENSION = "${MACHINE}${LAYER_EXTENSION}"
 PACKAGE_EXTRA_ARCHS:append = " ${VENDOR_LAYER_EXTENSION}"
 
 LICENSE_FLAGS_ACCEPTED += "commercial_gst-fluendo-mpegdemux \
