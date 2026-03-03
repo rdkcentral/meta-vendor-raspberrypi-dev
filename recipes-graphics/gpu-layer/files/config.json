@@ -1,0 +1,13 @@
+{
+  "vendorGpuSupport": {
+    "devNodes": [
+      "/dev/dma_heap/system",
+      "/dev/dma_heap/system-uncached",
+      "/dev/dri/card1",
+      "/dev/dri/renderD128"
+    ],
+    "groupIds": [
+      "video"
+    ]
+  }
+}
