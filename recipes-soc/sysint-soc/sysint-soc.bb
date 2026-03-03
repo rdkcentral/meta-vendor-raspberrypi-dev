@@ -22,6 +22,8 @@ do_install() {
         install -d ${D}${bindir}
         install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
         install -D -m 0755 ${S}/scripts/oem-first-boot.sh ${D}${bindir}/oem-first-boot.sh
+        install -D -m 0644 ${S}/systemd_units/enable-rdkappmanager.service ${D}${systemd_unitdir}/system/enable-rdkappmanager.service
+        install -D -m 0755 ${S}/scripts/enable-rdk-appmanager-services.sh ${D}${bindir}/enable-rdk-appmanager-services.sh
         install -D -m 0644 ${S}/systemd_units/nvram.service ${D}${systemd_unitdir}/system/nvram.service
         install -D -m 0755 ${S}/scripts/rpiBTReset.sh ${D}${bindir}/rpiBTReset.sh
         install -D -m 0644 ${S}/systemd_units/rpiBTReset.service ${D}${systemd_unitdir}/system/rpiBTReset.service
