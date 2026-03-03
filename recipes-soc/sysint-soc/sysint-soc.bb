@@ -13,6 +13,8 @@ RDEPENDS:${PN} += "util-linux-uuidgen"
 
 do_compile[noexec] = "1"
 
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+
 do_install() {
         install -d ${D}${systemd_unitdir}/system
 
@@ -48,3 +50,4 @@ FILES:${PN} += "${sysconfdir}/*"
 SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
 SYSTEMD_SERVICE:${PN} += "nvram.service"
 SYSTEMD_SERVICE:${PN} += "rpiBTReset.service"
+SYSTEMD_SERVICE:${PN} += "enable-rdkappmanager.service"
