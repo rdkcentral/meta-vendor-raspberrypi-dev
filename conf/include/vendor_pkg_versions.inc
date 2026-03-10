@@ -84,10 +84,13 @@ PV:pn-alsa-plugins = "1.2.6"
 PR:pn-alsa-plugins = "r0"
 PACKAGE_ARCH:pn-alsa-plugins = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-vulkan-tools = "1.3.204"
-PR:pn-vulkan-tools = "r0"
 PACKAGE_ARCH:pn-vulkan-tools = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vulkan-loader = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vulkan-headers = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vkmark = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
+PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
+PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 #Gstreamer components
 
