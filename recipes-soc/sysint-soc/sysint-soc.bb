@@ -13,6 +13,8 @@ RDEPENDS:${PN} += "util-linux-uuidgen"
 
 do_compile[noexec] = "1"
 
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+
 do_install() {
         install -d ${D}${systemd_unitdir}/system
 
@@ -22,6 +24,8 @@ do_install() {
         install -d ${D}${bindir}
         install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
         install -D -m 0755 ${S}/scripts/oem-first-boot.sh ${D}${bindir}/oem-first-boot.sh
+        install -D -m 0644 ${S}/systemd_units/enable-transition-markers.service ${D}${systemd_unitdir}/system/enable-transition-markers.service
+        install -D -m 0755 ${S}/scripts/enable-transition-markers.sh ${D}${bindir}/enable-transition-markers.sh
         install -D -m 0644 ${S}/systemd_units/nvram.service ${D}${systemd_unitdir}/system/nvram.service
         install -D -m 0755 ${S}/scripts/rpiBTReset.sh ${D}${bindir}/rpiBTReset.sh
         install -D -m 0644 ${S}/systemd_units/rpiBTReset.service ${D}${systemd_unitdir}/system/rpiBTReset.service
@@ -46,3 +50,4 @@ FILES:${PN} += "${sysconfdir}/*"
 SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
 SYSTEMD_SERVICE:${PN} += "nvram.service"
 SYSTEMD_SERVICE:${PN} += "rpiBTReset.service"
+SYSTEMD_SERVICE:${PN} += "enable-transition-markers.service"
