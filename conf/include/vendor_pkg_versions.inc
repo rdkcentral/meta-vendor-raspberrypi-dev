@@ -88,9 +88,9 @@ PACKAGE_ARCH:pn-vulkan-tools = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vulkan-loader = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vulkan-headers = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vkmark = "${VENDOR_LAYER_EXTENSION}"
-PREFERRED_VERSION_vulkan-tools="1.3.204.1"
-PREFERRED_VERSION_vulkan-headers="1.3.204.1"
-PREFERRED_VERSION_vulkan-loader="1.3.204.1"
+PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
+PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
+PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 #Gstreamer components
 
