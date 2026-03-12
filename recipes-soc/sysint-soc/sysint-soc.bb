@@ -41,6 +41,10 @@ do_install() {
 
         # Provide the OEM/SoC device.properties
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
+
+        # Default RCU ctrlm_config.json configuration file.
+        install -d ${D}${sysconfdir}/vendor/input
+        install -D -m 0644 ${S}/etc/rdk-bt-rcu-config.json ${D}${sysconfdir}/vendor/input/ctrlm_config.json
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
