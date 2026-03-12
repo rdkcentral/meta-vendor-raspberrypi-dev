@@ -84,10 +84,13 @@ PV:pn-alsa-plugins = "1.2.6"
 PR:pn-alsa-plugins = "r0"
 PACKAGE_ARCH:pn-alsa-plugins = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-vulkan-tools = "1.3.204"
-PR:pn-vulkan-tools = "r0"
 PACKAGE_ARCH:pn-vulkan-tools = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vulkan-loader = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vulkan-headers = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vkmark = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
+PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
+PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 #Gstreamer components
 
@@ -185,8 +188,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.3"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.3.3"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.4"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.3.4"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -215,8 +218,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.10"
-PV:pn-sysint-soc = "1.1.10"
+SRCREV:pn-sysint-soc = "2aece875b577d8add684b277ebb40b3a8b91d646"
+PV:pn-sysint-soc = "1.1.11"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
