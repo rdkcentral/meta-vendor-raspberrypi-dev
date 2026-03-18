@@ -27,3 +27,6 @@ OVERRIDES .= ":rdkv-oss"
 
 #Android raspberrypi Kernel version
 KERNEL_ARPI_MAJOR_VERSION = "6"
+
+# RCU specific keymap support for windowmanager
+VIRTUAL-RUNTIME_rcu-keymapper = "sysint-soc"
