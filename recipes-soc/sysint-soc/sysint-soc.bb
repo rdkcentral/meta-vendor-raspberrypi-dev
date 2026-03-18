@@ -48,7 +48,7 @@ do_install() {
 
         # RCU keymap configuration for windowmanager
         install -m 0644 ${S}/etc/rcu_keymap.json ${D}${sysconfdir}/rcu_keymap.json
-        install -D -m 0644 ${S}/systemd_units/00-rcu-keymap-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
+	install -D -m 0644 ${S}/systemd_units/00-rcu-keymap-drop-config.conf ${D}${systemd_unitdir}/system/wpeframework-rdkwindowmanager.service.d/00-rcu-keymap-dropin.conf
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
