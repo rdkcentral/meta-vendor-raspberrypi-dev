@@ -45,6 +45,10 @@ do_install() {
         # Default RCU ctrlm_config.json configuration file.
         install -d ${D}${sysconfdir}/vendor/input
         install -D -m 0644 ${S}/etc/rdk-bt-rcu-config.json ${D}${sysconfdir}/vendor/input/ctrlm_config.json
+
+        # RCU keymap configuration for windowmanager
+        install -m 0644 ${S}/etc/rcu_keymap.json ${D}${sysconfdir}/rcu_keymap.json
+        install -D -m 0644 ${S}/systemd_units/00-rcu-keymap-drop-config.conf ${D}${systemd_unitdir}/system/iptables.service.d/00-remove-static-ssh-drop-config.conf
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
