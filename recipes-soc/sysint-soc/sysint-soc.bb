@@ -45,10 +45,14 @@ do_install() {
         # Default RCU ctrlm_config.json configuration file.
         install -d ${D}${sysconfdir}/vendor/input
         install -D -m 0644 ${S}/etc/rdk-bt-rcu-config.json ${D}${sysconfdir}/vendor/input/ctrlm_config.json
+
+        # Device-specific reset script for Factory/Warehouse reset
+        install -D -m 0755 ${S}/scripts/device-specific-reset.sh ${D}/lib/rdk/device-specific-reset.sh
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"
 FILES:${PN} += "${sysconfdir}/*"
+FILES:${PN} += "/lib/rdk/device-specific-reset.sh"
 
 # RDKVREFPLT-4428: temporary fix
 SYSTEMD_SERVICE:${PN} += "oem-first-boot.service"
