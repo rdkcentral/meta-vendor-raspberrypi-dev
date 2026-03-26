@@ -84,10 +84,13 @@ PV:pn-alsa-plugins = "1.2.6"
 PR:pn-alsa-plugins = "r0"
 PACKAGE_ARCH:pn-alsa-plugins = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-vulkan-tools = "1.3.204"
-PR:pn-vulkan-tools = "r0"
 PACKAGE_ARCH:pn-vulkan-tools = "${VENDOR_LAYER_EXTENSION}"
 PACKAGE_ARCH:pn-vulkan-loader = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vulkan-headers = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-vkmark = "${VENDOR_LAYER_EXTENSION}"
+PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
+PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
+PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 #Gstreamer components
 
@@ -141,12 +144,12 @@ PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
 
-WESTEROS_VERSION = "1.1.61"
+WESTEROS_VERSION = "1.01.64"
 WESTEROS_REVISION = "r0"
 
 # Tip of westeros master as of Oct 01, 2025
 # Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.61"
+WESTEROS_SRCREV = "Westeros-1.01.64"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -185,8 +188,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.3"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.3.3"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.6"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.3.6"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -215,8 +218,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.9"
-PV:pn-sysint-soc = "1.1.9"
+SRCREV:pn-sysint-soc = "1.1.13"
+PV:pn-sysint-soc = "1.1.13"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 

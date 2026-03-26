@@ -29,6 +29,8 @@ do_deploy:append:raspberrypi4() {
  hdmi_mode=4\
 [HDMI:1]\
  hdmi_mode=4' ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
+#Enable 4K support
+    echo "hdmi_enable_4kp60=1" >> ${DEPLOYDIR}/${BOOTFILES_DIR_NAME}/config.txt
 }
 
 do_deploy:append() {
