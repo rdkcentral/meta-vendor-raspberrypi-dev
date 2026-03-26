@@ -256,7 +256,7 @@ PV:pn-apparmor-vendor = "1.0.1"
 PR:pn-apparmor-vendor = "r0"
 PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-apparmor-vendor = "1.0.1"
-SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "1.0.0"
+SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "2.4.0"
 
 SRCREV:pn-displayinfo-soc = "1.0.0"
 PV:pn-displayinfo-soc = "1.0.0"
