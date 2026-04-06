@@ -19,16 +19,28 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 update_device_properties() {
     # Escape characters special to sed replacement text (\, &, and the | delimiter).
     escape_sed_replacement() { printf '%s' "$1" | sed 's/[&|\\]/\\&/g'; }
+
+    # Update a single key=value line in the properties file.
+    replace_prop() {
+        prop_key="$1"
+        prop_value="$2"
+        [ -n "$prop_value" ] || return 0
+        escaped_value="$(escape_sed_replacement "$prop_value")"
+        sed -i "s|^${prop_key}=.*|${prop_key}=$escaped_value|" "$props"
+    }
+
     props="${D}${sysconfdir}/device-vendor.properties"
+
     # Normalize line endings (CRLF -> LF) and ensure a trailing newline.
     sed -i 's/\r$//' "$props"
     [ -n "$(tail -c1 "$props")" ] && echo >> "$props"
-    # Replace the matching ones, escaping sed-special characters in the values.
-    [ -n "${DEVICE_MODEL_NUMBER}" ] && escaped_value="$(escape_sed_replacement "${DEVICE_MODEL_NUMBER}")" && sed -i "s|^MODEL_NUM=.*|MODEL_NUM=$escaped_value|" "$props"
-    [ -n "${DAC_APP_PATH}" ] && escaped_value="$(escape_sed_replacement "${DAC_APP_PATH}")" && sed -i "s|^DAC_APP_PATH=.*|DAC_APP_PATH=$escaped_value|" "$props"
-    [ -n "${APP_PREINSTALL_DIRECTORY}" ] && escaped_value="$(escape_sed_replacement "${APP_PREINSTALL_DIRECTORY}")" && sed -i "s|^APP_PREINSTALL_DIRECTORY=.*|APP_PREINSTALL_DIRECTORY=$escaped_value|" "$props"
-    [ -n "${APP_DOWNLOAD_DIRECTORY}" ] && escaped_value="$(escape_sed_replacement "${APP_DOWNLOAD_DIRECTORY}")" && sed -i "s|^APP_DOWNLOAD_DIRECTORY=.*|APP_DOWNLOAD_DIRECTORY=$escaped_value|" "$props"
-    [ -n "${DEFAULT_APP_STORAGE_PATH}" ] && escaped_value="$(escape_sed_replacement "${DEFAULT_APP_STORAGE_PATH}")" && sed -i "s|^DEFAULT_APP_STORAGE_PATH=.*|DEFAULT_APP_STORAGE_PATH=$escaped_value|" "$props"
+
+    # Replace the matching ones; BitBake expands ${VAR} at parse time before the shell runs.
+    replace_prop MODEL_NUM "${DEVICE_MODEL_NUMBER}"
+    replace_prop DAC_APP_PATH "${DAC_APP_PATH}"
+    replace_prop APP_PREINSTALL_DIRECTORY "${APP_PREINSTALL_DIRECTORY}"
+    replace_prop APP_DOWNLOAD_DIRECTORY "${APP_DOWNLOAD_DIRECTORY}"
+    replace_prop DEFAULT_APP_STORAGE_PATH "${DEFAULT_APP_STORAGE_PATH}"
 }
 
 do_install() {
