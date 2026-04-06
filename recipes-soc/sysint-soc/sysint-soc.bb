@@ -17,16 +17,18 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 # Overlay build-configuration values from the product layer where property keys match.
 update_device_properties() {
+    # Escape characters special to sed replacement text (\, &, and the | delimiter).
+    escape_sed_replacement() { printf '%s' "$1" | sed 's/[&|\\]/\\&/g'; }
     props="${D}${sysconfdir}/device-vendor.properties"
     # Normalize line endings (CRLF -> LF) and ensure a trailing newline.
     sed -i 's/\r$//' "$props"
     [ -n "$(tail -c1 "$props")" ] && echo >> "$props"
-    # Replace the matching ones.
-    [ -n "${DEVICE_MODEL_NUMBER}" ] && sed -i "s|^MODEL_NUM=.*|MODEL_NUM=${DEVICE_MODEL_NUMBER}|" "$props"
-    [ -n "${DAC_APP_PATH}" ] && sed -i "s|^DAC_APP_PATH=.*|DAC_APP_PATH=${DAC_APP_PATH}|" "$props"
-    [ -n "${APP_PREINSTALL_DIRECTORY}" ] && sed -i "s|^APP_PREINSTALL_DIRECTORY=.*|APP_PREINSTALL_DIRECTORY=${APP_PREINSTALL_DIRECTORY}|" "$props"
-    [ -n "${APP_DOWNLOAD_DIRECTORY}" ] && sed -i "s|^APP_DOWNLOAD_DIRECTORY=.*|APP_DOWNLOAD_DIRECTORY=${APP_DOWNLOAD_DIRECTORY}|" "$props"
-    [ -n "${DEFAULT_APP_STORAGE_PATH}" ] && sed -i "s|^DEFAULT_APP_STORAGE_PATH=.*|DEFAULT_APP_STORAGE_PATH=${DEFAULT_APP_STORAGE_PATH}|" "$props"
+    # Replace the matching ones, escaping sed-special characters in the values.
+    [ -n "${DEVICE_MODEL_NUMBER}" ] && escaped_value="$(escape_sed_replacement "${DEVICE_MODEL_NUMBER}")" && sed -i "s|^MODEL_NUM=.*|MODEL_NUM=$escaped_value|" "$props"
+    [ -n "${DAC_APP_PATH}" ] && escaped_value="$(escape_sed_replacement "${DAC_APP_PATH}")" && sed -i "s|^DAC_APP_PATH=.*|DAC_APP_PATH=$escaped_value|" "$props"
+    [ -n "${APP_PREINSTALL_DIRECTORY}" ] && escaped_value="$(escape_sed_replacement "${APP_PREINSTALL_DIRECTORY}")" && sed -i "s|^APP_PREINSTALL_DIRECTORY=.*|APP_PREINSTALL_DIRECTORY=$escaped_value|" "$props"
+    [ -n "${APP_DOWNLOAD_DIRECTORY}" ] && escaped_value="$(escape_sed_replacement "${APP_DOWNLOAD_DIRECTORY}")" && sed -i "s|^APP_DOWNLOAD_DIRECTORY=.*|APP_DOWNLOAD_DIRECTORY=$escaped_value|" "$props"
+    [ -n "${DEFAULT_APP_STORAGE_PATH}" ] && escaped_value="$(escape_sed_replacement "${DEFAULT_APP_STORAGE_PATH}")" && sed -i "s|^DEFAULT_APP_STORAGE_PATH=.*|DEFAULT_APP_STORAGE_PATH=$escaped_value|" "$props"
 }
 
 do_install() {
