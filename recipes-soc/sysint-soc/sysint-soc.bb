@@ -15,6 +15,16 @@ do_compile[noexec] = "1"
 
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
+# Overlay build-configuration values from the product layer where property keys match.
+update_device_properties() {
+    props="${D}${sysconfdir}/device-vendor.properties"
+    [ -n "${DEVICE_MODEL_NUMBER}" ] && sed -i "s|^MODEL_NUM=.*|MODEL_NUM=${DEVICE_MODEL_NUMBER}|" "$props"
+    [ -n "${DAC_APP_PATH}" ] && sed -i "s|^DAC_APP_PATH=.*|DAC_APP_PATH=${DAC_APP_PATH}|" "$props"
+    [ -n "${APP_PREINSTALL_DIRECTORY}" ] && sed -i "s|^APP_PREINSTALL_DIRECTORY=.*|APP_PREINSTALL_DIRECTORY=${APP_PREINSTALL_DIRECTORY}|" "$props"
+    [ -n "${APP_DOWNLOAD_DIRECTORY}" ] && sed -i "s|^APP_DOWNLOAD_DIRECTORY=.*|APP_DOWNLOAD_DIRECTORY=${APP_DOWNLOAD_DIRECTORY}|" "$props"
+    [ -n "${DEFAULT_APP_STORAGE_PATH}" ] && sed -i "s|^DEFAULT_APP_STORAGE_PATH=.*|DEFAULT_APP_STORAGE_PATH=${DEFAULT_APP_STORAGE_PATH}|" "$props"
+}
+
 do_install() {
         install -d ${D}${systemd_unitdir}/system
 
@@ -41,6 +51,8 @@ do_install() {
 
         # Provide the OEM/SoC device.properties
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
+        # Update the properties to match with the build configuration.
+        update_device_properties
 
         # Default RCU ctrlm_config.json configuration file.
         install -d ${D}${sysconfdir}/vendor/input
