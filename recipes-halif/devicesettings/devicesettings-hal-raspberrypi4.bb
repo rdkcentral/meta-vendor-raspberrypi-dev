@@ -63,7 +63,8 @@ do_install:append() {
     install -m 0755 ${S}/hostData ${D}/opt/persistent/ds/
     install -m 0755 ${S}/scripts/rpiDisplayEnable.sh ${D}/lib/rdk/rpiDisplayEnable.sh
     install -m 0644 ${S}/systemd/rpiDisplay.service ${D}/lib/systemd/system/rpiDisplay.service
+    install -m 0644 ${S}/systemd/dshal-tvsvc.service ${D}/lib/systemd/system/dshal-tvsvc.service
     ln -sr ${D}${libdir}/libds-hal.so.0.0.0 ${D}${libdir}/libdshal.so
 }
 
-SYSTEMD_SERVICE:${PN} += "rpiDisplay.service"
+SYSTEMD_SERVICE:${PN} += "rpiDisplay.service dshal-tvsvc.service"
