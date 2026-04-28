@@ -15,6 +15,34 @@ do_compile[noexec] = "1"
 
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
+# Overlay build-configuration values from the product layer where property keys match.
+update_device_properties() {
+    # Escape characters special to sed replacement text (\, &, and the | delimiter).
+    escape_sed_replacement() { printf '%s' "$1" | sed 's/[&|\\]/\\&/g'; }
+
+    # Update a single key=value line in the properties file.
+    replace_prop() {
+        prop_key="$1"
+        prop_value="$2"
+        [ -n "$prop_value" ] || return 0
+        escaped_value="$(escape_sed_replacement "$prop_value")"
+        sed -i "s|^${prop_key}=.*|${prop_key}=$escaped_value|" "$props"
+    }
+
+    props="${D}${sysconfdir}/device-vendor.properties"
+
+    # Normalize line endings (CRLF -> LF) and ensure a trailing newline.
+    sed -i 's/\r$//' "$props"
+    [ -n "$(tail -c1 "$props")" ] && echo >> "$props"
+
+    # Replace the matching ones; BitBake expands ${VAR} at parse time before the shell runs.
+    replace_prop MODEL_NUM "${DEVICE_MODEL_NUMBER}"
+    replace_prop DAC_APP_PATH "${DAC_APP_PATH}"
+    replace_prop APP_PREINSTALL_DIRECTORY "${APP_PREINSTALL_DIRECTORY}"
+    replace_prop APP_DOWNLOAD_DIRECTORY "${APP_DOWNLOAD_DIRECTORY}"
+    replace_prop DEFAULT_APP_STORAGE_PATH "${DEFAULT_APP_STORAGE_PATH}"
+}
+
 do_install() {
         install -d ${D}${systemd_unitdir}/system
 
@@ -41,6 +69,8 @@ do_install() {
 
         # Provide the OEM/SoC device.properties
         install -m 0644 ${S}/etc/device-vendor.properties ${D}${sysconfdir}
+        # Update the properties to match with the build configuration.
+        update_device_properties
 
         # Default RCU ctrlm_config.json configuration file.
         install -d ${D}${sysconfdir}/vendor/input
