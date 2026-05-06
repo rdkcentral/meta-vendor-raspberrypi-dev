@@ -5,7 +5,7 @@ RPROVIDES:${PN} = "virtual/vendor-westeros-sink"
 
 SINK_SOC_PATH = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'v4l2', 'rpi', d)}"
 
-AUTOTOOLS_SCRIPT_PATH = "${S}/${SINK_SOC_PATH}"
+AUTOTOOLS_SCRIPT_PATH = "${S}/${SINK_SOC_PATH}/westeros-sink"
 
 LICENSE_LOCATION = "${S}/LICENSE"
 
@@ -21,12 +21,12 @@ PACKAGECONFIG[gst1] = "--enable-gstreamer1=yes,--enable-gstreamer1=no,gstreamer1
 PACKAGECONFIG = "gst1"
 
 do_configure:prepend() {
-  ln -sf ../westeros-sink.c ${AUTOTOOLS_SCRIPT_PATH}
-  ln -sf ../westeros-sink.h ${AUTOTOOLS_SCRIPT_PATH}
+  ln -sf ../../westeros-sink/westeros-sink.c ${AUTOTOOLS_SCRIPT_PATH}
+  ln -sf ../../westeros-sink/westeros-sink.h ${AUTOTOOLS_SCRIPT_PATH}
 
   sed -i -e 's/-lwesteros_simplebuffer_client/-lwesteros_compositor -lwesteros_simplebuffer_client/g' ${AUTOTOOLS_SCRIPT_PATH}/Makefile.am
-  ln -sf ../westeros-sink.c ${AUTOTOOLS_SCRIPT_PATH}
-  ln -sf ../westeros-sink.h ${AUTOTOOLS_SCRIPT_PATH}
+  ln -sf ../../westeros-sink/westeros-sink.c ${AUTOTOOLS_SCRIPT_PATH}
+  ln -sf ../../westeros-sink/westeros-sink.h ${AUTOTOOLS_SCRIPT_PATH}
 }
 
 FILES:${PN} += "${libdir}/gstreamer-*/*.so"
