@@ -16,18 +16,7 @@ S = "${WORKDIR}/git"
 
 DEPENDS = "devicesettings-hal-headers virtual/egl alsa-lib"
 
-# mesa is the egl provider for vc4graphics
-# but HAL implementation requires headers from userland
-DEPENDS += "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', 'userland', '', d)}"
-
-INCLUDE_DIRS = " \
-    -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/ds-hal/ \
-    -I${STAGING_DIR_TARGET}${includedir}/interface/vmcs_host/ \
-    "
-
-# note: we really on 'make -e' to control LDFLAGS and CFLAGS from here. This is
-# far from ideal, but this is to workaround the current component Makefile
-CFLAGS += " ${INCLUDE_DIRS}"
+# STB mode supports 1 HDMI out, select the best.
 EXTRA_OECMAKE += "-DDRI_CARD=/dev/dri/card1"
 
 # TODO: remove when MW alignes
@@ -45,14 +34,15 @@ INSANE_SKIP:${PN} += "dev-so"
 #inherit coverity systemd pkgconfig
 inherit systemd cmake pkgconfig hal-version
 
-CFLAGS += " -Wno-unused-parameter"
-
 CFLAGS += " \
   -DRDK_HALIF_DEVICE_SETTINGS_VERSION_MAJOR=${DEVICE_SETTINGS_VER_MAJOR} \
   -DRDK_HALIF_DEVICE_SETTINGS_VERSION_MINOR=${DEVICE_SETTINGS_VER_MINOR} \
   -DRDK_HALIF_DEVICE_SETTINGS_VERSION_BUILD=${DEVICE_SETTINGS_VER_BUILD} \
   -DRDK_HALIF_DEVICE_SETTINGS_VERSION_ENGINEERING=${DEVICE_SETTINGS_VER_ENG} \
-  -DKERNEL_ARPI_VERSION_MAJOR=${KERNEL_ARPI_MAJOR_VERSION}"
+  -DKERNEL_ARPI_VERSION_MAJOR=${KERNEL_ARPI_MAJOR_VERSION} \
+  -I${STAGING_DIR_TARGET}${includedir}/rdk/halif/ds-hal/ \
+  -Wno-unused-parameter \
+  "
 
 do_install:append() {
     install -d ${D}${bindir}
@@ -63,7 +53,8 @@ do_install:append() {
     install -m 0755 ${S}/hostData ${D}/opt/persistent/ds/
     install -m 0755 ${S}/scripts/rpiDisplayEnable.sh ${D}/lib/rdk/rpiDisplayEnable.sh
     install -m 0644 ${S}/systemd/rpiDisplay.service ${D}/lib/systemd/system/rpiDisplay.service
+    install -m 0644 ${S}/systemd/rpiAudioSoftvol.service ${D}/lib/systemd/system/rpiAudioSoftvol.service
     ln -sr ${D}${libdir}/libds-hal.so.0.0.0 ${D}${libdir}/libdshal.so
 }
 
-SYSTEMD_SERVICE:${PN} += "rpiDisplay.service"
+SYSTEMD_SERVICE:${PN} += "rpiDisplay.service rpiAudioSoftvol.service"
