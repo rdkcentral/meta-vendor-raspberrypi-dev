@@ -144,12 +144,12 @@ PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
 
-WESTEROS_VERSION = "1.01.64"
+WESTEROS_VERSION = "2.1.0"
 WESTEROS_REVISION = "r0"
 
-# Tip of westeros master as of Oct 01, 2025
-# Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.64"
+# Tip of westeros master as of Feb 26,2026
+# Tag - Westeros-2.1.0 (revision - 49a428aedef29e258b7f1b937cd949126ef04b19)
+WESTEROS_SRCREV = "2.1.0"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -175,6 +175,11 @@ PV:pn-essos = "${WESTEROS_VERSION}"
 PR:pn-essos = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-essos = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-essos = "${WESTEROS_SRCREV}"
+
+PV:pn-essosrmgr = "1.99"
+PR:pn-essosrmgr = "r0"
+PACKAGE_ARCH:pn-essosrmgr = "${VENDOR_LAYER_EXTENSION}"
+SRCREV:pn-essosrmgr = "c539ce0a7044b4396c36cdb609067c5d3b1761bf"
 
 PV:pn-westeros-sink = "${WESTEROS_VERSION}"
 PR:pn-westeros-sink = "${WESTEROS_REVISION}"
