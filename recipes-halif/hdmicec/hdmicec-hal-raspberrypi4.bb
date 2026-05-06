@@ -18,7 +18,7 @@ RPROVIDES:${PN} = " \
     virtual/vendor-hdmicec-hal \
     "
 
-DEPENDS = "hdmicecheader userland"
+DEPENDS = "hdmicecheader"
 
 inherit cmake
 
