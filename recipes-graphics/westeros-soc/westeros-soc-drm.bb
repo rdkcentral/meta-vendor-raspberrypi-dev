@@ -1,9 +1,13 @@
 require recipes-graphics/westeros/westeros.inc
 
 SUMMARY = "This receipe compiles the westeros gl component for drm supported platforms, currently the HiKey board"
-LICENSE_LOCATION = "${S}/../LICENSE"
+LICENSE_LOCATION = "${S}/LICENSE"
+LIC_FILES_CHKSUM = "file://${LICENSE_LOCATION};md5=8fb65319802b0c15fc9e0835350ffa02"
+SRC_URI = "${WESTEROS_SOC_URI}"
 
-S = "${WORKDIR}/git/drm"
+
+S = "${WORKDIR}/git"
+
 
 COMPATIBLE_MACHINE = "(hikey-32|dragonboard-410c-32|dragonboard-820c-32|poplar|imx8mqevk)"
 
