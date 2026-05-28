@@ -66,7 +66,7 @@ do_install() {
         
         # OEM first boot drop-in: skip service if mfr_util is not present
         install -d ${D}${systemd_unitdir}/system/oem-first-boot.service.d
-        install -D -m 0644 ${S}/systemd_units/oem-first-boot.service.d/10-mfr-util.conf \
+        install -D -m 0644 ${S}/systemd_units/oem-first-boot.service.d/00-mfr-util.conf \
             ${D}${systemd_unitdir}/system/oem-first-boot.service.d/00-mfr-util.conf
 
         # RDKE-115: Dropbear drop-in conf for RPi
