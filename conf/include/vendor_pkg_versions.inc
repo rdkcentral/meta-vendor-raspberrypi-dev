@@ -188,13 +188,13 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.3.7"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.3.7"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.1.0"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.1.0"
+SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
+PV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -218,8 +218,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.13"
-PV:pn-sysint-soc = "1.1.13"
+SRCREV:pn-sysint-soc = "1.1.15"
+PV:pn-sysint-soc = "1.1.15"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 

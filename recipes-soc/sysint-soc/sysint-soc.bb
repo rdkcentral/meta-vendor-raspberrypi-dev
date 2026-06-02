@@ -48,6 +48,7 @@ do_install() {
 
         # RDKE-122: WPEFramework drop-in
         install -D -m 0644 ${S}/systemd_units/00-wpeframework-vendor.conf ${D}${systemd_unitdir}/system/wpeframework.service.d/00-wpeframework-vendor.conf
+        install -D -m 0644 ${S}/systemd_units/00-dsmgr-vendor.conf ${D}${systemd_unitdir}/system/dsmgr.service.d/00-dsmgr-vendor.conf
         # RDKVREFPLT-4428: temporary fix
         install -d ${D}${bindir}
         install -D -m 0644 ${S}/systemd_units/oem-first-boot.service ${D}${systemd_unitdir}/system/oem-first-boot.service
