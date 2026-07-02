@@ -88,7 +88,7 @@ do_install() {
 
         bbnote "Installing WindowManager RCU keymap to ${WINDOWMANAGER_RCU_KEYMAP_FILE}"
 
-        install -D -m 0644 ${WORKDIR}/generic_rcu_keymapping.json ${D}${WINDOWMANAGER_RCU_KEYMAP_FILE}
+        install -D -m 0644 ${S}/etc/generic_rcu_keymapping.json ${D}${WINDOWMANAGER_RCU_KEYMAP_FILE}
 
 }
 
