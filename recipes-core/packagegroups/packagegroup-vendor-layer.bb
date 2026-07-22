@@ -33,6 +33,7 @@ RDEPENDS:${PN}:append:raspberrypi4 = " \
 RDEPENDS:${PN}:append:rdkv-oss = " \
         cairo \
         essos \
+        essosrmgr \
         gstreamer1.0 \
         gstreamer1.0-libav \
         gstreamer1.0-plugins-bad \
