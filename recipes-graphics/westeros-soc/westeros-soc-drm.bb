@@ -35,6 +35,7 @@ inherit autotools pkgconfig
 COMPATIBLE_MACHINE = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '(.*)', 'null', d)}"
 
 SRC_URI += "file://set_and_get_resolution.patch"
+SRC_URI += "file://0001-REFPLTV-3174-NoHDMI-WpeFramework-crash-issue-fix.patch"
 
 # incase if enabled in bb file, it should be removed for Rpi
 CFLAGS:remove = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '-DWESTEROS_GL_NO_PLANES', '', d)}"
