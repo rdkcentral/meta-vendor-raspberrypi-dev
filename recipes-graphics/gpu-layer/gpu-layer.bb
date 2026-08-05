@@ -82,6 +82,14 @@ do_install() {
         install -m 0444 "${STAGING_LIBDIR}/dri/${dri}" "${GPU_LAYER_DRIDIR}/${dri}"
     done
 
+    if ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'true', 'false', d)}; then
+        VULKAN_ICD_LAYER_DIR="${D}/usr/share/gpu-layer/rootfs/usr/share/vulkan/icd.d"
+        install -d ${VULKAN_ICD_LAYER_DIR}
+        install -m 0444 ${STAGING_DATADIR}/vulkan/icd.d/broadcom_icd.arm.json ${VULKAN_ICD_LAYER_DIR}/broadcom_icd.arm.json
+
+        install -m 0444 "${STAGING_LIBDIR}/libvulkan_broadcom.so" "${GPU_LAYER_LIBDIR}/libvulkan_broadcom.so"
+    fi
+    
     # Install GPU configuration
     install -m 0444 ${WORKDIR}/config.json ${GPU_LAYER_CONFDIR}/config.json
 }
@@ -91,7 +99,8 @@ FILES:${PN} += "/usr/share/gpu-layer"
 
 # Libraries intentionally bundled inside gpu-layer
 # (avoid shlibs auto-dependency generation)
-PRIVATE_LIBS:${PN} = "${GPU_LAYER_LIBS}"
+PRIVATE_LIBS:${PN} += "${GPU_LAYER_LIBS}"
+PRIVATE_LIBS:${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'libvulkan_broadcom.so', '', d)}"
 
 # Skip dev-so QA check because we deliberately install unversioned .so symlinks
 INSANE_SKIP:${PN} += "dev-so"
