@@ -1,5 +1,4 @@
-require westeros.inc
-
+require recipes-graphics/westeros/westeros.inc
 
 SUMMARY = "This receipe compiles the westeros gl component for drm supported platforms, currently the HiKey board"
 LICENSE = "Apache-2.0"
