@@ -13,8 +13,8 @@ DEPENDS += "\
     wayland-default-egl \
     westeros-soc-drm \
     expat \
-    libcap \
-    systemd \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'libcap', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'systemd', '', d)} \
     "
 
 # gpu-layer layout inside target rootfs
