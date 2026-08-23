@@ -27,7 +27,7 @@ BBLAYERS =+ "${@'${MANIFEST_PATH_PRODUCT_LAYER}' if os.path.isfile('${MANIFEST_P
 BBLAYERS =+ "${@'${MANIFEST_PATH_COMMON_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_COMMON_OSS_REFERENCE}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_BSP}' if os.path.isfile('${MANIFEST_PATH_BSP}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_PLATFORM}' if os.path.isfile('${MANIFEST_PATH_PLATFORM}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_RDK_BLUETOOTH}' if os.path.isfile('${MANIFEST_PATH_RDK_BLUETOOTH}/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_EXT}' if os.path.isfile('${MANIFEST_PATH_OSS_EXT}/conf/layer.conf') else ''}"
 BBLAYERS =+ "${@'${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}' if os.path.isfile('${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}/conf/layer.conf') else ''}"
 
 # Future reserved
