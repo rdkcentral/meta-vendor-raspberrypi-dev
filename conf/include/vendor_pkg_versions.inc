@@ -149,7 +149,8 @@ WESTEROS_REVISION = "r0"
 
 # Tip of westeros master as of Oct 01, 2025
 # Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.64"
+WESTEROS_URI = "${CMF_GIT_ROOT}/components/opensource/westeros;protocol=${CMF_GIT_PROTOCOL};nobranch=1;name=westeros"
+WESTEROS_SRCREV = "3b92ae0910a45e625fbb82493900563196f3f7e3"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
