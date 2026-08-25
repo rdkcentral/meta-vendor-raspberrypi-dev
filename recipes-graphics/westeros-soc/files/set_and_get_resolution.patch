@@ -1,7 +1,7 @@
-Index: drm/westeros-gl/westeros-gl.c
+Index: git/westeros-gl/westeros-gl.c
 ===================================================================
---- drm.orig/westeros-gl/westeros-gl.c
-+++ drm/westeros-gl/westeros-gl.c
+--- git/westeros-gl/westeros-gl.c
++++ git/westeros-gl/westeros-gl.c
 @@ -2897,7 +2897,7 @@ static void wstDisplayServerProcessMessa
                       if ( gCtx && gCtx->modeInfo )
                       {

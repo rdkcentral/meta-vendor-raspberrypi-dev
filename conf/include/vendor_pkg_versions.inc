@@ -144,12 +144,12 @@ PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
 
-WESTEROS_VERSION = "1.01.64"
+WESTEROS_VERSION = "2.1.2"
 WESTEROS_REVISION = "r0"
 
-# Tip of westeros master as of Oct 01, 2025
-# Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.64"
+# Tip of westeros master as of Jun 30, 2026
+# Tag - Westeros-2.1.2 (revision - f2c5d04631ef0ca5f13a647404a3cc89528fc81c)
+WESTEROS_SRCREV = "2.1.2"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -176,10 +176,16 @@ PR:pn-essos = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-essos = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-essos = "${WESTEROS_SRCREV}"
 
-PV:pn-westeros-sink = "${WESTEROS_VERSION}"
-PR:pn-westeros-sink = "${WESTEROS_REVISION}"
+PV:pn-westeros-sink = "2.1.1"
+PR:pn-westeros-sink = "r0"
 PACKAGE_ARCH:pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-westeros-sink = "${WESTEROS_SRCREV}"
+SRCREV:pn-westeros-sink = "6f3dd5489375fc5d0dd06f88fc85dbf5cf74e41d"
+
+PV:pn-essosrmgr = "1.99"
+PR:pn-essosrmgr = "r0"
+PACKAGE_ARCH:pn-essosrmgr = "${VENDOR_LAYER_EXTENSION}"
+SRCREV:pn-essosrmgr = "d51dc562effb2d146d540ea932d1c47664334337"
+
 
 PV:pn-wayland-default-egl = "1.20.0"
 PR:pn-wayland-default-egl = "r0"
