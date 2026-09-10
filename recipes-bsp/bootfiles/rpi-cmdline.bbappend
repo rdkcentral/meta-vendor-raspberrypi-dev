@@ -10,8 +10,8 @@ do_compile:append() {
             "cgroup_memory=1" \
             "systemd.unified_cgroup_hierarchy=1"
         do
-            grep -qw "${param}" ${CMDLINE_FILE} || \
-                sed -i "s/$/ ${param}/" ${CMDLINE_FILE}
+            grep -Fqw -- "${param}" "${CMDLINE_FILE}" || \
+                sed -i "s/$/ ${param}/" "${CMDLINE_FILE}"
         done
 
     fi
