@@ -172,10 +172,10 @@ PR:pn-westeros = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-westeros = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-westeros = "${WESTEROS_SRCREV}"
 
-PV:pn-essos = "${WESTEROS_VERSION}"
+PV:pn-essos = "2.1.2"
 PR:pn-essos = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-essos = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-essos = "${WESTEROS_SRCREV}"
+SRCREV:pn-essos = "2.1.2"
 
 PV:pn-westeros-sink = "2.1.3"
 PR:pn-westeros-sink = "r0"
