@@ -79,6 +79,16 @@ do_install() {
 
         # Device-specific reset script for Factory/Warehouse reset
         install -D -m 0755 ${S}/scripts/device-specific-reset.sh ${D}/lib/rdk/device-specific-reset.sh
+
+        # RDKMVE-2589: Move RCU keymap configuration to vendor layer
+        if [ -z "${WINDOWMANAGER_RCU_KEYMAP_FILE}" ]; then
+            bbfatal "WINDOWMANAGER_RCU_KEYMAP_FILE is not set. Cannot install keymap."
+        fi
+
+        bbnote "Installing WindowManager RCU keymap to ${WINDOWMANAGER_RCU_KEYMAP_FILE}"
+
+        install -D -m 0644 ${S}/etc/generic_rcu_keymapping.json ${D}${WINDOWMANAGER_RCU_KEYMAP_FILE}
+
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/*"

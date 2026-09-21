@@ -92,6 +92,8 @@ PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
 PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
 PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
+PACKAGE_ARCH:pn-bluez5 = "${VENDOR_LAYER_EXTENSION}"
+
 #Gstreamer components
 
 GST_VERSION = "1.18.5"
@@ -144,12 +146,11 @@ PREFERRED_VERSION_gstreamer1.0-rtsp-server ?= "${GST_VERSION}"
 
 # Westeros components
 
-WESTEROS_VERSION = "1.01.64"
+WESTEROS_VERSION = "2.1.3"
 WESTEROS_REVISION = "r0"
 
-# Tip of westeros master as of Oct 01, 2025
-# Tag - Westeros-1.01.61 (revision - 9e675285a527115e65fcb0e7d2fc7a24a1e46e82)
-WESTEROS_SRCREV = "Westeros-1.01.64"
+# Tip of westeros master as of Jun 30, 2026
+WESTEROS_SRCREV = "2.1.3"
 
 PV:pn-westeros-simplebuffer = "${WESTEROS_VERSION}"
 PR:pn-westeros-simplebuffer = "${WESTEROS_REVISION}"
@@ -161,25 +162,31 @@ PR:pn-westeros-simpleshell = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-westeros-simpleshell = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-westeros-simpleshell = "${WESTEROS_SRCREV}"
 
-PV:pn-westeros-soc-drm = "${WESTEROS_VERSION}"
+PV:pn-westeros-soc-drm = "2.1.4"
 PR:pn-westeros-soc-drm = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-westeros-soc-drm = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-westeros-soc-drm = "${WESTEROS_SRCREV}"
+SRCREV:pn-westeros-soc-drm = "2.1.4"
 
 PV:pn-westeros = "${WESTEROS_VERSION}"
 PR:pn-westeros = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-westeros = "${VENDOR_LAYER_EXTENSION}"
 SRCREV:pn-westeros = "${WESTEROS_SRCREV}"
 
-PV:pn-essos = "${WESTEROS_VERSION}"
+PV:pn-essos = "2.1.2"
 PR:pn-essos = "${WESTEROS_REVISION}"
 PACKAGE_ARCH:pn-essos = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-essos = "${WESTEROS_SRCREV}"
+SRCREV_essos:pn-essos = "2.1.2"
 
-PV:pn-westeros-sink = "${WESTEROS_VERSION}"
-PR:pn-westeros-sink = "${WESTEROS_REVISION}"
+PV:pn-westeros-sink = "2.1.3"
+PR:pn-westeros-sink = "r0"
 PACKAGE_ARCH:pn-westeros-sink = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-westeros-sink = "${WESTEROS_SRCREV}"
+SRCREV:pn-westeros-sink = "2.1.3"
+
+PV:pn-essosrmgr = "1.99"
+PR:pn-essosrmgr = "r0"
+PACKAGE_ARCH:pn-essosrmgr = "${VENDOR_LAYER_EXTENSION}"
+SRCREV:pn-essosrmgr = "38cfacba290fc3fbe5e437cf33be43290c65f0f1"
+
 
 PV:pn-wayland-default-egl = "1.20.0"
 PR:pn-wayland-default-egl = "r0"
@@ -188,23 +195,23 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.11"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.4.11"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
+SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.2.2"
+PV:pn-hdmicec-hal-raspberrypi4 = "1.2.2"
 PR:pn-hdmicec-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
-PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
+SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.1"
+PV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.1"
 PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
-PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
+SRCREV:pn-pwrmgr-hal-raspberrypi4 = "1.2.1"
+PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.1"
 PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -213,23 +220,23 @@ PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.1"
 PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
+SRCREV:pn-mfrlibs-hal-raspberrypi4 = "1.2.0"
+PV:pn-mfrlibs-hal-raspberrypi4 = "1.2.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.14"
-PV:pn-sysint-soc = "1.1.14"
+SRCREV:pn-sysint-soc = "1.1.20"
+PV:pn-sysint-soc = "1.1.20"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-systemaudioplatform = "1.0.1"
-PV:pn-systemaudioplatform = "1.0.1"
+SRCREV:pn-systemaudioplatform = "1.0.2"
+PV:pn-systemaudioplatform = "1.0.2"
 PR:pn-systemaudioplatform = "r0"
 PACKAGE_ARCH:pn-systemaudioplatform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-rdk-gstreamer-utils-platform = "1.2.0"
-PV:pn-rdk-gstreamer-utils-platform = "1.2.0"
+SRCREV:pn-rdk-gstreamer-utils-platform = "1.2.1"
+PV:pn-rdk-gstreamer-utils-platform = "1.2.1"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
@@ -252,19 +259,19 @@ PREFERRED_VERSION_ffmpeg = "4.2.2"
 PR:pn-ffmpeg = "r2"
 PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-apparmor-vendor = "1.0.1"
+PV:pn-apparmor-vendor = "1.0.2"
 PR:pn-apparmor-vendor = "r0"
 PACKAGE_ARCH:pn-apparmor-vendor = "${VENDOR_LAYER_EXTENSION}"
-SRCREV:pn-apparmor-vendor = "1.0.1"
+SRCREV:pn-apparmor-vendor = "1.0.2"
 SRCREV_rdk-apparmor-profiles:pn-apparmor-vendor = "2.4.0"
 
-SRCREV:pn-displayinfo-soc = "1.0.0"
-PV:pn-displayinfo-soc = "1.0.0"
+SRCREV:pn-displayinfo-soc = "1.0.1"
+PV:pn-displayinfo-soc = "1.0.1"
 PR:pn-displayinfo-soc = "r0"
 PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-miracast-hal-raspberrypi4 = "1.0.1"
-PV:pn-miracast-hal-raspberrypi4 = "1.0.1"
+SRCREV:pn-miracast-hal-raspberrypi4 = "1.0.2"
+PV:pn-miracast-hal-raspberrypi4 = "1.0.2"
 PR:pn-miracast-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-miracast-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
