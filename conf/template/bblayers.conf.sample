@@ -33,3 +33,6 @@ BBLAYERS =+ "${@'${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}' if os.path.isfile('${MANIF
 # Future reserved
 #BBLAYERS =+ "${@'${MANIFEST_PATH_OEM_OVERLAY_SOC}' if os.path.isfile('${MANIFEST_PATH_OEM_OVERLAY_SOC}/conf/layer.conf') else ''}"
 #BBLAYERS =+ "${@'${MANIFEST_PATH_VTS}' if os.path.isfile('${MANIFEST_PATH_VTS}/conf/layer.conf') else ''}"
+
+#wpa-supplicant
+BBLAYERS =+ "${@'${MANIFEST_PATH_RDK_WIRELESS_CONNECTIVITY}' if os.path.isfile('${MANIFEST_PATH_RDK_WIRELESS_CONNECTIVITY}/conf/layer.conf') else ''}"
