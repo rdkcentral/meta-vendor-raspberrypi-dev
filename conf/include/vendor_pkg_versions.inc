@@ -94,6 +94,9 @@ PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 PACKAGE_ARCH:pn-bluez5 = "${VENDOR_LAYER_EXTENSION}"
 
+#added preferred version for wpa_supplicant
+PREFERRED_VERSION_wpa-supplicant = "2.10"
+
 #Gstreamer components
 
 GST_VERSION = "1.18.5"
