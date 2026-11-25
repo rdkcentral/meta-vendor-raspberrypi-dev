@@ -56,4 +56,7 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros-simpleshell \
         gpu-layer \
         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
+        kernel-dev \
+        zram \
+        util-linux-zramctl \
         "
