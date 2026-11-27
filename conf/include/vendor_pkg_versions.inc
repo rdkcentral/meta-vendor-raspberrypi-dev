@@ -93,6 +93,10 @@ PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
 PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
 PACKAGE_ARCH:pn-bluez5 = "${VENDOR_LAYER_EXTENSION}"
+PACKAGE_ARCH:pn-zram = "${VENDOR_LAYER_EXTENSION}"
+
+#added preferred version for wpa_supplicant
+PREFERRED_VERSION_wpa-supplicant = "2.10"
 
 #Gstreamer components
 
@@ -195,8 +199,8 @@ PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 # RDKV HAL component versions
 
 # RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.11"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.4.11"
+SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.12"
+PV:pn-devicesettings-hal-raspberrypi4 = "1.4.12"
 PR:pn-devicesettings-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
@@ -225,8 +229,8 @@ PV:pn-mfrlibs-hal-raspberrypi4 = "1.2.0"
 PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
 PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-sysint-soc = "1.1.21"
-PV:pn-sysint-soc = "1.1.21"
+SRCREV:pn-sysint-soc = "1.1.23"
+PV:pn-sysint-soc = "1.1.23"
 PR:pn-sysint-soc = "r0"
 PACKAGE_ARCH:pn-sysint-soc = "${VENDOR_LAYER_EXTENSION}"
 

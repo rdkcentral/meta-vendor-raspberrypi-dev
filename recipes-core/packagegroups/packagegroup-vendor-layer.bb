@@ -8,7 +8,7 @@ inherit packagegroup
 
 DEPENDS = " virtual/kernel make-mod-scripts"
 
-PV = "4.15.0"
+PV = "4.16.0"
 PR = "r0"
 
 RDEPENDS:${PN} = " \
@@ -56,4 +56,7 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros-simpleshell \
         gpu-layer \
         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
+        kernel-dev \
+        zram \
+        util-linux-zramctl \
         "
