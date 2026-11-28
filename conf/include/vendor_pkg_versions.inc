@@ -98,6 +98,9 @@ PACKAGE_ARCH:pn-zram = "${VENDOR_LAYER_EXTENSION}"
 #added preferred version for wpa_supplicant
 PREFERRED_VERSION_wpa-supplicant = "2.10"
 
+#added preferred version for wpa_supplicant
+PREFERRED_VERSION_wpa-supplicant = "2.10"
+
 #Gstreamer components
 
 GST_VERSION = "1.18.5"
